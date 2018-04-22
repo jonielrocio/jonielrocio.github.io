@@ -361,13 +361,13 @@ html, body {
 }
 
 .textphotos a {
-    font-size: 50px;
+    font-size: 30px;
     color: black;
     font-display: block;
     position: absolute;
     text-decoration: none;
-    top: 40%;
-    left: 18%;
+    top: 45%;
+    left: 22%;
 }
 
 
@@ -381,13 +381,13 @@ html, body {
 }
 
 .textaboutme a {
-    font-size: 50px;
+    font-size: 30px;
     color: black;
     font-display: block;
     position: absolute;
     text-decoration: none;
-    top: 42%;
-    left: 65%;   
+    top: 47%;
+    left: 70%;   
 }
 
 .choices2 {
@@ -413,13 +413,13 @@ html, body {
 }
 
 .textcontact a {
-    font-size: 50px;
+    font-size: 30px;
     color: black;
     font-display: block;
     position: absolute;
     text-decoration: none;
-    top: 40%;
-    left: 15%;
+    top: 45%;
+    left: 20%;
     
 }
 .trails_img {
@@ -433,13 +433,13 @@ html, body {
 }
 
 .texttrails a {
-    font-size: 50px;
+    font-size: 30px;
     color: black;
     font-display: block;
     position: absolute;
     text-decoration: none;
-    top: 40%;
-    left: 72%;
+    top: 46%;
+    left: 75%;
 }
 
 .last {
@@ -1116,8 +1116,6 @@ html, body {
 }
 
 
-}
-
 .wday3 p {
     padding-right: 20px;
     font-size: 20px;
@@ -1128,8 +1126,38 @@ html, body {
     height: 350px;
 }
 .email {
-    
+   font-size: 20px;
+    width: 67.3%;
+    margin-left: 15%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    background-color: white;
 }
+
+.container {
+    border: 1px solid black;
+    margin-left: 15%;
+    width: 68.8%;
+    background-color: white;  
+}
+
+.email {
+    padding-top: 20px;
+    margin-left: 0;
+}
+
+input[type=text], select, textarea {
+    width: 105%;  
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+
+
+}
+
+
 
 
 
