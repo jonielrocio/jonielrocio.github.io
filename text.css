@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: red;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 250px;
+    margin-bottom: 0px;
+}
+
+.UC {
+    animation: blinkingText 2s infinite;
+}
+
+@keyframes blinkingText {
+     0%{     color: red;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: white;    }
+}
