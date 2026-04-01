@@ -579,7 +579,8 @@ html, body {
 .pemipg1 p {
     width: 82%;
     text-align: justify;
-    padding-left: 90px; 
+    padding-left: 90px;
+	color: white;
 }
 
 .p_img_3rd {
