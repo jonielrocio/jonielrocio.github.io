@@ -1154,7 +1154,14 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
 
-
+  padding: 25px;
+}
+.review {
+display: flex;
+justify-content: center;
+align-items: center;}
+{
+	color: #3A0A0A;
 }
 
 
