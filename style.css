@@ -131,6 +131,7 @@ html, body {
 .text {
     width: 100%;
     position: relative;
+	text-align: center;
     margin-top: -40%;
 	color: 29EA47;
 }
