@@ -471,8 +471,8 @@ html, body {
     font-size: 25px;
     text-decoration: none;
     margin-left: 50%;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 25%;
+	margin-bottom: 25%;
 }
 
 
@@ -1174,8 +1174,7 @@ input[type=text], select, textarea {
 	font-size: 10px;
 	font-family: sans-serif;
 }
-.top { margin-top: 25px;
-	  margin-bottom: 25px:}
+
  
 
 
