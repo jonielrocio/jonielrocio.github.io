@@ -472,6 +472,8 @@ html, body {
     text-decoration: none;
 	margin-top: 25px;
 	margin-bottom: 25px;
+	border: solid;
+	margin-left: 50%;
 }
 
 
