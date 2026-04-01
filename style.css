@@ -1161,9 +1161,9 @@ input[type=text], select, textarea {
 .review {
 display: flex;
 justify-content: center;
-align-items: center;}
-{
-	color: #3A0A0A;
+align-items: center;
+
+	color: #3A0A0A;}
 
   .text { font-family: sans-serif;
   font-size: 8px;
