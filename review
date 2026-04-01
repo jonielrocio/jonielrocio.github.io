@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <link rel="stylesheet" href="styles.css" />
+      <div class ="review"></div>
+  
+      <h1 class="review">Gear Review Page</h1>
+  </head>
+      
+      <script src="script.js"></script>
+  </body>
+</html>
