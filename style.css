@@ -464,8 +464,6 @@ html, body {
 }
 
 .top {
-    align-content: center;
-    text-align: center;
     margin-left: 50%;
     background: olivedrab;
     font-size: 25px;
