@@ -135,7 +135,7 @@ html, body {
 	color: 29EA47;
 }
 
-.text h1 {
+.text1 {
     text-align: center;
     color: white;
     mix-blend-mode: difference;
@@ -143,12 +143,19 @@ html, body {
     font-family: sans-serif;
 }
 
-.text h2 {
+.text2 {
     text-align: center;
     color: red;
     opacity: .7;
     font-size: 30px;
     font-family: sans-serif;
+}
+.text3 
+	text-align: center;
+	color: 29EA47;
+	opacity: .7;
+	font-size: 15px;
+	font-family: sans-serif;
 }
 
 .social_img {
