@@ -489,7 +489,8 @@ html, body {
     font-size: 25px;
     text-decoration: none;
     margin-left: 50%;
-    margin-bottom: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 
