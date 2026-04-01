@@ -1155,19 +1155,18 @@ input[type=text], select, textarea {
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-
-  padding: 25px;
+	padding: 25px;
 }
 .review {
-display: flex;
-justify-content: center;
-align-items: center;
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: #3A0A0A;}
 
-  .text { font-family: sans-serif;
-  font-size: 8px;
-  color:29EA47;
+  .text { 
+	font-family: sans-serif;
+  	font-size: 8px;
+  	color:29EA47;
 	max-height: 100%;
     max-width: 100%;
     width: 250px;
@@ -1175,7 +1174,7 @@ align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)}
-}
+
 
 
 
