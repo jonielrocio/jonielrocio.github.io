@@ -137,24 +137,24 @@ html, body {
 
 .text1 {
     text-align: center;
-    color: white;
+    color: 29EA47;
     mix-blend-mode: difference;
-    font-size: 30px;
+    font-size: 10px;
     font-family: sans-serif;
 }
 
 .text2 {
     text-align: center;
-    color: red;
+    color:29EA47 ;
     opacity: .7;
-    font-size: 30px;
+    font-size: 10px;
     font-family: sans-serif;
 }
 .text3 
 	text-align: center;
 	color: 29EA47;
 	opacity: .7;
-	font-size: 15px;
+	font-size: 10px;
 	font-family: sans-serif;
 }
 
