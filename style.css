@@ -592,6 +592,7 @@ html, body {
     height: 200px;
     margin-top: -20px;
     margin-bottom: 0;
+	align-items: center;
 }
 
 .pemipg2 p {
