@@ -597,6 +597,7 @@ html, body {
 	justify: flex;
 	word-wrap: break-word;
 	color: black;
+	display: inline;
 
 }
 
