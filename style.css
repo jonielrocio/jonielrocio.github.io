@@ -120,8 +120,9 @@ html, body {
     background: white;
 }
 
-.slide_img 
-    	z-index: 1;
+.slide_img {
+    	z-index: 1;}
+
 	#i1:checked ~ #one,
 	#i2:checked ~ #two,		
 	#i3:checked ~ #three,
