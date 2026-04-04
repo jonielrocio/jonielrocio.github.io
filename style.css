@@ -1186,6 +1186,7 @@ input[type=text], select, textarea {
  .lastw {
 	 margin-bottom: 10%;
 	 margin-left: 50%
+	 position: absolute;
 	 
  }
 	 
