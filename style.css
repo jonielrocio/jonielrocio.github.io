@@ -119,12 +119,10 @@ html, body {
 
 .slide_img {
     z-index: 1;
-}
-
-#i1:checked ~ #one,
-#i2:checked ~ #two,
-#i3:checked ~ #three,
-#i4:checked ~ #four {
+	#i1:checked ~ #one,
+	#i2:checked ~ #two,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four 
     z-index: 2;
 }
 
@@ -1175,7 +1173,12 @@ input[type=text], select, textarea {
 	opacity: .7;
 	font-size: 10px;
 	font-family: sans-serif;
+	
 }
+.page3 {
+	height: auto;
+	width: 100%;
+{
 
  
 
