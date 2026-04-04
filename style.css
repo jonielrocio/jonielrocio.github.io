@@ -594,6 +594,8 @@ html, body {
     margin-bottom: 0;
 	align-items: center;
 	justify-content: center;
+	justify: flex;
+
 }
 
 .pemipg2 p {
