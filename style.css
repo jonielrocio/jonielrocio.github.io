@@ -125,7 +125,8 @@ html, body {
 	#i1:checked ~ #one,
 	#i2:checked ~ #two,		
 	#i3:checked ~ #three,
-	#i4:checked ~ #four}
+	#i4:checked ~ #four
+}
 
    	z-index: 2;
 }
