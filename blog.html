@@ -64,10 +64,19 @@
                 <img id="myPhoto" src="" style="max-width: 100%; display: none;">
                     </div>
 
-                <script>                
-                  const input = document.getElementById('imageInput');
-                  const img = document.getElementById('myPhoto');
+                <script>
+                const input = document.getElementById('imageInput');
+                const img = document.getElementById('myPhoto');
 
-                 </script>
+                input.onchange = (e) => {
+                const [file] = input.files;
+                if (file) {
+                img.src = URL.createObjectURL(file); //https://console.cloudinary.com/app/c-af890568c88580d436f8cb5a2f7216/image/home
+                img.style.display = 'block';
+                }
+                };
+                </script>
+
+                </script>
             </div>
     </body>
