@@ -1211,6 +1211,10 @@ input[type=text], select, textarea {
 	 height: 100%;
 	 width: 100%;
  }
+ .photo {
+	 background-image: url('image.jpg');
+	 background-size: cover;
+ }
 	 
 	 
 	 
