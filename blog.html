@@ -58,7 +58,16 @@
             </div>
             <p id="UC">UNDER CONSTRUCTION</p>
                 <div contenteditable="true"></div>
-                <div class="photos">
-                    <img src="image.jpg" alt="Description">
-                </div>
+                <input type="file" id="imageInput" accept="image/*">
+
+                <div id="display">
+                <img id="myPhoto" src="" style="max-width: 100%; display: none;">
+                    </div>
+
+                <script>                
+                  const input = document.getElementById('imageInput');
+                  const img = document.getElementById('myPhoto');
+
+                 </script>
+            </div>
     </body>
