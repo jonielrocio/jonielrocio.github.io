@@ -262,55 +262,42 @@
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
-               function checkLogin() {
-                    try {
-                        console.log("Login sequence started...");
-                        
-                        // 1. Get the elements (Check these IDs in your HTML!)
-                        var userField = document.getElementById('username');
-                        var passField = document.getElementById('password');
-                        var loginBox = document.querySelector('.login-box');
-                
-                        // SAFETY CHECK: If these are missing, the code stops here.
-                        if (!userField || !passField) {
-                            alert("Error: I can't find the 'username' or 'password' boxes in your HTML!");
-                            return;
+              function checkLogin() {
+                var u = document.getElementById('username').value;
+                var p = document.getElementById('password').value;
+                var loginBox = document.querySelector('.login-box');
+                var btn = document.querySelector('#loginModal button');
+            
+                // Visual feedback
+                if (loginBox) loginBox.style.background = 'yellow';
+                btn.innerText = "Checking...";
+            
+                setTimeout(function() {
+                    if (u === 'username' && p === 'password') {
+                        alert("Success! Welcome Boss.");
+            
+                        // 1. Show Admin tools
+                        var admins = document.getElementsByClassName('admin-only');
+                        for (var i = 0; i < admins.length; i++) {
+                            admins[i].style.setProperty('display', 'inline-block', 'important');
                         }
-                
-                        var u = userField.value;
-                        var p = passField.value;
-                
-                        // 2. Visual Feedback
-                        if (loginBox) loginBox.style.background = 'yellow';
-                
-                        // 3. The Logic
-                        if (u === 'username' && p === 'password') {
-                            alert("Success! Welcome Boss.");
-                
-                            // Show Admin buttons
-                            var admins = document.getElementsByClassName('admin-only');
-                            for (var i = 0; i < admins.length; i++) {
-                                admins[i].style.setProperty('display', 'inline-block', 'important');
-                            }
-                
-                            // Show Logout button
-                            var logoutBtn = document.getElementById('logoutBtn');
-                            if (logoutBtn) {
-                                logoutBtn.style.setProperty('display', 'inline-block', 'important');
-                            }
-                
-                            // Hide Modal
-                            document.getElementById('loginModal').style.display = 'none';
-                        } else {
-                            alert("Incorrect Credentials. You typed: " + u);
-                            if (loginBox) loginBox.style.background = 'white';
-                        }
-                
-                    } catch (err) {
-                        // THIS WILL TELL US THE EXACT PROBLEM
-                        alert("JavaScript Error: " + err.message);
+            
+                        // 2. Show the Logout button
+                        document.getElementById('logoutBtn').style.display = 'inline-block';
+            
+                        // 3. HIDE THE MAIN LOGIN BUTTON (The one that opens the modal)
+                        document.getElementById('openLoginBtn').style.display = 'none';
+            
+                        // 4. Hide the Modal
+                        document.getElementById('loginModal').style.display = 'none';
+            
+                    } else {
+                        alert("Incorrect Credentials");
+                        if (loginBox) loginBox.style.background = 'white';
+                        btn.innerText = "Login";
                     }
-                }
+                }, 400);
+            }
                 function logout() {
                     // 1. Hide all Admin elements again
                     var admins = document.getElementsByClassName('admin-only');
