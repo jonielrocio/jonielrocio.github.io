@@ -1281,6 +1281,14 @@ input[type=text], select, textarea {
 .admin-only {
 	display: none !important;
 }
+
+.admin-only, #logoutBtn, #admin-tools-header {
+    display: none !important;
+}
+
+#loginModal {
+    display: none;
+}
 	 
 	 
 
