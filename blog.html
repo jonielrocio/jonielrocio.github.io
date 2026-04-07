@@ -135,15 +135,13 @@
                 </style>
             
                 <div class="controls">
-                   <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'">
+                    <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'">
                         Admin Login
                     </button>
                     
                     <div id="loginModal" class="login-box" style="display: none;">
                         <div id="login-form-content">
                             <h3>Admin Login</h3>
-                            <button id="add-text-action" class="admin-only" style="display: none;" onclick="addText()">Add Text</button>
-                            <button id="add-photo-action" class="admin-only" style="display: none;" onclick="addPhoto()">Add Photo</button>
                             <input type="text" id="username" placeholder="Username"><br>
                             <input type="password" id="password" placeholder="Password"><br>
                             <button type="button" onclick="checkLogin();">Login Now</button>
@@ -151,7 +149,11 @@
                         </div>
                     
                         <div id="admin-header-tools" style="display: none;">
-                            <span style="font-weight: bold; margin-right: 10px;">👤 username</span>
+                            <span style="font-weight: bold; margin-right: 10px;">👤 JonieRocio</span>
+                            
+                            <button id="add-text-action" class="admin-only" style="display: none;" onclick="addText()">Add Text</button>
+                            <button id="add-photo-action" class="admin-only" style="display: none;" onclick="addPhoto()">Add Photo</button>
+                            
                             <button id="logoutBtn" type="button" onclick="logout()" style="background: #dc3545; color: white; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
                                 Logout
                             </button>
