@@ -278,15 +278,15 @@
                             } //
                             else {
                                 document.getElementById('loginError').style.display = 'block';
-                            }
-                        } // <--- Closes checkLogin
+                            } //
+                        
                         
                         // --- 3. AUTO-LOAD ADMIN MODE ---
                         window.addEventListener('load', () => {
                             if (localStorage.getItem('isAdmin') === 'true') {
                                 document.body.classList.add('admin-mode');
                             }
-                        }); //
+                        } //
                 </script>
     </body>    
 </html>
