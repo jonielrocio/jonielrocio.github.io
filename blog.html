@@ -259,24 +259,25 @@
                     };
                 </script>
             
-                <button id="openLoginBtn" type="button" class="login-btn" onclick="openLoginModal()" style="display: block;">
-                    Login
-                </button>
-                   <div class="login-box">
+                <div class="controls">
+                    <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'" style="display: block;">
+                        Login
+                    </button>
+                
+                    <div id="loginModal" class="login-box" style="display: none;">
                         <div id="login-form-content">
                             <h3>Admin Login</h3>
-                            <input type="text" id="username" placeholder="Username"><br>
-                            <input type="password" id="password" placeholder="Password"><br>
-                            <button type="button" onclick="checkLogin();">Login</button>
-                            <button onclick="closeLogin()" style="background:#666;">Cancel</button>
+                            <input type="text" id="username" placeholder="Username" autocomplete="username"><br>
+                            <input type="password" id="password" placeholder="Password" autocomplete="current-password"><br>
+                            
+                            <button type="button" onclick="checkLogin();">Login Now</button>
+                            
+                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666;">Cancel</button>
                         </div>
-                    
-                        <button id="logoutBtn" type="button" onclick="logout()" style="display: none; background: #dc3545; color: white; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
-                            Logout
-                        </button>
-                    
+                
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
+                </div>
             
                 <script>
                     // 1. THE AUTO-CHECK (Runs every time the page refreshes)
