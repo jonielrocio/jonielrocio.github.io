@@ -247,31 +247,66 @@
                 </script>
             
                 <button type="button" class="login-btn" onclick="checkLogin()">Login</button>
-                    <div class="login-box">
-                        <h3>Admin Login</h3>
-                        <input type="text" id="username" placeholder="Username"><br>
-                        <input type="password" id="password" placeholder="Password"><br>
-                        <button type="button" onclick="console.log('HTML says: I am being clicked!'); checkLogin();">Login</button>
-                        <button onclick="closeLogin()" style="background:#666;">Cancel</button>
-                        <button id="logoutBtn" type="button" onclick="logout()" style="display: none; background: #dc3545; color: white; margin-left: 20px; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
+                   <div class="login-box">
+                        <div id="login-form-content">
+                            <h3>Admin Login</h3>
+                            <input type="text" id="username" placeholder="Username"><br>
+                            <input type="password" id="password" placeholder="Password"><br>
+                            <button type="button" onclick="checkLogin();">Login</button>
+                            <button onclick="closeLogin()" style="background:#666;">Cancel</button>
+                        </div>
+                    
+                        <button id="logoutBtn" type="button" onclick="logout()" style="display: none; background: #dc3545; color: white; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
                             Logout
                         </button>
+                    
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
-                </div>
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
-              function checkLogin() {
-                var u = document.getElementById('username').value;
-                var p = document.getElementById('password').value;
-                var loginBox = document.querySelector('.login-box');
-                var btn = document.querySelector('#loginModal button');
-            
-                // Visual feedback
-                if (loginBox) loginBox.style.background = 'yellow';
-                btn.innerText = "Checking...";
-            
+                function checkLogin() {
+                    console.log("Login sequence started...");
+                    
+                    // 1. Get the elements
+                    var u = document.getElementById('username').value;
+                    var p = document.getElementById('password').value;
+                    var loginBox = document.querySelector('.login-box');
+                    var loginForm = document.getElementById('login-form-content');
+                    var logoutBtn = document.getElementById('logoutBtn');
+                
+                    // 2. Immediate Feedback
+                    if (loginBox) loginBox.style.background = 'yellow';
+                
+                    // 3. The Logic (The "Brain")
+                    setTimeout(function() {
+                        if (u === 'JonieRocio' && p === '2919153Pldt') {
+                            alert("Success! Welcome Boss.");
+                
+                            // A. Hide the entire Login form (Inputs + Header + Login Button)
+                            if (loginForm) loginForm.style.display = 'none';
+                
+                            // B. Show the Logout button
+                            if (logoutBtn) logoutBtn.style.setProperty('display', 'inline-block', 'important');
+                
+                            // C. Show all on-page Admin tools (Add Text, Add Photo, etc.)
+                            var admins = document.getElementsByClassName('admin-only');
+                            for (var i = 0; i < admins.length; i++) {
+                                admins[i].style.setProperty('display', 'inline-block', 'important');
+                            }
+                
+                            // D. Optional: If you want the yellow box to turn back to normal
+                            if (loginBox) loginBox.style.background = 'white';
+                
+                        } else {
+                            // If Login Fails
+                            alert("Incorrect Credentials.");
+                            if (loginBox) loginBox.style.background = 'white';
+                            document.getElementById('loginError').style.display = 'block';
+                        }
+                    }, 400); // Small delay for professional feel
+                }
+                            
                 setTimeout(function() {
                     if (u === 'username' && p === 'password') {
                         alert("Success! Welcome Boss.");
@@ -299,22 +334,31 @@
                 }, 400);
             }
                 function logout() {
-                    // 1. Hide all Admin elements again
-                    var admins = document.getElementsByClassName('admin-only');
-                    for (var i = 0; i < admins.length; i++) {
-                        admins[i].style.setProperty('display', 'none', 'important');
-                    }
+                    console.log("Logging out...");
                 
-                    // 2. Hide the Red Logout button itself
+                    // 1. Hide the Logout button itself
                     document.getElementById('logoutBtn').style.display = 'none';
                 
-                    // 3. Show the Login Modal so you can log back in later
-                    document.getElementById('loginModal').style.display = 'block';
-                    
-                    // 4. Clear the password field for security
+                    // 2. Bring back the Login Form (The Header + Inputs + Login Button)
+                    var loginForm = document.getElementById('login-form-content');
+                    if (loginForm) {
+                        loginForm.style.display = 'block';
+                    }
+                
+                    // 3. Clear the input fields (So your password isn't just sitting there)
+                    document.getElementById('username').value = '';
                     document.getElementById('password').value = '';
-                    
-                    console.log("Admin has logged out.");
+                
+                    // 4. Hide all the on-page Admin tools (Add Text, etc.)
+                    var admins = document.getElementsByClassName('admin-only');
+                    for (var i = 0; i < admins.length; i++) {
+                        admins[i].style.display = 'none';
+                    }
+                
+                    // 5. Hide the error message if it was visible
+                    document.getElementById('loginError').style.display = 'none';
+                
+                    alert("Logged Out. See you later, Boss!");
                 }
 
              </script>
