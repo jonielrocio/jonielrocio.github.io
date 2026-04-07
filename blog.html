@@ -313,26 +313,28 @@
                     }
                 
                     // --- 3. THE UI SWAPPER (A helper function used by Login and Auto-Check) ---
-                    function applyAdminUI() {
-                        // Hide Login Form & Show Logout Button
-                        if (document.getElementById('login-form-content')) {
-                            document.getElementById('login-form-content').style.display = 'none';
-                        }
-                        if (document.getElementById('logoutBtn')) {
-                            document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
-                        }
-                        
-                        // Hide the main "Admin Login" trigger button if you have one
-                        if (document.getElementById('openLoginBtn')) {
-                            document.getElementById('openLoginBtn').style.display = 'none';
-                        }
+                 function applyAdminUI() {
+                    // 1. Hide the Visitor Login Button
+                    var openBtn = document.getElementById('openLoginBtn');
+                    if (openBtn) openBtn.style.setProperty('display', 'none', 'important');
                 
-                        // Show all Admin-only tools on the page
-                        var admins = document.getElementsByClassName('admin-only');
-                        for (var i = 0; i < admins.length; i++) {
-                            admins[i].style.setProperty('display', 'inline-block', 'important');
-                        }
+                    // 2. Hide the Login Form Inputs
+                    var form = document.getElementById('login-form-content');
+                    if (form) form.style.setProperty('display', 'none', 'important');
+                
+                    // 3. SHOW the Logout & Admin Tools
+                    var adminTools = document.getElementById('admin-header-tools');
+                    if (adminTools) adminTools.style.setProperty('display', 'block', 'important');
+                
+                    var logout = document.getElementById('logoutBtn');
+                    if (logout) logout.style.setProperty('display', 'inline-block', 'important');
+                
+                    // 4. Show all on-page Admin elements (like "Add Text")
+                    var admins = document.getElementsByClassName('admin-only');
+                    for (var i = 0; i < admins.length; i++) {
+                        admins[i].style.setProperty('display', 'inline-block', 'important');
                     }
+                }
                 
                     // --- 4. THE LOGOUT ---
                     function logout() {
