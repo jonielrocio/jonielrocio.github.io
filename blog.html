@@ -282,29 +282,28 @@
                     </div>
             
                 <script>
-                    // --- 1. THE AUTO-CHECK (Runs every time the page refreshes) ---
+                    // 1. THE AUTO-CHECK (Runs every time the page refreshes)
                     window.onload = function() {
                         var isLoggedIn = localStorage.getItem('adminLoggedIn');
-                        
                         if (isLoggedIn === 'true') {
-                            console.log("Welcome back, Boss! Session restored.");
-                            applyAdminUI(); // If the 'memory' says true, skip the login box
+                            console.log("Welcome back, Boss!");
+                            applyAdminUI();
                         }
                     };
                 
-                    // --- 2. THE LOGIN ENGINE ---
+                    // 2. THE LOGIN ENGINE
                     function checkLogin() {
                         var u = document.getElementById('username').value;
                         var p = document.getElementById('password').value;
                         var loginBox = document.querySelector('.login-box');
                 
+                        // Visual feedback
                         if (loginBox) loginBox.style.background = 'yellow';
                 
                         setTimeout(function() {
-                            if (u === 'username' && p === 'password') {
+                            if (u === 'JonieRocio' && p === '2919153Pldt') {
                                 // SAVE to browser memory
                                 localStorage.setItem('adminLoggedIn', 'true');
-                                
                                 applyAdminUI();
                                 alert("Success! Welcome Boss.");
                             } else {
@@ -314,38 +313,38 @@
                         }, 400);
                     }
                 
-                    // --- 3. THE UI SWAPPER (A helper function used by Login and Auto-Check) ---
-                 function applyAdminUI() {
-                    // 1. Hide the Visitor Login Button
-                    var openBtn = document.getElementById('openLoginBtn');
-                    if (openBtn) openBtn.style.setProperty('display', 'none', 'important');
+                    // 3. THE MASTER SWITCH (Shows everything for the Admin)
+                    function applyAdminUI() {
+                        // Hide the "Admin Login" button visitors see
+                        var openBtn = document.getElementById('openLoginBtn');
+                        if (openBtn) openBtn.style.setProperty('display', 'none', 'important');
                 
-                    // 2. Hide the Login Form Inputs
-                    var form = document.getElementById('login-form-content');
-                    if (form) form.style.setProperty('display', 'none', 'important');
+                        // Hide the input fields/form
+                        var form = document.getElementById('login-form-content');
+                        if (form) form.style.setProperty('display', 'none', 'important');
                 
-                    // 3. SHOW the Logout & Admin Tools
-                    var adminTools = document.getElementById('admin-header-tools');
-                    if (adminTools) adminTools.style.setProperty('display', 'block', 'important');
+                        // Show the Logout button and Username container
+                        var adminTools = document.getElementById('admin-header-tools');
+                        if (adminTools) adminTools.style.setProperty('display', 'block', 'important');
                 
-                    var logout = document.getElementById('logoutBtn');
-                    if (logout) logout.style.setProperty('display', 'inline-block', 'important');
+                        // Show the Modal/Box so the logout button is visible
+                        var modal = document.getElementById('loginModal');
+                        if (modal) modal.style.setProperty('display', 'block', 'important');
                 
-                    // 4. Show all on-page Admin elements (like "Add Text")
-                    var admins = document.getElementsByClassName('admin-only');
-                    for (var i = 0; i < admins.length; i++) {
-                        admins[i].style.setProperty('display', 'inline-block', 'important');
+                        // WAKE UP all elements with class "admin-only" (Add Text/Photo buttons)
+                        var admins = document.getElementsByClassName('admin-only');
+                        for (var i = 0; i < admins.length; i++) {
+                            admins[i].style.setProperty('display', 'inline-block', 'important');
+                        }
                     }
-                }
                 
-                    // --- 4. THE LOGOUT ---
+                    // 4. THE LOGOUT (Clears memory and resets for visitors)
                     function logout() {
-                        // Clear the browser memory
                         localStorage.removeItem('adminLoggedIn');
-                        
-                        // Refresh the page to reset everything for a visitor
-                        location.reload();
+                        alert("Logged Out. See you later, Boss!");
+                        location.reload(); 
                     }
+
                 </script>
                    
     </body>    
