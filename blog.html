@@ -253,6 +253,9 @@
                         <input type="password" id="password" placeholder="Password"><br>
                         <button type="button" onclick="console.log('HTML says: I am being clicked!'); checkLogin();">Login</button>
                         <button onclick="closeLogin()" style="background:#666;">Cancel</button>
+                        <button id="logoutBtn" type="button" onclick="logout()" style="display: none; background: #dc3545; color: white; margin-left: 20px; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
+                            Logout
+                        </button>
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
                 </div>
