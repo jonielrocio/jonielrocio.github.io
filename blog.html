@@ -57,12 +57,15 @@
                 <a href="#"><img class="simg" src="photos/YouTube.png"></a>
             </div>
             <p id="UC">UNDER CONSTRUCTION</p>
-                <div contenteditable="true"></div>
+                <div id="textField" contenteditable="true" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;">
+                    Type something here...
+                </div>
+
                 <input type="file" id="imageInput" accept="image/*">
 
                 <div id="display">
-                <img id="myPhoto" src="" style="max-width: 100%; display: none;">
-                    </div>
+                <img id="myPhoto" src="" style="max-width: 100%; display: none; margin-top: 10px;">
+                </div>
 
                 <script>
                     const input = document.getElementById('imageInput');
