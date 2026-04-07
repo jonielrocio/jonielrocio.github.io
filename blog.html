@@ -263,80 +263,70 @@
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
             
-             <script>
-                console.log("Diagnostic: Script is alive and ready!");
-            
-                function checkLogin() {
-                    console.log("Login sequence started...");
-                    
-                    // 1. Get the elements
-                    var u = document.getElementById('username').value;
-                    var p = document.getElementById('password').value;
-                    var loginBox = document.querySelector('.login-box');
-                    var loginForm = document.getElementById('login-form-content');
-                    var logoutBtn = document.getElementById('logoutBtn');
-            
-                    // 2. Immediate Feedback
-                    if (loginBox) loginBox.style.background = 'yellow';
-            
-                    // 3. The Logic
-                    setTimeout(function() {
-                        // Check against your real credentials
-                        if (u === 'username' && p === 'password') {
-                            alert("Success! Welcome Boss.");
-            
-                            // A. Hide the entire Login form (Inputs + Header + Login Button)
-                            if (loginForm) loginForm.style.display = 'none';
-            
-                            // B. Show the Logout button
-                            if (logoutBtn) logoutBtn.style.setProperty('display', 'inline-block', 'important');
-            
-                            // C. Show all on-page Admin tools
-                            var admins = document.getElementsByClassName('admin-only');
-                            for (var i = 0; i < admins.length; i++) {
-                                admins[i].style.setProperty('display', 'inline-block', 'important');
-                            }
-            
-                            // D. Turn the box back to normal color
-                            if (loginBox) loginBox.style.background = 'white';
-            
-                        } else {
-                            // If Login Fails
-                            alert("Incorrect Credentials.");
-                            if (loginBox) loginBox.style.background = 'white';
-                            document.getElementById('loginError').style.display = 'block';
+                <script>
+                    // --- 1. THE AUTO-CHECK (Runs every time the page refreshes) ---
+                    window.onload = function() {
+                        var isLoggedIn = localStorage.getItem('adminLoggedIn');
+                        
+                        if (isLoggedIn === 'true') {
+                            console.log("Welcome back, Boss! Session restored.");
+                            applyAdminUI(); // If the 'memory' says true, skip the login box
                         }
-                    }, 400); 
-                }
-            
-                function logout() {
-                    console.log("Logging out...");
-            
-                    // 1. Hide the Logout button
-                    document.getElementById('logoutBtn').style.display = 'none';
-            
-                    // 2. Bring back the Login Form
-                    var loginForm = document.getElementById('login-form-content');
-                    if (loginForm) {
-                        loginForm.style.display = 'block';
+                    };
+                
+                    // --- 2. THE LOGIN ENGINE ---
+                    function checkLogin() {
+                        var u = document.getElementById('username').value;
+                        var p = document.getElementById('password').value;
+                        var loginBox = document.querySelector('.login-box');
+                
+                        if (loginBox) loginBox.style.background = 'yellow';
+                
+                        setTimeout(function() {
+                            if (u === 'JonieRocio' && p === '2919153Pldt') {
+                                // SAVE to browser memory
+                                localStorage.setItem('adminLoggedIn', 'true');
+                                
+                                applyAdminUI();
+                                alert("Success! Welcome Boss.");
+                            } else {
+                                alert("Incorrect Credentials.");
+                                if (loginBox) loginBox.style.background = 'white';
+                            }
+                        }, 400);
                     }
-            
-                    // 3. Clear the input fields
-                    document.getElementById('username').value = '';
-                    document.getElementById('password').value = '';
-            
-                    // 4. Hide all Admin tools
-                    var admins = document.getElementsByClassName('admin-only');
-                    for (var i = 0; i < admins.length; i++) {
-                        admins[i].style.display = 'none';
+                
+                    // --- 3. THE UI SWAPPER (A helper function used by Login and Auto-Check) ---
+                    function applyAdminUI() {
+                        // Hide Login Form & Show Logout Button
+                        if (document.getElementById('login-form-content')) {
+                            document.getElementById('login-form-content').style.display = 'none';
+                        }
+                        if (document.getElementById('logoutBtn')) {
+                            document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
+                        }
+                        
+                        // Hide the main "Admin Login" trigger button if you have one
+                        if (document.getElementById('openLoginBtn')) {
+                            document.getElementById('openLoginBtn').style.display = 'none';
+                        }
+                
+                        // Show all Admin-only tools on the page
+                        var admins = document.getElementsByClassName('admin-only');
+                        for (var i = 0; i < admins.length; i++) {
+                            admins[i].style.setProperty('display', 'inline-block', 'important');
+                        }
                     }
-            
-                    // 5. Hide error message
-                    document.getElementById('loginError').style.display = 'none';
-            
-                    alert("Logged Out. See you later, Boss!");
-                }
-            </script>
+                
+                    // --- 4. THE LOGOUT ---
+                    function logout() {
+                        // Clear the browser memory
+                        localStorage.removeItem('adminLoggedIn');
+                        
+                        // Refresh the page to reset everything for a visitor
+                        location.reload();
+                    }
+                </script>
                    
     </body>    
 </html>
