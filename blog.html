@@ -47,7 +47,7 @@
                     <label class="dots" id="dot3" for="i3"></label>
                     <label class="dots" id="dot4" for="i4"></label>
                 </div>
-            </div>           
+        </div>           
             
             <div class="social_img">
                 <a href="#"><img class="simg" src="photos/Facebook.png"></a>
@@ -56,58 +56,104 @@
                 <a href="#"><img class="simg" src="photos/Twitter.png"></a>
                 <a href="#"><img class="simg" src="photos/YouTube.png"></a>
             </div>
+        </head>
             <p id="UC">UNDER CONSTRUCTION</p>
-                <div id="textField" contenteditable="true" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;">
-                    Type something here...
-                </div>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Writable Page with Resizable Photo</title>
+                <style>
+                    body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
 
-                <input type="file" id="imageInput" accept="image/*">
+                    /* The Writable Area */
+                    #textField {
+                    border: 2px solid #ddd;
+                    padding: 15px;
+                    min-height: 100px;
+                    margin-bottom: 20px;
+                    border-radius: 8px;
+                    outline: none;
+                    }
+                    #textField:focus { border-color: #007bff; }
 
-                <div id="display">
-                <img id="myPhoto" src="" style="max-width: 100%; display: none; margin-top: 10px;">
-                </div>
+                    /* The Resizable Container */
+                    .image-wrapper {
+                    display: inline-block; /* Allows the box to fit the image */
+                    resize: both;          /* Enables the drag handle in the corner */
+                    overflow: hidden;      /* Required for resize to work */
+                    border: 1px dashed #aaa;
+                    padding: 5px;
+                    max-width: 100%;
+                    min-width: 50px;
+                    min-height: 50px;
+                    }
+
+                    #myPhoto {
+                    width: 100%;           /* Image stretches to fill the resized wrapper */
+                    height: 100%;
+                    display: block;
+                    object-fit: contain;   /* Keeps the photo from looking squished */
+                    }
+
+                    .hidden { display: none; }
+                </style>
+    
+                <body>
+
+                    <h2>My Writable Page</h2>
+    
+                    <div id="textField" contenteditable="true">Type your notes here...</div>
+
+                    <input type="file" id="imageInput" accept="image/*">            
+                    <p><small>Tip: After uploading, drag the bottom-right corner of the photo to resize it.</small></p>
+
+                    <div id="displayArea" class="hidden">
+                        <div class="image-wrapper">
+                        <img id="myPhoto" src="" alt="Uploaded Photo">
+                        </div>
+                    </div>
 
                 <script>
                     const input = document.getElementById('imageInput');
                     const img = document.getElementById('myPhoto');
+                    const displayArea = document.getElementById('displayArea');
                     const textField = document.getElementById('textField');
 
-                    // --- LOAD DATA ON START ---
+                    // 1. LOAD SAVED DATA WHEN PAGE OPENS
                     window.onload = () => {
                     const savedText = localStorage.getItem('myText');
                     const savedImage = localStorage.getItem('myPhotoData');
 
-                    if (savedText) textField.innerHTML = savedText;
+                    if (savedText) {
+                    textField.innerHTML = savedText;
+                    }
                     if (savedImage) {
                     img.src = savedImage;
-                    img.style.display = 'block';
+                    displayArea.classList.remove('hidden');
                     }
                     };
 
-                    // --- SAVE TEXT AS YOU TYPE ---
+                    // 2. SAVE TEXT AUTOMATICALLY AS YOU TYPE
                     textField.oninput = () => {
                     localStorage.setItem('myText', textField.innerHTML);
                     };
 
-                    // --- SAVE IMAGE ON UPLOAD ---
+                    // 3. SAVE IMAGE WHEN UPLOADED
                     input.onchange = (e) => {
                     const file = input.files[0];
                     if (file) {
                     const reader = new FileReader();
-            
+                
                     reader.onloadend = () => {
                     const base64String = reader.result;
-                    // Store the actual image data string
+                    // Save to local storage
                     localStorage.setItem('myPhotoData', base64String);
-                    // Update the UI
+                    // Update the page
                     img.src = base64String;
-                    img.style.display = 'block';
+                    displayArea.classList.remove('hidden');
                     };
 
-                    reader.readAsDataURL(file); 
+                    reader.readAsDataURL(file);
                     }
                     };
                 </script>
-
-        </div>
     </body>
