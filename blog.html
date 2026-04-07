@@ -258,9 +258,14 @@
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
+                  function checkLogin() {
+                    document.querySelector('.login-box').style.background = 'yellow'; 
+                    
+                    console.log("Button was clicked!");
+                    
+                }
             
                 function checkLogin() {
-                    // This MUST show up in the console if the button is working
                     console.log("CLICK DETECTED!"); 
             
                     var u = document.getElementById('username').value;
