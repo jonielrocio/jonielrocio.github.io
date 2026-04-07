@@ -256,38 +256,38 @@
                     </div>
                 </div>
                 <script>
-                // 1. MODAL CONTROLS
-                    function openLogin() {
-                        document.getElementById('loginModal').style.display = 'flex';
-                    } 
-                
-                    function closeLogin() {
-                        document.getElementById('loginModal').style.display = 'none';
-                    } 
-                
-                    // 2. THE LOGIN CHECKER
-                    function checkLogin() {
-                        const user = document.getElementById('username').value;
-                        const pass = document.getElementById('password').value;
-                
-                        if (user === 'xxxxx' && pass === 'xxxxx') {
-                            document.body.classList.add('admin-mode');
-                            localStorage.setItem('isAdmin', 'true');
-                            closeLogin();
-                            alert("Welcome back, Boss!");
+                      // --- 1. MODAL CONTROLS ---
+                        function openLogin() {
+                            document.getElementById('loginModal').style.display = 'flex';
                         } 
-                        else {
-                            document.getElementById('loginError').style.display = 'block';
+                        
+                        function closeLogin() {
+                            document.getElementById('loginModal').style.display = 'none';
                         } 
-                    } // 
-                
-                    // 3. AUTO-LOAD ADMIN
-                    window.addEventListener('load', () => {
-                        if (localStorage.getItem('isAdmin') === 'true') {
-                            document.body.classList.add('admin-mode');
-                        }
-                    }); //
-            </script>
+                        
+                        // --- 2. THE LOGIN CHECKER ---
+                        function checkLogin() {
+                            const user = document.getElementById('username').value;
+                            const pass = document.getElementById('password').value;
+                        
+                            if (user === 'xxxxx' && pass === 'xxxxx') {
+                                document.body.classList.add('admin-mode');
+                                localStorage.setItem('isAdmin', 'true');
+                                closeLogin();
+                                alert("Welcome back, Boss!");
+                            } 
+                            else {
+                                document.getElementById('loginError').style.display = 'block';
+                            } 
+                        } // 
+                        
+                        // --- 3. AUTO-LOAD ADMIN MODE ---
+                        window.addEventListener('load', () => {
+                            if (localStorage.getItem('isAdmin') === 'true') {
+                                document.body.classList.add('admin-mode');
+                            }
+                        }); //
+                </script>
                    
     </body>    
 </html>
