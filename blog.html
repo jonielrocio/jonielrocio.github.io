@@ -150,38 +150,68 @@
                     }
                 </style>
             
-                <div class="controls">
+               <div class="controls" style="position: fixed; bottom: 20px; right: 20px; z-index: 10000;">
                     <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'">
                         Admin Login
                     </button>
                     
-                    <div id="loginModal" class="login-box" style="display: none;">
+                    <div id="loginModal" class="login-box" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 2px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                         <div id="login-form-content">
                             <h3>Admin Login</h3>
-                            <input type="text" id="username" placeholder="Username"><br>
-                            <input type="password" id="password" placeholder="Password"><br>
-                            <button type="button" onclick="checkLogin();">Login Now</button>
-                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666;">Cancel</button>
+                            <input type="text" id="admin-user-input" placeholder="Username" style="margin-bottom:10px;"><br>
+                            <input type="password" id="admin-pass-input" placeholder="Password" style="margin-bottom:10px;"><br>
+                            <button type="button" onclick="checkLogin();" style="background: #28a745; color: white;">Login Now</button>
+                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666; color: white;">Cancel</button>
                         </div>
-                    
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
                 </div>
-            
+                
                 <script>
                     const canvas = document.getElementById('canvas');
                 
-                    // --- 1. ADMIN & LOGIN LOGIC ---
+                    // 1. COMBINED LOAD LOGIC
+                    window.onload = function() {
+                        // Check Login Status
+                        if (localStorage.getItem('adminLoggedIn') === 'true') {
+                            applyAdminUI();
+                        }
+                
+                        // Load Scrapbook Data
+                        const data = JSON.parse(localStorage.getItem('scrapbookData'));
+                        if (data && canvas) {
+                            data.forEach(item => {
+                                if (item.type === 'text') addText(item.content, item.x, item.y);
+                                else createPhotoElement(item.content, item.x, item.y, item.w);
+                            });
+                        }
+                    };
+                
+                    // 2. LOGIN ENGINE
+                    function checkLogin() {
+                        var u = document.getElementById('admin-user-input').value;
+                        var p = document.getElementById('admin-pass-input').value;
+                
+                        if (u === 'JonieRocio' && p === '2919153Pldt') {
+                            localStorage.setItem('adminLoggedIn', 'true');
+                            alert("Success! Welcome Boss.");
+                            location.reload(); 
+                        } else {
+                            document.getElementById('loginError').style.display = 'block';
+                            document.getElementById('loginModal').style.background = '#ffebee';
+                        }
+                    }
+                
                     function applyAdminUI() {
                         const bar = document.getElementById('admin-floating-bar');
                         if (bar) bar.style.display = 'block';
                         
-                        const loginBtn = document.getElementById('openLoginBtn');
-                        if (loginBtn) loginBtn.style.display = 'none';
-                        
+                        const openBtn = document.getElementById('openLoginBtn');
+                        if (openBtn) openBtn.style.display = 'none';
+                
                         const modal = document.getElementById('loginModal');
                         if (modal) modal.style.display = 'none';
-                
+                        
                         document.body.style.marginTop = "60px"; 
                     }
                 
@@ -190,56 +220,46 @@
                         location.reload();
                     }
                 
-                    // --- 2. SCRAPBOOK LOGIC (TEXT) ---
+                    // 3. SCRAPBOOK CONSTRUCTION FUNCTIONS
                     function addText(content = "New Note...", x = 50, y = 50) {
+                        if (!canvas) return;
                         const div = document.createElement('div');
                         div.className = 'drag-item';
                         div.style.left = x + 'px';
                         div.style.top = y + 'px';
-                        
                         div.innerHTML = `
-                            <div class="handle"><span>⠿ DRAG TEXT</span> <span class="delete-btn" onclick="this.parentElement.parentElement.remove()">X</span></div>
-                            <div class="content-area" contenteditable="true">${content}</div>
+                            <div class="handle" style="background:#444; color:white; padding:5px; cursor:move; font-size:10px;">
+                                <span>⠿ DRAG</span> 
+                                <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
+                            </div>
+                            <div class="content-area" contenteditable="true" style="padding:10px; background:white; border:1px solid #ccc;">${content}</div>
                         `;
-                        
                         canvas.appendChild(div);
                         makeDraggable(div);
                     }
                 
-                    // --- 3. SCRAPBOOK LOGIC (PHOTOS) ---
-                    function addPhoto(input) {
-                        const file = input.files[0];
-                        if (!file) return;
-                
-                        const reader = new FileReader();
-                        reader.onload = (e) => {
-                            createPhotoElement(e.target.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                
                     function createPhotoElement(src, x = 100, y = 100, w = "200px") {
+                        if (!canvas) return;
                         const div = document.createElement('div');
                         div.className = 'drag-item';
                         div.style.left = x + 'px';
                         div.style.top = y + 'px';
-                
                         div.innerHTML = `
-                            <div class="handle"><span>⠿ DRAG PHOTO</span> <span class="delete-btn" onclick="this.parentElement.parentElement.remove()">X</span></div>
+                            <div class="handle" style="background:#444; color:white; padding:5px; cursor:move; font-size:10px;">
+                                <span>⠿ PHOTO</span> 
+                                <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
+                            </div>
                             <div class="image-wrapper" style="width: ${w}">
                                 <img src="${src}" style="width:100%;">
                             </div>
                         `;
-                
                         canvas.appendChild(div);
                         makeDraggable(div);
                     }
                 
-                    // --- 4. DRAG & SAVE LOGIC ---
                     function makeDraggable(el) {
                         let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
                         const handle = el.querySelector('.handle');
-                
                         handle.onmousedown = (e) => {
                             e.preventDefault();
                             pos3 = e.clientX;
@@ -259,125 +279,6 @@
                             };
                         };
                     }
-                
-                    function saveAll() {
-                        const items = [];
-                        document.querySelectorAll('.drag-item').forEach(el => {
-                            const isImg = el.querySelector('img');
-                            items.push({
-                                type: isImg ? 'image' : 'text',
-                                content: isImg ? isImg.src : el.querySelector('.content-area').innerHTML,
-                                x: el.offsetLeft,
-                                y: el.offsetTop,
-                                w: isImg ? el.querySelector('.image-wrapper').style.width : null
-                            });
-                        });
-                        localStorage.setItem('scrapbookData', JSON.stringify(items));
-                        alert("Layout Saved!");
-                    }
-                
-                    // --- 5. INITIALIZE ON LOAD ---
-                    window.onload = () => {
-                        // Check Login
-                        if (localStorage.getItem('adminLoggedIn') === 'true') {
-                            applyAdminUI();
-                        }
-                
-                        // Load Content
-                        const data = JSON.parse(localStorage.getItem('scrapbookData'));
-                        if (data) {
-                            data.forEach(item => {
-                                if (item.type === 'text') addText(item.content, item.x, item.y);
-                                else createPhotoElement(item.content, item.x, item.y, item.w);
-                            });
-                        }
-                    };
-                </script>
-            
-                <div class="controls">
-                    <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'" style="display: block;">
-                        Login
-                    </button>
-                
-                    <div id="loginModal" class="login-box" style="display: none;">
-                        <div id="login-form-content">
-                            <h3>Admin Login</h3>
-                            <input type="text" id="username" placeholder="Username" autocomplete="username"><br>
-                            <input type="password" id="password" placeholder="Password" autocomplete="current-password"><br>
-                            
-                            <button type="button" onclick="checkLogin();">Login Now</button>
-                            
-                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666;">Cancel</button>
-                        </div>
-                
-                        <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
-                    </div>
-                </div>
-            
-                <script>
-                    // 1. THE AUTO-CHECK (Runs every time the page refreshes)
-                    window.onload = function() {
-                        var isLoggedIn = localStorage.getItem('adminLoggedIn');
-                        if (isLoggedIn === 'true') {
-                            console.log("Welcome back, Boss!");
-                            applyAdminUI();
-                        }
-                    };
-                
-                    // 2. THE LOGIN ENGINE
-                    function checkLogin() {
-                        var u = document.getElementById('username').value;
-                        var p = document.getElementById('password').value;
-                        var loginBox = document.querySelector('.login-box');
-                
-                        // Visual feedback
-                        if (loginBox) loginBox.style.background = 'yellow';
-                
-                        setTimeout(function() {
-                            if (u === 'username' && p === 'password') {
-                                // SAVE to browser memory
-                                localStorage.setItem('adminLoggedIn', 'true');
-                                applyAdminUI();
-                                alert("Success! Welcome Boss.");
-                            } else {
-                                alert("Incorrect Credentials.");
-                                if (loginBox) loginBox.style.background = 'white';
-                            }
-                        }, 400);
-                    }
-                
-                    // 3. THE MASTER SWITCH (Shows everything for the Admin)
-                    function applyAdminUI() {
-                        // Hide the "Admin Login" button visitors see
-                        var openBtn = document.getElementById('openLoginBtn');
-                        if (openBtn) openBtn.style.setProperty('display', 'none', 'important');
-                
-                        // Hide the input fields/form
-                        var form = document.getElementById('login-form-content');
-                        if (form) form.style.setProperty('display', 'none', 'important');
-                
-                        // Show the Logout button and Username container
-                        var adminTools = document.getElementById('admin-header-tools');
-                        if (adminTools) adminTools.style.setProperty('display', 'block', 'important');
-                
-                        // Show the Modal/Box so the logout button is visible
-                        var modal = document.getElementById('loginModal');
-                        if (modal) modal.style.setProperty('display', 'block', 'important');
-                
-                        // WAKE UP all elements with class "admin-only" (Add Text/Photo buttons)
-                        var admins = document.getElementsByClassName('admin-only');
-                        for (var i = 0; i < admins.length; i++) {
-                            admins[i].style.setProperty('display', 'inline-block', 'important');
-                        }
-                    }
-                
-                    // 4. THE LOGOUT (Clears memory and resets for visitors)
-                    function logout() {
-                        localStorage.removeItem('adminLoggedIn');
-                        alert("Logged Out. See you later, Boss!");
-                        location.reload(); 
-                    }
-
                 </script>
                    
     </body>    
