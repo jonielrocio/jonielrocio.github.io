@@ -112,48 +112,48 @@
                     </div>
 
                     <script>
-                    const input = document.getElementById('imageInput');
-                    const img = document.getElementById('myPhoto');
-                    const displayArea = document.getElementById('displayArea');
-                    const textField = document.getElementById('textField');
+                        const input = document.getElementById('imageInput');
+                        const img = document.getElementById('myPhoto');
+                        const displayArea = document.getElementById('displayArea');
+                        const textField = document.getElementById('textField');
 
-                    // 1. LOAD SAVED DATA WHEN PAGE OPENS
-                    window.onload = () => {
-                    const savedText = localStorage.getItem('myText');
-                    const savedImage = localStorage.getItem('myPhotoData');
+                        // 1. LOAD SAVED DATA WHEN PAGE OPENS
+                        window.onload = () => {
+                        const savedText = localStorage.getItem('myText');
+                        const savedImage = localStorage.getItem('myPhotoData');
 
-                    if (savedText) {
-                    textField.innerHTML = savedText;
-                    }
-                    if (savedImage) {
-                    img.src = savedImage;
-                    displayArea.classList.remove('hidden');
-                    }
-                    };
+                        if (savedText) {
+                        textField.innerHTML = savedText;
+                        }
+                        if (savedImage) {
+                        img.src = savedImage;
+                        displayArea.classList.remove('hidden');
+                        }
+                        };
 
-                    // 2. SAVE TEXT AUTOMATICALLY AS YOU TYPE
-                    textField.oninput = () => {
-                    localStorage.setItem('myText', textField.innerHTML);
-                    };
+                        // 2. SAVE TEXT AUTOMATICALLY AS YOU TYPE
+                        textField.oninput = () => {
+                        localStorage.setItem('myText', textField.innerHTML);
+                        };
 
-                    // 3. SAVE IMAGE WHEN UPLOADED
-                    input.onchange = (e) => {
-                    const file = input.files[0];
-                    if (file) {
-                    const reader = new FileReader();
+                        // 3. SAVE IMAGE WHEN UPLOADED
+                        input.onchange = (e) => {
+                        const file = input.files[0];
+                        if (file) {
+                        const reader = new FileReader();
                 
-                    reader.onloadend = () => {
-                    const base64String = reader.result;
-                    // Save to local storage
-                    localStorage.setItem('myPhotoData', base64String);
-                    // Update the page
-                    img.src = base64String;
-                    displayArea.classList.remove('hidden');
-                    };
+                        reader.onloadend = () => {
+                        const base64String = reader.result;
+                        // Save to local storage
+                        localStorage.setItem('myPhotoData', base64String);
+                        // Update the page
+                        img.src = base64String;
+                        displayArea.classList.remove('hidden');
+                        };
 
-                    reader.readAsDataURL(file);
-                    }
-                    };
-                </script>
+                        reader.readAsDataURL(file);
+                        }
+                        };
+                    </script>
         </body>    
 </html>
