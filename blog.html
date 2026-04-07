@@ -256,37 +256,23 @@
                     </div>
                 </div>
                 <script>
-                      // --- 1. MODAL CONTROLS ---
-                        function openLogin() {
-                            document.getElementById('loginModal').style.display = 'flex';
-                        } 
+                    console.log("Diagnostic: Script is alive!");
+
+                    function checkLogin() {
+                        console.log("Diagnostic: Login button was actually clicked!");
                         
-                        function closeLogin() {
-                            document.getElementById('loginModal').style.display = 'none';
-                        } 
+                        const user = document.getElementById('username').value;
+                        const pass = document.getElementById('password').value;
                         
-                        // --- 2. THE LOGIN CHECKER ---
-                        function checkLogin() {
-                            const user = document.getElementById('username').value;
-                            const pass = document.getElementById('password').value;
-                        
-                            if (user === 'xxxxx' && pass === 'xxxxx') {
-                                document.body.classList.add('admin-mode');
-                                localStorage.setItem('isAdmin', 'true');
-                                closeLogin();
-                                alert("Welcome back, Boss!");
-                            } 
-                            else {
-                                document.getElementById('loginError').style.display = 'block';
-                            } 
-                        } // 
-                        
-                        // --- 3. AUTO-LOAD ADMIN MODE ---
-                        window.addEventListener('load', () => {
-                            if (localStorage.getItem('isAdmin') === 'true') {
-                                document.body.classList.add('admin-mode');
-                            }
-                        }); //
+                        console.log("Diagnostic: I grabbed the username: " + user);
+                        if (user === 'JonieRocio' && pass === '2919153Pldt') {
+                            alert("Success! Welcome Boss.");
+                            // ... rest of your code ...
+                        } else {
+                            console.log("Diagnostic: Password match failed.");
+                            document.getElementById('loginError').style.display = 'block';
+                        }
+                    }         
                 </script>
                    
     </body>    
