@@ -255,35 +255,40 @@
                         <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
                 </div>
-                <script>
+               <script>
                     console.log("Diagnostic: Script is alive!");
-
+                
                     function checkLogin() {
                         console.log("Diagnostic: Login button was actually clicked!");
-                        
-                            const user = document.getElementById('username').value;
-                            const pass = document.getElementById('password').value;
-                            
-                        console.log("Diagnostic: I grabbed the username: " + user);
-                            if (user === 'username' && pass === 'password') {
+                
+                        // 1. Grab the values from the boxes
+                        const user = document.getElementById('username').value;
+                        const pass = document.getElementById('password').value;
+                
+                        console.log("Diagnostic: Attempting login for: " + user);
+                
+                        // 2. Check the credentials
+                        if (user === 'JonieRocio' && pass === '2919153Pldt') {
                             alert("Success! Welcome Boss.");
-                        
-                        // This finds every single element with the 'admin-only' sticker
-                        var admins = document.getElementsByClassName('admin-only');
-                        
-                        // We have to loop through them one by one to wake them up
-                        for (var i = 0; i < admins.length; i++) {
-                            admins[i].style.setProperty('display', 'inline-block', 'important');
-                        }
-                    
-                        document.getElementById('loginModal').style.display = 'none';
-                                
+                
+                            // 3. Find every element that has the 'admin-only' class
+                            var admins = document.getElementsByClassName('admin-only');
+                
+                            // 4. Loop through them to make them visible
+                            for (var i = 0; i < admins.length; i++) {
+                                admins[i].style.setProperty('display', 'inline-block', 'important');
+                            }
+                
+                            // 5. Hide the login box now that we are done
+                            document.getElementById('loginModal').style.display = 'none';
+                            
                         } else {
-                            console.log("Diagnostic: Password match failed.");
+                            // 6. If the password was wrong, show the red error message
+                            console.log("Diagnostic: Login failed.");
                             document.getElementById('loginError').style.display = 'block';
                         }
-                    }         
-                </script>
+                    }
+</script>
                    
     </body>    
 </html>
