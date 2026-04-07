@@ -277,21 +277,26 @@
             
                     console.log("Attempting Login with: " + u);
             
-                    if (u === 'username' && p === 'password') {
+                   if (u === 'JonieRocio' && p === '2919153Pldt') { // Use your real credentials here
                         alert("Success! Welcome Boss.");
                         
-                        // Show all Admin elements
+                        // 1. Show all Admin elements (Add Text, etc.)
                         var admins = document.getElementsByClassName('admin-only');
                         for (var i = 0; i < admins.length; i++) {
                             admins[i].style.setProperty('display', 'inline-block', 'important');
                         }
+                    
+                        // 2. WAKE UP THE LOGOUT BUTTON
+                        // We target it by ID specifically since it's not part of the 'admin-only' loop
+                        document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
                         
+                        // 3. Hide the login modal
                         document.getElementById('loginModal').style.display = 'none';
+                    
                     } else {
                         console.log("Login Failed: Incorrect credentials.");
                         document.getElementById('loginError').style.display = 'block';
                     }
-                }
                 function logout() {
                     // 1. Hide all Admin elements again
                     var admins = document.getElementsByClassName('admin-only');
