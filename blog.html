@@ -258,10 +258,9 @@
                 <script>
                     // --- 1. MODAL CONTROLS ---
                         function openLogin() {
-                            document.getElementById('loginModal').style.display = 'flex';
-                        } //
+                            document.getElementById('loginModal').style.display = 'flex'; 
                         
-                        function closeLogin() {
+                        function closeLogin() 
                             document.getElementById('loginModal').style.display = 'none';
                         } //
                         
@@ -275,9 +274,10 @@
                                 localStorage.setItem('isAdmin', 'true');
                                 closeLogin();
                                 alert("Welcome back, Boss!");
-                            } //
+                            } 
                             else {
                                 document.getElementById('loginError').style.display = 'block';
+                            }
                             } //
                         
                         
