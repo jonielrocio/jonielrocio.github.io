@@ -1278,10 +1278,6 @@ input[type=text], select, textarea {
 	display: inline-block;
 }
 
-.admin-only {
-	display: none !important;
-}
-
 .admin-only, #logoutBtn, #admin-tools-header {
     display: none !important;
 }
