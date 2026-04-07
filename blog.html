@@ -135,15 +135,29 @@
                 </style>
             
                 <div class="controls">
-                    <button type="button" onclick="addText()" class="admin-only">Add Text Box</button>
-                    <label for="multiImageInput" style="margin-left: 20px;" class="admin-only">Add Photo: </label>
-                    <input type="file" id="multiImageInput" class="admin-only" accept="image/*" onchange="addPhoto(this)">
-                    <button type="button" onclick="saveAll()" class="admin-only" style="margin-left: 20px; background: #28a745; color: white;">Save Layout</button>
-                    <button id="logoutBtn" onclick="logout()" style="display:block; background: #dc3545; color: white;">Logout</button>
-                </div>
-            
-                <div id="canvas">
+                   <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'">
+                        Admin Login
+                    </button>
+                    
+                    <div id="loginModal" class="login-box" style="display: none;">
+                        <div id="login-form-content">
+                            <h3>Admin Login</h3>
+                            <input type="text" id="username" placeholder="Username"><br>
+                            <input type="password" id="password" placeholder="Password"><br>
+                            <button type="button" onclick="checkLogin();">Login Now</button>
+                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666;">Cancel</button>
+                        </div>
+                    
+                        <div id="admin-header-tools" style="display: none;">
+                            <span style="font-weight: bold; margin-right: 10px;">👤 username</span>
+                            <button id="logoutBtn" type="button" onclick="logout()" style="background: #dc3545; color: white; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
+                                Logout
+                            </button>
+                        </div>
+                    
+                        <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
                     </div>
+                </div>
             
                 <script>
                     const canvas = document.getElementById('canvas');
