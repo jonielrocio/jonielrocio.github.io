@@ -1223,7 +1223,9 @@ input[type=text], select, textarea {
 }
 
 .blogc  {
-    display: none;
+    display: block;
+	margin: 0;
+	padding: 0;
 }
 
 .blogc.admin-mode .controls {
