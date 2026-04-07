@@ -262,41 +262,47 @@
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
-                  function checkLogin() {
-                    document.querySelector('.login-box').style.background = 'yellow'; 
-                    
-                    console.log("Button was clicked!");
-                    
-                }
-            
-                function checkLogin() {
+                  
+                 function checkLogin() {
                     console.log("CLICK DETECTED!"); 
-            
+                
+                    // 1. Visual Feedback: Turn the box yellow and change button text
+                    document.querySelector('.login-box').style.background = 'yellow';
+                    var btn = document.querySelector('#loginModal button');
+                    btn.innerText = "Checking...";
+                
+                    // 2. Get the values
                     var u = document.getElementById('username').value;
                     var p = document.getElementById('password').value;
-            
+                
                     console.log("Attempting Login with: " + u);
-            
-                   if (u === 'username' && p === 'password') { // Use your real credentials here
+                
+                    // 3. The Logic (Make sure these match your intended username/password)
+                    if (u === 'JonieRocio' && p === '2919153Pldt') { 
                         alert("Success! Welcome Boss.");
                         
-                        // 1. Show all Admin elements (Add Text, etc.)
+                        // Show all Admin elements (Add Text, etc.)
                         var admins = document.getElementsByClassName('admin-only');
                         for (var i = 0; i < admins.length; i++) {
                             admins[i].style.setProperty('display', 'inline-block', 'important');
                         }
-                    
-                        // 2. WAKE UP THE LOGOUT BUTTON
-                        // We target it by ID specifically since it's not part of the 'admin-only' loop
+                
+                        // Wake up the Logout button
                         document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
                         
-                        // 3. Hide the login modal
+                        // Hide the login modal
                         document.getElementById('loginModal').style.display = 'none';
-                    
+                
                     } else {
+                        // If it fails, reset the look so they can try again
                         console.log("Login Failed: Incorrect credentials.");
+                        alert("Incorrect Credentials");
+                        
+                        document.querySelector('.login-box').style.background = 'white'; // Reset color
+                        btn.innerText = "Login"; // Reset button
                         document.getElementById('loginError').style.display = 'block';
                     }
+                }
                 function logout() {
                     // 1. Hide all Admin elements again
                     var admins = document.getElementsByClassName('admin-only');
