@@ -262,45 +262,35 @@
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
-                  
-                 function checkLogin() {
-                    console.log("CLICK DETECTED!"); 
-                
-                    // 1. Visual Feedback: Turn the box yellow and change button text
+                  function checkLogin() {
+                    // 1. Visual Feedback
                     document.querySelector('.login-box').style.background = 'yellow';
-                    var btn = document.querySelector('#loginModal button');
-                    btn.innerText = "Checking...";
-                
-                    // 2. Get the values
+                    
+                    // 2. Get the values from the boxes
                     var u = document.getElementById('username').value;
                     var p = document.getElementById('password').value;
                 
-                    console.log("Attempting Login with: " + u);
+                    console.log("Checking credentials...");
+                    console.log("Typed User: " + u);
+                    console.log("Typed Pass: " + p);
                 
-                    // 3. The Logic (Make sure these match your intended username/password)
+                    // 3. The Logic - DOUBLE CHECK THESE STRINGS
                     if (u === 'username' && p === 'password') { 
                         alert("Success! Welcome Boss.");
                         
-                        // Show all Admin elements (Add Text, etc.)
                         var admins = document.getElementsByClassName('admin-only');
                         for (var i = 0; i < admins.length; i++) {
                             admins[i].style.setProperty('display', 'inline-block', 'important');
                         }
                 
-                        // Wake up the Logout button
                         document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
-                        
-                        // Hide the login modal
                         document.getElementById('loginModal').style.display = 'none';
                 
                     } else {
-                        // If it fails, reset the look so they can try again
-                        console.log("Login Failed: Incorrect credentials.");
-                        alert("Incorrect Credentials");
-                        
-                        document.querySelector('.login-box').style.background = 'white'; // Reset color
-                        btn.innerText = "Login"; // Reset button
-                        document.getElementById('loginError').style.display = 'block';
+                        // This will tell us if the password just didn't match
+                        alert("Access Denied: The username or password didn't match exactly.");
+                        console.log("Login Failed.");
+                        document.querySelector('.login-box').style.background = 'white';
                     }
                 }
                 function logout() {
