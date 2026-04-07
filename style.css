@@ -1216,7 +1216,31 @@ input[type=text], select, textarea {
 	 background-image: url('image.jpg');
 	 background-size: cover;
  }
-	 
+
+	/* Hide the toolbar by default */
+.controls {
+    display: none; 
+}
+
+/* 1. Hide the toolbar and the drag handles by default on the blog page */
+.blogc .controls, 
+.blogc .handle, 
+.blogc .delete-btn {
+    display: none;
+}
+
+/* 2. ONLY show them when 'admin-mode' is added to the body */
+.blogc.admin-mode .controls {
+    display: block;
+}
+
+.blogc.admin-mode .handle {
+    display: flex; /* Shows the bar so you can move items */
+}
+
+.blogc.admin-mode .delete-btn {
+    display: block; /* Shows the X so you can delete items */
+}
 	 
 	 
 
