@@ -65,18 +65,46 @@
                     </div>
 
                 <script>
-                const input = document.getElementById('imageInput');
-                const img = document.getElementById('myPhoto');
+                    const input = document.getElementById('imageInput');
+                    const img = document.getElementById('myPhoto');
+                    const textField = document.getElementById('textField');
 
-                input.onchange = (e) => {
-                const [file] = input.files;
-                if (file) {
-                img.src = URL.createObjectURL(file); //<262596933233615>:<hraFYlvpLWL82wuGW9-6MgTXFNQ>@dg2ji8c4v
-                img.style.display = 'block';
-                }
-                };
+                    // --- LOAD DATA ON START ---
+                    window.onload = () => {
+                    const savedText = localStorage.getItem('myText');
+                    const savedImage = localStorage.getItem('myPhotoData');
+
+                    if (savedText) textField.innerHTML = savedText;
+                    if (savedImage) {
+                    img.src = savedImage;
+                    img.style.display = 'block';
+                    }
+                    };
+
+                    // --- SAVE TEXT AS YOU TYPE ---
+                    textField.oninput = () => {
+                    localStorage.setItem('myText', textField.innerHTML);
+                    };
+
+                    // --- SAVE IMAGE ON UPLOAD ---
+                    input.onchange = (e) => {
+                    const file = input.files[0];
+                    if (file) {
+                    const reader = new FileReader();
+            
+                    reader.onloadend = () => {
+                    const base64String = reader.result;
+                    // Store the actual image data string
+                    localStorage.setItem('myPhotoData', base64String);
+                    // Update the UI
+                    img.src = base64String;
+                    img.style.display = 'block';
+                    };
+
+                    reader.readAsDataURL(file); 
+                    }
+                    };
                 </script>
 
-                </script>
-            </div>
+        </div>
     </body>
