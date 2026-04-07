@@ -160,8 +160,27 @@
             
                 <script>
                     const canvas = document.getElementById('canvas');
-            
-                    // 1. ADD NEW TEXT BOX
+                
+                    // --- 1. ADMIN & LOGIN LOGIC ---
+                    function applyAdminUI() {
+                        const bar = document.getElementById('admin-floating-bar');
+                        if (bar) bar.style.display = 'block';
+                        
+                        const loginBtn = document.getElementById('openLoginBtn');
+                        if (loginBtn) loginBtn.style.display = 'none';
+                        
+                        const modal = document.getElementById('loginModal');
+                        if (modal) modal.style.display = 'none';
+                
+                        document.body.style.marginTop = "60px"; 
+                    }
+                
+                    function logout() {
+                        localStorage.removeItem('adminLoggedIn');
+                        location.reload();
+                    }
+                
+                    // --- 2. SCRAPBOOK LOGIC (TEXT) ---
                     function addText(content = "New Note...", x = 50, y = 50) {
                         const div = document.createElement('div');
                         div.className = 'drag-item';
@@ -176,41 +195,41 @@
                         canvas.appendChild(div);
                         makeDraggable(div);
                     }
-            
-                    // 2. ADD NEW PHOTO
+                
+                    // --- 3. SCRAPBOOK LOGIC (PHOTOS) ---
                     function addPhoto(input) {
                         const file = input.files[0];
                         if (!file) return;
-            
+                
                         const reader = new FileReader();
                         reader.onload = (e) => {
                             createPhotoElement(e.target.result);
                         };
                         reader.readAsDataURL(file);
                     }
-            
+                
                     function createPhotoElement(src, x = 100, y = 100, w = "200px") {
                         const div = document.createElement('div');
                         div.className = 'drag-item';
                         div.style.left = x + 'px';
                         div.style.top = y + 'px';
-            
+                
                         div.innerHTML = `
                             <div class="handle"><span>⠿ DRAG PHOTO</span> <span class="delete-btn" onclick="this.parentElement.parentElement.remove()">X</span></div>
                             <div class="image-wrapper" style="width: ${w}">
-                                <img src="${src}">
+                                <img src="${src}" style="width:100%;">
                             </div>
                         `;
-            
+                
                         canvas.appendChild(div);
                         makeDraggable(div);
                     }
-            
-                    // 3. DRAG LOGIC (Works for any element passed to it)
+                
+                    // --- 4. DRAG & SAVE LOGIC ---
                     function makeDraggable(el) {
                         let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
                         const handle = el.querySelector('.handle');
-            
+                
                         handle.onmousedown = (e) => {
                             e.preventDefault();
                             pos3 = e.clientX;
@@ -230,8 +249,7 @@
                             };
                         };
                     }
-            
-                    // 4. SAVE & LOAD (Handles multiple items)
+                
                     function saveAll() {
                         const items = [];
                         document.querySelectorAll('.drag-item').forEach(el => {
@@ -247,8 +265,15 @@
                         localStorage.setItem('scrapbookData', JSON.stringify(items));
                         alert("Layout Saved!");
                     }
-            
+                
+                    // --- 5. INITIALIZE ON LOAD ---
                     window.onload = () => {
+                        // Check Login
+                        if (localStorage.getItem('adminLoggedIn') === 'true') {
+                            applyAdminUI();
+                        }
+                
+                        // Load Content
                         const data = JSON.parse(localStorage.getItem('scrapbookData'));
                         if (data) {
                             data.forEach(item => {
