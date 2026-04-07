@@ -244,6 +244,7 @@
                         }
                     };
                 </script>
+            
                 <div id="loginModal" class="login-overlay" style="display:none;">
                     <div class="login-box">
                         <h3>Admin Login</h3>
@@ -274,7 +275,8 @@
                                 localStorage.setItem('isAdmin', 'true');
                                 closeLogin();
                                 alert("Welcome back, Boss!");
-                            } else {
+                            } //
+                            else {
                                 document.getElementById('loginError').style.display = 'block';
                             }
                         } // <--- Closes checkLogin
