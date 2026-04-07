@@ -3,14 +3,16 @@
     <head><link rel="stylesheet" type="text/css" href="style.css"></head>
     
     <body id="blogc">
-        <div id="canvas" style="position: relative; width: 100%; min-height: 100vh; background: #fdfdfd; overflow: hidden;">
-        </div>
         <div id="admin-floating-bar" class="admin-only" style="display: none; position: fixed; top: 0; left: 0; width: 100%; background: #333; color: white; padding: 10px; z-index: 9999; text-align: center; border-bottom: 2px solid #555;">
             <span style="margin-right: 20px; font-weight: bold;">🛠️ Admin Mode: JonieRocio</span>
             <button onclick="addText()" style="background: #28a745; color: white; border: none; padding: 5px 15px; cursor: pointer; margin-right: 10px; border-radius: 4px;">+ Add Text</button>
             <button onclick="addPhoto()" style="background: #17a2b8; color: white; border: none; padding: 5px 15px; cursor: pointer; margin-right: 10px; border-radius: 4px;">+ Add Photo</button>
             <button onclick="logout()" style="background: #dc3545; color: white; border: none; padding: 5px 15px; cursor: pointer; border-radius: 4px;">Logout</button>
         </div>
+
+        <div id="canvas" style="position: relative; width: 100%; min-height: 100vh; background: #fdfdfd; overflow: hidden;">
+        </div>
+        
         <div class="nav">
             <ul class="uppernav">
                 <li class="navi"><a class="navig" href="index.html">Home</a></li>
