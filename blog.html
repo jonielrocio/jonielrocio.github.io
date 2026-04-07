@@ -58,192 +58,187 @@
     </head>
             <p id="UC">UNDER CONSTRUCTION</p>
                 <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Writable Page with Resizable Photo</title>
+                <title>Multi-Element Scrapbook</title>
                 <style>
-                    body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+                    body { font-family: sans-serif; margin: 0; background: #f0f0f0; }
+        
+                    /* The Toolbar */
+                    .controls {
+                        background: #333;
+                        color: white;
+                        padding: 15px;
+                        text-align: center;
+                        position: sticky;
+                        top: 0;
+                        z-index: 100;
+                    }        
 
-                    /* The Writable Area */
-                    #textField {
-                    border: 2px solid #ddd;
-                    padding: 15px;
-                    min-height: 100px;
-                    margin-bottom: 20px;
-                    border-radius: 8px;
-                    outline: none;
+                    /* The Canvas */
+                    #canvas {
+                        position: relative;
+                        width: 100%;
+                        height: 2000px; /* Large area to work in */
+                        background: white;
+                        background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+                        background-size: 30px 30px;
                     }
-                    #textField:focus { border-color: #007bff; }
 
-                    /* The Resizable Container */
+                    /* Draggable Container */
+                    .drag-item {
+                        position: absolute;
+                        z-index: 10;
+                        background: white;
+                        border: 1px solid #ccc;
+                        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+                        min-width: 150px;
+                    }
+
+                    .handle {
+                        background: #444;
+                        color: white;
+                        padding: 5px;
+                        cursor: move;
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .delete-btn {
+                        cursor: pointer;
+                        color: #ff4d4d;
+                        font-weight: bold;
+                    }
+
+                    .content-area {
+                        padding: 10px;
+                        outline: none;
+                    }
+
                     .image-wrapper {
-                    display: inline-block; /* Allows the box to fit the image */
-                    resize: both;          /* Enables the drag handle in the corner */
-                    overflow: hidden;      /* Required for resize to work */
-                    border: 1px dashed #aaa;
-                    padding: 5px;
-                    max-width: 100%;
-                    min-width: 50px;
-                    min-height: 50px;
+                        resize: both;
+                        overflow: hidden;
+                        width: 200px;
                     }
 
-                    #myPhoto {
-                    width: 100%;           /* Image stretches to fill the resized wrapper */
-                    height: 100%;
-                    display: block;
-                    object-fit: contain;   /* Keeps the photo from looking squished */
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        object-fit: contain;
                     }
-
-                    .hidden { display: none; }
                 </style>
-    
-        <body id="blog">
-
-                    <div id="canvas" style="position: relative; width: 100%; height: 600px; border: 1px solid #eee; background-color: #fafafa; overflow: hidden;">
-    
-                        <p style="padding: 10px;"><small>1. Type in the box. 2. Upload a photo. 3. Click and drag the edges to move them!</small></p>
-
-                        <div id="textContainer" class="drag-item" style="left: 50px; top: 80px;">            
-                            <div class="handle">⠿ Drag Text</div>
-                            <div id="textField" contenteditable="true">Type your notes here...</div>
-                        </div>
-
-                        <div id="imageContainer" class="drag-item hidden" style="left: 400px; top: 80px;">
-                            <div class="handle">⠿ Drag Photo</div>
-                            <div class="image-wrapper">
-                                <img id="myPhoto" src="" alt="Uploaded Photo">
-                            </div>
-                        </div>
+            </head>
+            <body>
+            
+                <div class="controls">
+                    <button onclick="addText()">+ Add Text Box</button>
+                    <label style="margin-left: 20px;">Add Photo: </label>
+                    <input type="file" id="multiImageInput" accept="image/*" onchange="addPhoto(this)">
+                    <button onclick="saveAll()" style="margin-left: 20px; background: #28a745; color: white;">Save Layout</button>
+                </div>
+            
+                <div id="canvas">
                     </div>
-
-                    <input type="file" id="imageInput" accept="image/*" style="margin-top: 20px;">
-
-                    <style>
-                        /* Styling for the draggable containers */
-                        .drag-item {
-                            position: absolute; /* Allows movement anywhere */
-                            z-index: 10;
-                            background: white;
-                            border: 1px solid #ccc;
-                            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-                            border-radius: 5px;
-                        }
-
-                        .handle {
-                            background: #f1f1f1;
-                            padding: 5px;
-                            cursor: move; /* Changes cursor to the 'move' crosshair */
-                            font-size: 12px;
-                            color: #666;
-                            border-bottom: 1px solid #ddd;
-                            user-select: none;
-                        }
-
-                        #textField {
-                            padding: 10px;
-                            min-width: 200px;
-                            outline: none;
-                        }        
-
-                        .image-wrapper {
-                            resize: both;
-                            overflow: hidden;
-                            width: 200px;
-                            height: auto;
-                        }
-
-                        #myPhoto {
-                            width: 100%;
-                            height: 100%;
-                            display: block;
-                            object-fit: contain;
-                        }
-
-                        .hidden { display: none; }
-                    </style>
-
+            
                 <script>
-                        // --- DRAG LOGIC ---
-                            function makeDraggable(element) {
-                                let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-                                const handle = element.querySelector('.handle');
-
-                                handle.onmousedown = dragMouseDown;
-
-                            function dragMouseDown(e) {
-                                e.preventDefault();
-                                pos3 = e.clientX;
-                                pos4 = e.clientY;
-                                document.onmouseup = closeDragElement;
-                                document.onmousemove = elementDrag;
-                                }
-
-                            function elementDrag(e) {
+                    const canvas = document.getElementById('canvas');
+            
+                    // 1. ADD NEW TEXT BOX
+                    function addText(content = "New Note...", x = 50, y = 50) {
+                        const div = document.createElement('div');
+                        div.className = 'drag-item';
+                        div.style.left = x + 'px';
+                        div.style.top = y + 'px';
+                        
+                        div.innerHTML = `
+                            <div class="handle"><span>⠿ DRAG TEXT</span> <span class="delete-btn" onclick="this.parentElement.parentElement.remove()">X</span></div>
+                            <div class="content-area" contenteditable="true">${content}</div>
+                        `;
+                        
+                        canvas.appendChild(div);
+                        makeDraggable(div);
+                    }
+            
+                    // 2. ADD NEW PHOTO
+                    function addPhoto(input) {
+                        const file = input.files[0];
+                        if (!file) return;
+            
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            createPhotoElement(e.target.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+            
+                    function createPhotoElement(src, x = 100, y = 100, w = "200px") {
+                        const div = document.createElement('div');
+                        div.className = 'drag-item';
+                        div.style.left = x + 'px';
+                        div.style.top = y + 'px';
+            
+                        div.innerHTML = `
+                            <div class="handle"><span>⠿ DRAG PHOTO</span> <span class="delete-btn" onclick="this.parentElement.parentElement.remove()">X</span></div>
+                            <div class="image-wrapper" style="width: ${w}">
+                                <img src="${src}">
+                            </div>
+                        `;
+            
+                        canvas.appendChild(div);
+                        makeDraggable(div);
+                    }
+            
+                    // 3. DRAG LOGIC (Works for any element passed to it)
+                    function makeDraggable(el) {
+                        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                        const handle = el.querySelector('.handle');
+            
+                        handle.onmousedown = (e) => {
+                            e.preventDefault();
+                            pos3 = e.clientX;
+                            pos4 = e.clientY;
+                            document.onmouseup = () => {
+                                document.onmouseup = null;
+                                document.onmousemove = null;
+                            };
+                            document.onmousemove = (e) => {
                                 e.preventDefault();
                                 pos1 = pos3 - e.clientX;
                                 pos2 = pos4 - e.clientY;
                                 pos3 = e.clientX;
                                 pos4 = e.clientY;
-                                element.style.top = (element.offsetTop - pos2) + "px";
-                                element.style.left = (element.offsetLeft - pos1) + "px";
-                                }
-
-                            function closeDragElement() {
-                                document.onmouseup = null;
-                                document.onmousemove = null;
-                                // Save positions to localStorage
-                                localStorage.setItem(element.id + 'Pos', JSON.stringify({
-                                    top: element.style.top,
-                                    left: element.style.left
-                                }));
-                            }
-                        }
-
-                        // Apply dragging to both containers
-                        makeDraggable(document.getElementById("textContainer"));
-                        makeDraggable(document.getElementById("imageContainer"));
-
-                        // --- EXISTING SAVE/LOAD LOGIC ---
-                        const input = document.getElementById('imageInput');
-                        const img = document.getElementById('myPhoto');
-                        const imageContainer = document.getElementById('imageContainer');
-                        const textField = document.getElementById('textField');
-
-                        window.onload = () => {
-                            // Load content
-                            const savedText = localStorage.getItem('myText');
-                            const savedImage = localStorage.getItem('myPhotoData');
-                            if (savedText) textField.innerHTML = savedText;
-                            if (savedImage) {
-                                img.src = savedImage;
-                                imageContainer.classList.remove('hidden');
-                            }
-
-                        // Load positions
-                        ['textContainer', 'imageContainer'].forEach(id => {
-                            const pos = JSON.parse(localStorage.getItem(id + 'Pos'));
-                            if (pos) {
-                                const el = document.getElementById(id);
-                                el.style.top = pos.top;
-                                el.style.left = pos.left;
-                            }
-                        });
-                    };
-
-                    textField.oninput = () => localStorage.setItem('myText', textField.innerHTML);
-
-                    input.onchange = (e) => {
-                        const file = input.files[0];
-                        if (file) {
-                            const reader = new FileReader();
-                            reader.onloadend = () => {
-                                const base64String = reader.result;
-                                localStorage.setItem('myPhotoData', base64String);
-                                img.src = base64String;
-                                imageContainer.classList.remove('hidden');
+                                el.style.top = (el.offsetTop - pos2) + "px";
+                                el.style.left = (el.offsetLeft - pos1) + "px";
                             };
-                            reader.readAsDataURL(file);
+                        };
+                    }
+            
+                    // 4. SAVE & LOAD (Handles multiple items)
+                    function saveAll() {
+                        const items = [];
+                        document.querySelectorAll('.drag-item').forEach(el => {
+                            const isImg = el.querySelector('img');
+                            items.push({
+                                type: isImg ? 'image' : 'text',
+                                content: isImg ? isImg.src : el.querySelector('.content-area').innerHTML,
+                                x: el.offsetLeft,
+                                y: el.offsetTop,
+                                w: isImg ? el.querySelector('.image-wrapper').style.width : null
+                            });
+                        });
+                        localStorage.setItem('scrapbookData', JSON.stringify(items));
+                        alert("Layout Saved!");
+                    }
+            
+                    window.onload = () => {
+                        const data = JSON.parse(localStorage.getItem('scrapbookData'));
+                        if (data) {
+                            data.forEach(item => {
+                                if (item.type === 'text') addText(item.content, item.x, item.y);
+                                else createPhotoElement(item.content, item.x, item.y, item.w);
+                            });
                         }
                     };
                 </script>
-        </body>    
+            </body>    
 </html>
