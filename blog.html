@@ -262,35 +262,53 @@
             
               <script>
                 console.log("Diagnostic: Script is alive and ready!");
-                  function checkLogin() {
-                    // 1. Visual Feedback
-                    document.querySelector('.login-box').style.background = 'yellow';
-                    
-                    // 2. Get the values from the boxes
-                    var u = document.getElementById('username').value;
-                    var p = document.getElementById('password').value;
-                
-                    console.log("Checking credentials...");
-                    console.log("Typed User: " + u);
-                    console.log("Typed Pass: " + p);
-                
-                    // 3. The Logic - DOUBLE CHECK THESE STRINGS
-                    if (u === 'username' && p === 'password') { 
-                        alert("Success! Welcome Boss.");
+               function checkLogin() {
+                    try {
+                        console.log("Login sequence started...");
                         
-                        var admins = document.getElementsByClassName('admin-only');
-                        for (var i = 0; i < admins.length; i++) {
-                            admins[i].style.setProperty('display', 'inline-block', 'important');
+                        // 1. Get the elements (Check these IDs in your HTML!)
+                        var userField = document.getElementById('username');
+                        var passField = document.getElementById('password');
+                        var loginBox = document.querySelector('.login-box');
+                
+                        // SAFETY CHECK: If these are missing, the code stops here.
+                        if (!userField || !passField) {
+                            alert("Error: I can't find the 'username' or 'password' boxes in your HTML!");
+                            return;
                         }
                 
-                        document.getElementById('logoutBtn').style.setProperty('display', 'inline-block', 'important');
-                        document.getElementById('loginModal').style.display = 'none';
+                        var u = userField.value;
+                        var p = passField.value;
                 
-                    } else {
-                        // This will tell us if the password just didn't match
-                        alert("Access Denied: The username or password didn't match exactly.");
-                        console.log("Login Failed.");
-                        document.querySelector('.login-box').style.background = 'white';
+                        // 2. Visual Feedback
+                        if (loginBox) loginBox.style.background = 'yellow';
+                
+                        // 3. The Logic
+                        if (u === 'username' && p === 'password') {
+                            alert("Success! Welcome Boss.");
+                
+                            // Show Admin buttons
+                            var admins = document.getElementsByClassName('admin-only');
+                            for (var i = 0; i < admins.length; i++) {
+                                admins[i].style.setProperty('display', 'inline-block', 'important');
+                            }
+                
+                            // Show Logout button
+                            var logoutBtn = document.getElementById('logoutBtn');
+                            if (logoutBtn) {
+                                logoutBtn.style.setProperty('display', 'inline-block', 'important');
+                            }
+                
+                            // Hide Modal
+                            document.getElementById('loginModal').style.display = 'none';
+                        } else {
+                            alert("Incorrect Credentials. You typed: " + u);
+                            if (loginBox) loginBox.style.background = 'white';
+                        }
+                
+                    } catch (err) {
+                        // THIS WILL TELL US THE EXACT PROBLEM
+                        alert("JavaScript Error: " + err.message);
                     }
                 }
                 function logout() {
