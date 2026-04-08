@@ -1286,10 +1286,12 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-   margin: 0 auto !important;
-    width: 95% !important;
-    background-color: white;
-    border: 2px dashed blue;
+    width: 95%; 
+    min-height: 500px;
+    background: #fdfdfd; 
+    margin: 0 auto;
+    border: 2px dashed blue; 
+    padding-top: 10px;
 }
 
 
@@ -1354,6 +1356,13 @@ html, body {
 	margin: 0 !important;
     padding: 20px 0;
     text-align: center;
+}
+
+#empty-message {
+    text-align: center; 
+    color: #ccc; 
+    margin-top: 20px;
+    font-family: sans-serif;
 }
 	
 
