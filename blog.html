@@ -1,20 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Tool Test</title>
+    
     <link rel="stylesheet" type="text/css" href="style.css">
+
     <style>
+      body {
+          margin: 0;
+          padding: 0;
+          background-color: white !important;
+      }
+
       * {
           border: 1px solid green !important;
       }
 
-      .blogc, #blogc {
+      #blogc {
           display: block !important;
+          visibility: visible !important;
           min-height: 500px !important;
-          border: 10px solid red !important;
-          background-color: #ffeaea !important;
+          background-color: #f0f0f0 !important;
+          border: 5px solid red !important;
+          position: relative;
+          z-index: 9999;
+          margin-top: 20px;
       }
     </style>
-    </head>
+</head>
+
+    <div id="blogc">
+        <h1 style="color: black;">If you see this, the tool is working!</h1>
+        <div id="canvas">
+            </div>
+    </div>
     
     <body id="blogc">
         <div id="admin-floating-bar" class="admin-only" style="display: none; position: fixed; top: 0; left: 0; width: 100%; background: #333; color: white; padding: 10px; z-index: 9999; text-align: center; border-bottom: 2px solid #555;">
