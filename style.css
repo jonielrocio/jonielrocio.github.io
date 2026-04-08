@@ -1287,14 +1287,12 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    position: relative;
+   position: relative;
     width: 95%;
-    height: auto;
-    min-height: 300px;
-    background: #fdfdfd;
     margin: 0 auto;
+    padding: 0;
+    min-height: 0;
     border: 2px dashed blue;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -1358,7 +1356,9 @@ html, body {
 }
 
 #empty-message {
-   margin-top: 10px !important;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
 }
 
 #blog-container, #canvas {
@@ -1383,9 +1383,11 @@ html, body {
 	padding-top: 0 !important;
 }
 	
-#empty-message h1, #empty-message p {
-    line-height: 1.2 !important;
-    display: block !important;
+#empty-message h1, 
+#empty-message p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;  
 }
 
 	
