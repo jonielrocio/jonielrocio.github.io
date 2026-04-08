@@ -1334,9 +1334,14 @@ html {
 }
 
 html, body { 
-	width: 100%;
-    height: 100%;
+    width: 100%;
+    height: auto !important; 
+    min-height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #blog-container h1 {
@@ -1367,13 +1372,8 @@ html, body {
 }
 
 #admin-floating-bar {
-  	position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: #333 !important;
-    z-index: 9999;
+  	top: 0 !important;
+    margin: 0 !important;
 }
 
 #canvas h1, #canvas h2 {
