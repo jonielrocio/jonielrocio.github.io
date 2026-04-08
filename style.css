@@ -1329,4 +1329,10 @@ body {
     cursor: pointer;
     font-size: 12px;
 }
+
+#admin-user-input {
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+}
  
