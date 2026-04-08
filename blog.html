@@ -58,33 +58,26 @@
             <div class="canvas">
                 <p>Your blog content starts here.</p>
             </div>
-            <div id="login-overlay" class="login-overlay" style="display: none;">
+            <div id="loginModal" class="login-overlay" style="display: none;">
                 <div class="login-box">
-                    <h3>Admin Access</h3>
-                    <input type="password" id="adminPass" placeholder="Password">
-            <        div class="login-buttons">
-                        <button onclick="checkLogin()">Login</button>
-                        <button onclick="closeLogin()" class="cancel-btn">Cancel</button>
+                    <div id="login-form-content">
+                        <h3>Admin Login</h3>
+                        
+                        <input type="text" id="admin-user-input" placeholder="Username">
+                        
+                        <input type="password" id="admin-pass-input" placeholder="Password">
+                        
+                        <div class="login-buttons">
+                            <button onclick="checkLogin()">Login Now</button>
+                            <button onclick="closeLogin()" class="cancel-btn">Cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div class="admin-only admin-toolbar">
                 <p>Admin Mode Active</p>
                 <button onclick="logout()" class="logout-btn">Log Out</button>
-            </div>
-            <div id="loginModal" class="login-box" style="display: none;">
-                <div id="login-form-content">
-                    <h3>Admin Login</h3>
-                    
-                    <input type="text" id="admin-user-input" placeholder="Username">
-                    
-                    <input type="password" id="admin-pass-input" placeholder="Password">
-                    
-                    <div class="login-buttons">
-                        <button onclick="checkLogin()">Login Now</button>
-                        <button onclick="closeLogin()" class="cancel-btn">Cancel</button>
-                    </div>
-                </div>
             </div>
             <script>
             function openLogin() {
