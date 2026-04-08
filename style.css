@@ -1341,4 +1341,9 @@ body {
     display: block;
     margin: 10px auto 20px auto;
 }
+
+html body #loginModal #login-form-content input#admin-user-input {
+    width: 60% !important;
+    background-color: yellow !important;
+}
  
