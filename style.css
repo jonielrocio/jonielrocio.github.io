@@ -1223,9 +1223,14 @@ input[type=text], select, textarea {
 }
 
 .blogc  {
-    display: block;
+    display: block !important;
 	margin: 0;
 	padding: 0;
+	padding-top 0;
+	margin-top: 0;
+	min-height: 500px;
+	border: 2px solid red;
+	background-color: #f0f0f0;
 }
 
 .blogc.admin-mode .controls {
