@@ -1288,13 +1288,9 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    width: 95%;
-    max-width: 1000px;
     margin: 20px auto !important;
-    background: #ffffff !important;
-    min-height: 400px !important;
-    border: 1px solid #ddd !important;
-    box-sizing: border-box;
+    text-align: left;
+    padding: 40px;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1378,6 +1374,10 @@ html, body {
     height: 50px;
     background: #333 !important;
     z-index: 9999;
+}
+
+#canvas h1, #canvas h2 {
+    text-align: center;
 }
 	
 	
