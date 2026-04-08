@@ -1333,7 +1333,7 @@ body {
 }
 
 #admin-user-input {
-    width: 20%; 
+    width: 20px !important; 
     margin-left: 0 !important;
     margin-right: 100%;
 	box-sizing: border-box;
