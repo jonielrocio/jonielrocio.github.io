@@ -1357,14 +1357,10 @@ html, body {
 }
 
 #empty-message {
-  	position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 1;
+    position: relative;
 }
 
 #blog-container, #canvas {
@@ -1398,14 +1394,21 @@ html, body {
 }
 
 #empty-message h1 {
-	font-size: 3rem;
-    line-height: 1;
+	font-size: 2rem;
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    line-height: 1.2;
 }
 
 body#blogc, #blog-container {
 	display: block !important;
+}
+
+#empty-message p {
+	font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
 }
 
 	
