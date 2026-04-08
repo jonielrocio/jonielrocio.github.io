@@ -1287,10 +1287,15 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    margin-top: 0 !important;
-    padding-top: 10px !important;
-	display: flow-root !important;
-	overflow: auto;
+    position: relative;
+    width: 95%;
+    height: auto;
+    min-height: 300px;
+    background: #fdfdfd;
+    margin: 0 auto;
+    border: 2px dashed blue;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 header, .header, nav, .nav, .masthead, #header {
