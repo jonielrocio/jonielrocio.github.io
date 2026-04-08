@@ -1285,9 +1285,13 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    position: relative !important;
-    top: 0 !important; 
-    margin-top: 0 !important;
+    background-color: white !important;
+    width: 90% !important;
+    height: 600px !important; 
+    margin-top: 50px !important;
+    border: 5px dashed red !important;
+    display: block !important;
+    z-index: 999;
 }
 
 
@@ -1307,8 +1311,8 @@ body#blogc, {
 	flex-direction: column !important;
 	justify-content: flex-start !important;
 	align-items: center !important;
-	pading-top: 0 !important;
-	margin-top: 0 !important;
+	min-height: 100vh;
+	border: 10px solid line !important;
 }
 .blogc, {
 }
@@ -1342,6 +1346,12 @@ html {
 	gap: 20px;
 }
 
+html, body { 
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 0 !important;
+	overflow-x: hidden;
+}
 	
 
 
