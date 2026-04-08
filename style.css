@@ -1303,12 +1303,16 @@ body#blogc,
 .blogc, 
 #blogc {
     display: block !important;
-    visibility: visible !important;
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh !important;
-    background-color: #f0f0f0 !important;
-    border: 10px solid red !important;  
+    border: 5px solid red !important;  
+}
+
+html:has(#blogc) {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white; 
 }
 
 	
