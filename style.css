@@ -1281,7 +1281,7 @@ body {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    width: 300px;
+    width: 30%;
 }
 
 .login-box input {
