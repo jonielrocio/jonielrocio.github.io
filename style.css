@@ -1290,6 +1290,7 @@ input[type=text], select, textarea {
     margin-top: 0 !important;
     padding-top: 10px !important;
 	display: flow-root !important;
+	overflow: auto;
 }
 
 header, .header, nav, .nav, .masthead, #header {
