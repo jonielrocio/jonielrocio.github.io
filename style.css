@@ -1285,13 +1285,10 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    background-color: white !important;
-    width: 90% !important;
-    height: 600px !important; 
-    margin-top: 50px !important;
-    border: 5px dashed red !important;
-    display: block !important;
-    z-index: 999;
+   margin: 0 auto !important;
+    width: 95% !important;
+    background-color: white;
+    border: 2px dashed blue;
 }
 
 
@@ -1352,6 +1349,12 @@ html, body {
 	padding: 0 !important;
 	height: 0 !important;
 	overflow-x: hidden;
+}
+
+#blog-container h1 {
+	margin: 0 !important;
+    padding: 20px 0;
+    text-align: center;
 }
 	
 
