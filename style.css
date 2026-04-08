@@ -1227,17 +1227,6 @@ input[type=text], select, textarea {
 	margin-top: 0 !important;
 }
 
-.blogc  {
-    display: block !important;
-	margin: 0;
-	padding: 0;
-	padding-top 0;
-	margin-top: 0;
-	min-height: 500px;
-	border: 2px solid red;
-	background-color: #f0f0f0;
-}
-
 .blogc.admin-mode .controls {
     display: block;
 }
@@ -1309,15 +1298,19 @@ nav, .menu, .header {
     margin-top: 0;
 }
 
-body#blogc {
-	margin-top: 0 !important;
-	padding: 0; !important;
-	min-height: 100vh;
-	border: 10px: solid red !important;
-	backgound-color: #f0f0f0;
-	position: relative;
-	display: block !important;
+body.blogc, 
+body#blogc, 
+.blogc, 
+#blogc {
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    background-color: #f0f0f0 !important;
+    border: 10px solid red !important;  
 }
+
 	
 
 
