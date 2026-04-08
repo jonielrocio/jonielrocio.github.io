@@ -1289,9 +1289,16 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-  margin-top: 0 !important;
+    height: auto !important; 
+    min-height: 300px !important; 
+    padding: 20px !important; 
+    margin: 10px auto !important; 
+    width: 95%;
+    background: #fdfdfd; 
+    border: 2px dashed blue !important; 
+    position: relative;
+    box-sizing: border-box;
 }
-
 
 header, .header, nav, .nav, .masthead, #header {
     margin: 0 !important;
