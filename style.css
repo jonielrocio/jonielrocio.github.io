@@ -1220,4 +1220,21 @@ body {
     background-color: #f0f2f5; /* Light grey background */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* This is the box that holds the 'ghost' images */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* This sets the height to 60% of the screen */
+    min-height: 400px; /* Ensures it never gets too squashed */
+    margin-bottom: 40px; /* Pushes the Title down so it can breathe */
+    overflow: hidden;
+}
+
+/* This makes sure your Whitney Summit and Banner photos fit perfectly */
+.slide_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops the image to fill the box without stretching */
+}
  
