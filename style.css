@@ -1335,4 +1335,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.login-box #admin-user-input {
+    width: 30% !important;
+    display: block;
+    margin: 10px auto 20px auto;
+}
  
