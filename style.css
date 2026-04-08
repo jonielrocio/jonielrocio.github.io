@@ -1222,6 +1222,9 @@ input[type=text], select, textarea {
     display: none; 
 }
 
+* { 
+	border: 1px solid green !important; }
+
 .blogc  {
     display: block !important;
 	margin: 0;
