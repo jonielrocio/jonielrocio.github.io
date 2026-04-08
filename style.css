@@ -1336,6 +1336,7 @@ body {
     width: 20%; 
     margin-left: 0 !important;
     margin-right: 100%;
+	box-sizing: border-box;
 }
 
 
