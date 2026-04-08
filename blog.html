@@ -1,222 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog Tool – Full Layout</title>
-    <style>
-/* Reset and basic styles */
-                * {
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                }
-                
-                body {
-                    font-family: sans-serif;
-                    background: #f0f0f0;
-                }
-                
-                /* Blog Container */
-                #blog-container {
-                    width: 95%;
-                    margin: 0 auto;
-                    padding: 0;
-                    display: block;
-                }
-                
-                /* Heading */
-                #blog-container > h1 {
-                    font-size: 2rem;
-                    line-height: 1.1;
-                    text-align: center;
-                    margin-bottom: 0.5rem;
-                }
-                
-                /* Canvas */
-                #canvas {
-                    position: relative;
-                    width: 100%;
-                    height: auto;
-                    min-height: 0;
-                    padding: 0;
-                    margin: 0 auto;
-                    border: 2px dashed blue;
-                    box-sizing: border-box;
-                    background: #fdfdfd;
-                }
-                
-                /* Empty Message inside Canvas */
-                #empty-message {
-                    text-align: center;
-                    padding: 10px 0;
-                }
-                
-                #empty-message h1 {
-                    font-size: 1.5rem;
-                    line-height: 1.1;
-                }
-                
-                #empty-message p {
-                    font-size: 1rem;
-                    line-height: 1.1;
-                }
-                
-                /* Admin floating bar */
-                #admin-floating-bar {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    background: #333;
-                    color: white;
-                    padding: 10px;
-                    z-index: 9999;
-                    text-align: center;
-                    border-bottom: 2px solid #555;
-                }
-                
-                #admin-floating-bar button {
-                    margin-left: 10px;
-                    padding: 5px 15px;
-                    border: none;
-                    border-radius: 4px;
-                    cursor: pointer;
-                }
-                
-                /* Draggable elements */
-                .drag-item {
-                    position: absolute;
-                    cursor: move;
-                    z-index: 10;
-                    min-width: 150px;
-                    background: transparent;
-                    border: none;
-                    padding: 5px;
-                }
-                
-                .handle {
-                    background: #444;
-                    color: white;
-                    padding: 5px;
-                    cursor: move;
-                    font-size: 10px;
-                    display: flex;
-                    justify-content: space-between;
-                }
-                
-                .content-area {
-                    padding: 10px;
-                    outline: none;
-                    background: white;
-                    border: 1px solid #ccc;
-                }
-                
-                .image-wrapper img {
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                    object-fit: contain;
-                }
-                
-                /* Slideshow Section */
-                .main {
-                    width: 95%;
-                    margin: 20px auto;
-                }
-                
-                .slides {
-                    position: relative;
-                    width: 100%;
-                    overflow: hidden;
-                    height: 300px; /* adjust as needed */
-                }
-                
-                .slides input {
-                    display: none;
-                }
-                
-                .slide_img {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    transition: opacity 0.5s ease-in-out;
-                }
-                
-                .slide_img img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-                
-                input#i1:checked ~ #one,
-                input#i2:checked ~ #two,
-                input#i3:checked ~ #three,
-                input#i4:checked ~ #four {
-                    opacity: 1;
-                }
-                
-                .nav_img {
-                    text-align: center;
-                    margin-top: 5px;
-                }
-                
-                .nav_img .dots {
-                    display: inline-block;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: #ccc;
-                    margin: 0 4px;
-                    cursor: pointer;
-                }
-                
-                .social_img {
-                    text-align: center;
-                    margin: 10px 0;
-                }
-                
-                .social_img img {
-                    width: 32px;
-                    height: 32px;
-                    margin: 0 5px;
-                    vertical-align: middle;
-                }
-    </style>
-</head>
-        <body id="blogc">
-
-<!-- Admin Bar -->
-        <div id="admin-floating-bar">
-            <span>🛠️ Admin Mode</span>
-            <button onclick="addText()">+ Add Text</button>
-            <button onclick="addPhoto()">+ Add Photo</button>
-            <button onclick="logout()">Logout</button>
-        </div>
-
-<!-- Blog Content -->
-        <div id="blog-container">
-            <h1>If you see this, the tool is working!</h1>
-            <div id="canvas">
-        <div id="empty-message">
-                    <h1>Your Canvas is Ready</h1>
-                    <p>Login as Admin and click "+ Add Text" to begin constructing.</p>
-                </div>
-            </div>
-        </div>
-        <div class="nav">
+<!doctype html>
+<html>
+<head><link rel="stylesheet" type="text/css" href="style.css"></head>    
+    <body id="news">
+            <div class="nav">
                 <ul class="uppernav">
                     <li class="navi"><a class="navig" href="index.html">Home</a></li>
-                    <li class="navi"><a class="navig" href="#">Blog</a></li>
+                    <li class="navi"><a class="navig" href="blog.html">Blog</a></li>
                     <li class="navi"><a class="navig" href="email.html">Contact</a></li>
                     <li class="navi"><a class="navig" href="#">About</a></li>
                     <li class="navi"><a class="navig" href="review.html">Review</a></li>
                     <li class="navi"><a class="navig" href="news.html">News</a></li>
                 </ul>
             </div>
-<!-- Slideshow / Photo Section -->
-        <div class="main">
+        <div class="main">    
             <div class="slides">
                 <input type="radio" name="images" id="i1" checked>
                 <input type="radio" name="images" id="i2">
@@ -225,24 +21,25 @@
                 
                 <div class="slide_img" id="one">
                     <img src="photos/banner.jpg">
-                    <label for="i4" class="pre"></label>
-                    <label for="i2" class="nxt"></label>
+                        <label for="i4" class="pre"></label>
+                        <label for="i2" class="nxt"></label>
                 </div>
-                <div class="slide_img" id="two">
+                 <div class="slide_img" id="two">
                     <img src="photos/Awesome.jpg">
-                    <label for="i1" class="pre"></label>
-                    <label for="i3" class="nxt"></label>
+                        <label for="i1" class="pre"></label>
+                        <label for="i3" class="nxt"></label>
                 </div>
                 <div class="slide_img" id="three">
                     <img src="photos/Entrance.jpg">
-                    <label for="i2" class="pre"></label>
-                    <label for="i4" class="nxt"></label>
+                        <label for="i2" class="pre"></label>
+                        <label for="i4" class="nxt"></label>
                 </div>
                 <div class="slide_img" id="four">
                     <img src="photos/Whitney%20Summit.jpg">
-                    <label for="i3" class="pre"></label>
-                    <label for="i1" class="nxt"></label>
+                        <label for="i3" class="pre"></label>
+                        <label for="i1" class="nxt"></label>
                 </div>
+                
                 <div class="nav_img">
                     <label class="dots" id="dot1" for="i1"></label>
                     <label class="dots" id="dot2" for="i2"></label>
@@ -252,87 +49,12 @@
             </div>           
             
             <div class="social_img">
-                <a href="#"><img src="photos/Facebook.png"></a>
-                <a href="#"><img src="photos/Google+.png"></a>
-                <a href="#"><img src="photos/Instagram.png"></a>
-                <a href="#"><img src="photos/Twitter.png"></a>
-                <a href="#"><img src="photos/YouTube.png"></a>
+                <a href="#"><img class="simg" src="photos/Facebook.png"></a>
+                <a href="#"><img class="simg" src="photos/Google+.png"></a>
+                <a href="#"><img class="simg" src="photos/Instagram.png"></a>
+                <a href="#"><img class="simg" src="photos/Twitter.png"></a>
+                <a href="#"><img class="simg" src="photos/YouTube.png"></a>
             </div>
-        </div>
-
-        <script>
-        // Canvas
-        const canvas = document.getElementById('canvas');
-        
-        // Admin UI
-        function applyAdminUI() {
-            document.getElementById('admin-floating-bar').style.display = 'block';
-        }
-        
-        function logout() {
-            document.getElementById('admin-floating-bar').style.display = 'none';
-        }
-        
-        // Add draggable text
-        function addText(content="New Note...", x=50, y=50) {
-            const div = document.createElement('div');
-            div.className = 'drag-item';
-            div.style.left = x + 'px';
-            div.style.top = y + 'px';
-            div.innerHTML = `
-                <div class="handle">
-                    <span>⠿ DRAG</span> 
-                    <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
-                </div>
-                <div class="content-area" contenteditable="true">${content}</div>
-            `;
-            canvas.appendChild(div);
-            makeDraggable(div);
-        }
-        
-        // Add draggable photo
-        function addPhoto(src="https://via.placeholder.com/200", x=100, y=100) {
-            const div = document.createElement('div');
-            div.className = 'drag-item';
-            div.style.left = x + 'px';
-            div.style.top = y + 'px';
-            div.innerHTML = `
-                <div class="handle">
-                    <span>⠿ PHOTO</span>
-                    <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
-                </div>
-                <div class="image-wrapper" style="width:200px;">
-                    <img src="${src}">
-                </div>
-            `;
-            canvas.appendChild(div);
-            makeDraggable(div);
-        }
-        
-        // Draggable helper
-        function makeDraggable(el) {
-            let pos1=0, pos2=0, pos3=0, pos4=0;
-            const handle = el.querySelector('.handle');
-            handle.onmousedown = (e) => {
-                e.preventDefault();
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
-                document.onmousemove = (e) => {
-                    e.preventDefault();
-                    pos1 = pos3 - e.clientX;
-                    pos2 = pos4 - e.clientY;
-                    pos3 = e.clientX;
-                    pos4 = e.clientY;
-                    el.style.top = (el.offsetTop - pos2) + "px";
-                    el.style.left = (el.offsetLeft - pos1) + "px";
-                };
-            };
-        }
-        
-        // Show admin UI
-        applyAdminUI();
-        </script>
-        
-     </body>
-</html>
+            <p id="UC">UNDER CONSTRUCTION</p>
+    </body>
+</html>    
