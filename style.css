@@ -1229,6 +1229,7 @@ input[type=text], select, textarea {
 	margin: 0;
     padding: 0;
     box-sizing: border-box;
+	max-height: 3000px;
 }
 
 .blogc.admin-mode .controls {
@@ -1360,6 +1361,12 @@ html, body {
     margin-top: 20px;
     font-family: sans-serif;
 }
+
+#blog-container, #canvas {
+    height: auto !important;
+	min-height: 0 !important;
+}
+	
 	
 
 
