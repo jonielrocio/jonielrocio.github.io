@@ -1340,6 +1340,7 @@ body {
     width: 30% !important;
     display: block;
     margin: 10px auto 20px auto;
+	margin-left: 0 !impotant;
 }
 
 html body #loginModal #login-form-content input#admin-user-input {
