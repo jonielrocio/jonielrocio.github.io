@@ -1289,6 +1289,7 @@ input[type=text], select, textarea {
 #canvas {
     margin-top: 0 !important;
     padding-top: 10px !important;
+	display: flow-root !important;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1371,6 +1372,11 @@ html, body {
     flex-direction: column;
     margin-top: 0 !important;
 	padding-top: 0 !important;
+}
+	
+#empty-message h1, #empty-message p {
+    line-height: 1.2 !important;
+    display: block !important;
 }
 
 	
