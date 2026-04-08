@@ -1290,6 +1290,7 @@ input[type=text], select, textarea {
     height: auto !important;
     min-height: 0 !important;
     padding: 0 !important;
+    margin: 0 auto;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1341,10 +1342,10 @@ html, body {
 }
 
 #blog-container h1 {
-  	height: auto !important;
-    min-height: 300px;
+    font-size: 2rem;
+    margin: 0 !important;
     padding: 0 !important;
-    margin: 0 auto;
+    line-height: 1.1 !important;
 }
 
 
@@ -1411,10 +1412,11 @@ body#blogc, #blog-container {
 }
 
 #blog-container {
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     height: auto !important;
     min-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 auto;
 }
 
 #canvas p {
@@ -1429,6 +1431,14 @@ body#blogc, #blog-container {
     line-height: 1.1;
     margin: 0;
     padding: 0;
+}
+
+#canvas #empty-message h1,
+#canvas #empty-message p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+	    font-size: 1rem; 
 }
 
 	
