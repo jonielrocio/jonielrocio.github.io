@@ -73,26 +73,33 @@
                 <button onclick="logout()" class="logout-btn">Log Out</button>
             </div>
             <script>
-                function openLogin() {
-                    document.getElementById('login-overlay').style.display = 'flex';
+            function openLogin() {
+                const modal = document.getElementById('loginModal');
+                if (modal) {
+                    modal.style.display = 'block';
+                } else {
+                    console.error("Could not find the element with ID 'loginModal'");
                 }
-        
-                function closeLogin() {
-                    document.getElementById('login-overlay').style.display = 'none';
+            }
+            
+            function closeLogin() {
+                document.getElementById('loginModal').style.display = 'none';
+            }
+            
+            function checkLogin() {
+                const user = document.getElementById('admin-user-input').value;
+                const pass = document.getElementById('admin-pass-input').value;
+            
+                if (user === 'username' && pass === 'password') {
+                    document.body.classList.add('admin-mode');
+                    closeLogin();
+                    alert("Welcome back, Jonie!");
+                } else {
+                    alert("Access Denied");
                 }
-        
-                function checkLogin() {
-                    const pass = document.getElementById('adminPass').value;
-                    // You can change 'admin123' to whatever you want
-                    if (pass === 'admin123') {
-                        document.body.classList.add('admin-mode');
-                        closeLogin();
-                        alert("Admin Mode Active!");
-                    } else {
-                        alert("Access Denied");
-                    }
-                }
-                function logout() {
+            }
+                
+                    function logout() {
                     document.body.classList.remove('admin-mode');
                     alert("Logged Out Successfully");
                 }
