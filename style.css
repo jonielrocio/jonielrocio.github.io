@@ -1331,6 +1331,7 @@ html {
 	margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh;
+	padding-top: 60px !important;
 }
 
 html, body { 
@@ -1358,6 +1359,7 @@ html, body {
 #blog-container, #canvas {
     height: auto !important;
 	min-height: 0 !important;
+	align-items: flex-start;
 }
 
 #admin-floating-bar {
