@@ -68,6 +68,10 @@
                     </div>
                 </div>
             </div>
+            <div class="admin-only admin-toolbar">
+                <p>Admin Mode Active</p>
+                <button onclick="logout()" class="logout-btn">Log Out</button>
+            </div>
             <script>
                 function openLogin() {
                     document.getElementById('login-overlay').style.display = 'flex';
@@ -87,6 +91,10 @@
                     } else {
                         alert("Access Denied");
                     }
+                }
+                function logout() {
+                    document.body.classList.remove('admin-mode');
+                    alert("Logged Out Successfully");
                 }
             </script>
             <p id="UC">UNDER CONSTRUCTION</p>
