@@ -1281,7 +1281,9 @@ body {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    width: 30%;
+    width: 5%;
+	margin-left: 0 !important;
+	
 }
 
 .login-box input {
@@ -1336,15 +1338,4 @@ body {
     margin-right: auto;
 }
 
-.login-box #admin-user-input {
-    width: 30% !important;
-    display: block;
-    margin: 10px auto 20px auto;
-	margin-left: 0 !impotant;
-}
 
-html body #loginModal #login-form-content input#admin-user-input {
-    width: 60% !important;
-    background-color: yellow !important;
-}
- 
