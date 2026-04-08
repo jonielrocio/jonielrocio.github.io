@@ -1334,7 +1334,7 @@ body {
 
 #admin-user-input {
     width: 20%; 
-    margin-left: auto;
+    margin-left: 0 !important;
     margin-right: auto;
 }
 
