@@ -1309,8 +1309,14 @@ nav, .menu, .header {
     margin-top: 0;
 }
 
-#blogc {
+body#blogc {
 	margin-top: 0 !important;
+	padding: 0; !important;
+	min-height: 100vh;
+	border: 10px: solid red !important;
+	backgound-color: #f0f0f0;
+	position: relative;
+	display: block !important;
 }
 	
 
