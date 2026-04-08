@@ -1287,15 +1287,10 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-    position: relative;
-    width: 95%;
-    height: auto !important;
+     height: auto !important;
     min-height: 300px;
     padding: 0 !important;
     margin: 0 auto;
-    border: 2px dashed blue;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1347,15 +1342,18 @@ html, body {
 }
 
 #blog-container h1 {
-  	margin-top: 0 !important;
-    padding-top: 0 !important;
+  	height: auto !important;
+    min-height: 300px;
+    padding: 0 !important;
+    margin: 0 auto;
 }
 
 
 #blog-container > *:first-child {
-    margin-top: 0 !important;
-    padding-top: 10px !important;
-	display: block !important;
+	margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    font-size: 2rem;
 }
 
 #empty-message {
