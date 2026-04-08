@@ -1253,7 +1253,6 @@ input[type=text], select, textarea {
     align-items: center;
 }
 
-
 .login-box {
     background: white;
     padding: 30px;
@@ -1303,12 +1302,8 @@ header, .header, nav, .nav, .masthead, #header {
 	height: 0 !important;
 	display: none !important;
 	padding: 0 !important;
-	
 }
 
-body.blogc, {
-	
-}
 body#blogc, {
 	display: flex !important;
 	flex-direction: column !important;
@@ -1317,8 +1312,7 @@ body#blogc, {
 	min-height: 100vh;
 	border: 10px solid line !important;
 }
-.blogc, {
-}
+
 #blogc {
 	display: block !important;
     position: relative !important;
