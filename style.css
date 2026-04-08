@@ -1220,13 +1220,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.sblog {
-    position: relative;
-    width: 100%;
+#sblog {
+	margin-top: 0;
     height: 60vh;
-    min-height: 400px;
-    margin-bottom: 40px;
-    overflow: hidden;
+    margin-bottom: 40px
 }
 
 .slide_img img {
