@@ -1288,9 +1288,8 @@ input[type=text], select, textarea {
 	 
 #canvas {
     height: auto !important;
-    min-height: 300px;
+    min-height: 0 !important;
     padding: 0 !important;
-    margin: 0 auto;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1394,7 +1393,7 @@ html, body {
 }
 
 #empty-message h1 {
-	font-size: 2rem;
+	font-size: 1.5rem;
     margin: 0;
     padding: 0;
     line-height: 1.2;
@@ -1405,7 +1404,7 @@ body#blogc, #blog-container {
 }
 
 #empty-message p {
-	font-size: 1rem;
+	font-size: 0.9rem;
     margin: 0;
     padding: 0;
     line-height: 1.2;
