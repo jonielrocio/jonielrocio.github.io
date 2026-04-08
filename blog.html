@@ -90,16 +90,21 @@
                 document.getElementById('loginModal').style.display = 'none';
             }
             
-            function checkLogin() {
-                var userIn = document.getElementById('admin-user-input').value;
-                var passIn = document.getElementById('admin-pass-input').value;
+          function checkLogin() {
+                const userIn = document.getElementById('admin-user-input').value;
+                const passIn = document.getElementById('admin-pass-input').value;
+
+                const hashedU = btoa(userIn);
+                const hashedP = btoa(passIn);
             
-                if (btoa(userIn) === "Sm9uaWVSb2Npbw==" && btoa(passIn) === "MjkxOTE1M1BsZHQ=") {
+                const targetU = "Sm9uaWVSb2Npbw==";
+                const targetP = "MjkxOTE1M1BsZHQ=";
+            
+                if (hashedU === targetU && hashedP === targetP) {
                     localStorage.setItem("adminMode", "true");
-                    alert("Access Granted");
-                    location.reload(); 
+                    location.reload();
                 } else {
-                    alert("Access Denied");
+                    alert("Access Denied: The scrambled strings do not match.");
                 }
             }
                 
