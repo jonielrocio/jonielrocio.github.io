@@ -1306,7 +1306,9 @@ body#blogc,
     margin: 0 !important;
     padding: 0 !important;
     min-height: 100vh !important;
-    border: 5px solid red !important;  
+    border: 5px solid red !important;
+	position: relative !important;
+	top: 0 !important;
 }
 
 html:has(#blogc) {
