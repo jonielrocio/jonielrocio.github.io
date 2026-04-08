@@ -1,317 +1,219 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Blog Tool Test</title>
-    
-    <link rel="stylesheet" href="style.css?v=999" type="text/css">
-       <style>
-      body {
-          margin: 0;
-          padding: 0;
-          background-color: white !important;
-      }
-
-      * {
-          border: 1px solid green !important;
-      }
-
-      #blogc {
-          display: block !important;
-          visibility: visible !important;
-          min-height: 500px !important;
-          background-color: #f0f0f0 !important;
-          border: 5px solid red !important;
-          position: relative;
-          z-index: 9999;
-          margin-top: 0px;
-      }
-    </style>
-
-</head>
-    
-   <body id="blogc" style="margin: 0; padding: 0;"> 
-    
-        <div id="admin-floating-bar" class="admin-only" style="display: none; position: fixed; top: 0; left: 0; width: 100%; background: #333; color: white; padding: 10px; z-index: 9999; text-align: center; border-bottom: 2px solid #555;">
-            <span style="margin-right: 20px; font-weight: bold;">🛠️ Admin Mode</span>
-            <button onclick="addText()" style="background: #28a745; color: white; border: none; padding: 5px 15px; cursor: pointer; margin-right: 10px; border-radius: 4px;">+ Add Text</button>
-            <button onclick="addPhoto()" style="background: #17a2b8; color: white; border: none; padding: 5px 15px; cursor: pointer; margin-right: 10px; border-radius: 4px;">+ Add Photo</button>
-            <button onclick="logout()" style="background: #dc3545; color: white; border: none; padding: 5px 15px; cursor: pointer; border-radius: 4px;">Logout</button>
-        </div>
-
-        <div id="blog-container" style="margin: 0; padding-top: 50px; display: flow-root;">
-            <h1 style="color: black; margin: 0; padding: 5px; text-align: center; font-family: sans-serif;">
-                If you see this, the tool is working!
-            </h1>
-            <div id="canvas" style="height: auto; padding: 0;">
-                <div id="empty-message" style="text-align: center; color: #ccc; margin-top: 0; font-family: sans-serif;">
-                    <h1 style="font-size: 3rem; margin: 0; padding-top: 20px;">Your Canvas is Ready</h1>
-                    <p style="margin: 0;">Login as Admin and click "+ Add Text" to begin constructing.</p>
-                </div>
-            </div>
-        </div>
-       
-        <div class="nav">
-            <ul class="uppernav">
-                <li class="navi"><a class="navig" href="index.html">Home</a></li>
-                <li class="navi"><a class="navig" href="#">Blog</a></li>
-                <li class="navi"><a class="navig" href="email.html">Contact</a></li>
-                <li class="navi"><a class="navig" href="#">About</a></li>
-                <li class="navi"><a class="navig" href="review.html">Review</a></li>
-                <li class="navi"><a class="navig" href="news.html">News</a></li>
-            </ul>
-        </div>
-       
-        <div class="main">    
-            <div class="slides">
-                <input type="radio" name="images" id="i1" checked>
-                <input type="radio" name="images" id="i2">
-                <input type="radio" name="images" id="i3">
-                <input type="radio" name="images" id="i4">
-                
-                <div class="slide_img" id="one">
-                    <img src="photos/banner.jpg">
-                        <label for="i4" class="pre"></label>
-                        <label for="i2" class="nxt"></label>
-                </div>
-                 <div class="slide_img" id="two">
-                    <img src="photos/Awesome.jpg">
-                        <label for="i1" class="pre"></label>
-                        <label for="i3" class="nxt"></label>
-                </div>
-                <div class="slide_img" id="three">
-                    <img src="photos/Entrance.jpg">
-                        <label for="i2" class="pre"></label>
-                        <label for="i4" class="nxt"></label>
-                </div>
-                <div class="slide_img" id="four">
-                    <img src="photos/Whitney%20Summit.jpg">
-                        <label for="i3" class="pre"></label>
-                        <label for="i1" class="nxt"></label>
-                </div>
-                <div class="nav_img">
-                    <label class="dots" id="dot1" for="i1"></label>
-                    <label class="dots" id="dot2" for="i2"></label>
-                    <label class="dots" id="dot3" for="i3"></label>
-                    <label class="dots" id="dot4" for="i4"></label>
-                </div>
-        </div>           
-            
-            <div class="social_img">
-                <a href="#"><img class="simg" src="photos/Facebook.png"></a>
-                <a href="#"><img class="simg" src="photos/Google+.png"></a>
-                <a href="#"><img class="simg" src="photos/Instagram.png"></a>
-                <a href="#"><img class="simg" src="photos/Twitter.png"></a>
-                <a href="#"><img class="simg" src="photos/YouTube.png"></a>
-            </div>
-    
-            <p id="UC">UNDER CONSTRUCTION</p>
-                <meta charset="UTF-8">
-                <title>Multi-Element Scrapbook</title>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+                <title>Blog Tool Tight Layout with Drag</title>
                 <style>
-                    body { font-family: sans-serif; margin: 0; background: #f0f0f0; }
-        
-                    /* The Toolbar */
-                    .controls {
-                        background: #333;
-                        color: white;
-                        padding: 15px;
-                        text-align: center;
-                        position: sticky;
-                        top: 0;
-                        z-index: 100;
-                    }        
 
-                    /* The Canvas */
-                    #canvas {
-                        position: relative;
-                        width: 100%;
-                        height: 2000px; /* Large area to work in */
-                        background: white;
-                        background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
-                        background-size: 30px 30px;
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
                     }
 
-                    /* Draggable Container */
-                    .drag-item {
-                       /* KEEP THESE (The Structure) */
-                        position: absolute;
-                        cursor: move;
-                        z-index: 10;
-                        min-width: 150px;
-                    
-                        /* CHANGE THESE (The Style) */
-                        background: transparent;
-                        border: none;
-                        box-shadow: none;
-                        padding: 5px;
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: sans-serif;
+                        background: #f0f0f0;
                     }
 
-                    .handle {
-                        background: #444;
-                        color: white;
-                        padding: 5px;
-                        cursor: move;
-                        font-size: 10px;
-                        display: flex;
-                        justify-content: space-between;
-                    }
 
-                    .delete-btn {
-                        cursor: pointer;
-                        color: #ff4d4d;
-                        font-weight: bold;
-                    }
-
-                    .content-area {
-                        padding: 10px;
-                        outline: none;
-                    }
-
-                    .image-wrapper {
-                        resize: both;
-                        overflow: hidden;
-                        width: 200px;
-                    }
-
-                    img {
-                        width: 100%;
-                        height: 100%;
+                    #blog-container {
                         display: block;
-                        object-fit: contain;
+                        width: 95%;
+                        margin: 0 auto;
+                        padding: 0;
+                        height: auto;
                     }
-                </style>
-            
-               <div class="controls" style="position: fixed; bottom: 20px; right: 20px; z-index: 10000;">
-                    <button id="openLoginBtn" type="button" class="login-btn" onclick="document.getElementById('loginModal').style.display='block'">
-                        Admin Login
-                    </button>
-                    
-                    <div id="loginModal" class="login-box" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 2px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                        <div id="login-form-content">
-                            <h3>Admin Login</h3>
-                            <input type="text" id="admin-user-input" placeholder="Username" style="margin-bottom:10px;"><br>
-                            <input type="password" id="admin-pass-input" placeholder="Password" style="margin-bottom:10px;"><br>
-                            <button type="button" onclick="checkLogin();" style="background: #28a745; color: white;">Login Now</button>
-                            <button type="button" onclick="document.getElementById('loginModal').style.display='none'" style="background:#666; color: white;">Cancel</button>
-                        </div>
-                        <p id="loginError" style="color:red; font-size:12px; display:none;">Incorrect details!</p>
+
+
+                        #blog-container > h1 {
+                            font-size: 2rem;
+                            line-height: 1.1;
+                            margin: 0;
+                            padding: 0;
+                            text-align: center;
+                        }
+                        
+                        
+                        #canvas {
+                            position: relative;
+                            width: 100%;
+                            height: auto;
+                            min-height: 0;
+                            padding: 0;
+                            margin: 0 auto;
+                            border: 2px dashed blue;
+                            box-sizing: border-box;
+                            background: #fdfdfd;
+                        }
+                        
+                        
+                        #empty-message {
+                            text-align: center;
+                        }
+                        
+                        #empty-message h1 {
+                            font-size: 1.5rem;
+                            line-height: 1.1;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        #empty-message p {
+                            font-size: 1rem;
+                            line-height: 1.1;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        
+                        #admin-floating-bar {
+                            display: none;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            background: #333;
+                            color: white;
+                            padding: 10px;
+                            z-index: 9999;
+                            text-align: center;
+                            border-bottom: 2px solid #555;
+                        }
+                        
+                        #admin-floating-bar button {
+                            margin-left: 10px;
+                            padding: 5px 15px;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                        }
+
+
+                            .drag-item {
+                                position: absolute;
+                                cursor: move;
+                                z-index: 10;
+                                min-width: 150px;
+                                background: transparent;
+                                border: none;
+                                box-shadow: none;
+                                padding: 5px;
+                            }
+                            
+                            .handle {
+                                background: #444;
+                                color: white;
+                                padding: 5px;
+                                cursor: move;
+                                font-size: 10px;
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                            
+                            .content-area {
+                                padding: 10px;
+                                outline: none;
+                                background: white;
+                                border: 1px solid #ccc;
+                            }
+                            
+                            .image-wrapper img {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                object-fit: contain;
+                            }
+            </style>
+        </head>
+        <body id="blogc">
+
+            <div id="admin-floating-bar">
+                <span>🛠️ Admin Mode</span>
+                    <button onclick="addText()">+ Add Text</button>
+                    <button onclick="addPhoto()">+ Add Photo</button>
+                    <button onclick="logout()">Logout</button>
+            </div>
+
+            <div id="blog-container">
+                <h1>If you see this, the tool is working!</h1>
+                <div id="canvas">
+                    <div id="empty-message">
+                        <h1>Your Canvas is Ready</h1>
+                    <p>Login as Admin and click "+ Add Text" to begin constructing.</p>
                     </div>
                 </div>
-                
-                <script>
-                    const canvas = document.getElementById('canvas');
-                
-                    // 1. COMBINED LOAD LOGIC
-                    window.onload = function() {
-                        // Check Login Status
-                        if (localStorage.getItem('adminLoggedIn') === 'true') {
-                            applyAdminUI();
-                        }
-                
-                        // Load Scrapbook Data
-                        const data = JSON.parse(localStorage.getItem('scrapbookData'));
-                        if (data && canvas) {
-                            data.forEach(item => {
-                                if (item.type === 'text') addText(item.content, item.x, item.y);
-                                else createPhotoElement(item.content, item.x, item.y, item.w);
-                            });
-                        }
-                    };
-                
-                    // 2. LOGIN ENGINE
-                    function checkLogin() {
-                        var u = document.getElementById('admin-user-input').value;
-                        var p = document.getElementById('admin-pass-input').value;
-                
-                        if (u === 'username' && p === 'password') {
-                            localStorage.setItem('adminLoggedIn', 'true');
-                            alert("Success! Welcome Boss.");
-                            location.reload(); 
-                        } else {
-                            document.getElementById('loginError').style.display = 'block';
-                            document.getElementById('loginModal').style.background = '#ffebee';
-                        }
-                    }
-                
-                    function applyAdminUI() {
-                        const bar = document.getElementById('admin-floating-bar');
-                        if (bar) bar.style.display = 'block';
-                        
-                        const openBtn = document.getElementById('openLoginBtn');
-                        if (openBtn) openBtn.style.display = 'none';
-                
-                        const modal = document.getElementById('loginModal');
-                        if (modal) modal.style.display = 'none';
-                        
-                        document.body.style.marginTop = "60px"; 
-                    }
-                
-                    function logout() {
-                        localStorage.removeItem('adminLoggedIn');
-                        location.reload();
-                    }
-                
-                    // 3. SCRAPBOOK CONSTRUCTION FUNCTIONS
-                    function addText(content = "New Note...", x = 50, y = 50) {
-                        if (!canvas) return;
-                        const div = document.createElement('div');
-                        div.className = 'drag-item';
-                        div.style.left = x + 'px';
-                        div.style.top = y + 'px';
-                        div.innerHTML = `
-                            <div class="handle" style="background:#444; color:white; padding:5px; cursor:move; font-size:10px;">
-                                <span>⠿ DRAG</span> 
-                                <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
-                            </div>
-                            <div class="content-area" contenteditable="true" style="padding:10px; background:white; border:1px solid #ccc;">${content}</div>
-                        `;
-                        canvas.appendChild(div);
-                        makeDraggable(div);
-                    }
-                
-                    function createPhotoElement(src, x = 100, y = 100, w = "200px") {
-                        if (!canvas) return;
-                        const div = document.createElement('div');
-                        div.className = 'drag-item';
-                        div.style.left = x + 'px';
-                        div.style.top = y + 'px';
-                        div.innerHTML = `
-                            <div class="handle" style="background:#444; color:white; padding:5px; cursor:move; font-size:10px;">
-                                <span>⠿ PHOTO</span> 
-                                <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
-                            </div>
-                            <div class="image-wrapper" style="width: ${w}">
-                                <img src="${src}" style="width:100%;">
-                            </div>
-                        `;
-                        canvas.appendChild(div);
-                        makeDraggable(div);
-                    }
-                
-                    function makeDraggable(el) {
-                        let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-                        const handle = el.querySelector('.handle');
-                        handle.onmousedown = (e) => {
-                            e.preventDefault();
-                            pos3 = e.clientX;
-                            pos4 = e.clientY;
-                            document.onmouseup = () => {
-                                document.onmouseup = null;
-                                document.onmousemove = null;
-                            };
-                            document.onmousemove = (e) => {
-                                e.preventDefault();
-                                pos1 = pos3 - e.clientX;
-                                pos2 = pos4 - e.clientY;
-                                pos3 = e.clientX;
-                                pos4 = e.clientY;
-                                el.style.top = (el.offsetTop - pos2) + "px";
-                                el.style.left = (el.offsetLeft - pos1) + "px";
-                            };
-                        };
-                    }
-                </script>
-                   
-    </body>    
+            </div>
+
+<script>
+const canvas = document.getElementById('canvas');
+
+function applyAdminUI() {
+    const bar = document.getElementById('admin-floating-bar');
+    bar.style.display = 'block';
+}
+
+function logout() {
+    document.getElementById('admin-floating-bar').style.display = 'none';
+}
+
+function addText(content="New Note...", x=50, y=50) {
+    const div = document.createElement('div');
+    div.className = 'drag-item';
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
+    div.innerHTML = `
+        <div class="handle">
+            <span>⠿ DRAG</span> 
+            <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
+        </div>
+        <div class="content-area" contenteditable="true">${content}</div>
+    `;
+    canvas.appendChild(div);
+    makeDraggable(div);
+}
+function addPhoto(src="https://via.placeholder.com/200", x=100, y=100) {
+    const div = document.createElement('div');
+    div.className = 'drag-item';
+    div.style.left = x + 'px';
+    div.style.top = y + 'px';
+    div.innerHTML = `
+        <div class="handle">
+            <span>⠿ PHOTO</span>
+            <span style="float:right; cursor:pointer;" onclick="this.parentElement.parentElement.remove()">X</span>
+        </div>
+        <div class="image-wrapper" style="width:200px;">
+            <img src="${src}">
+        </div>
+    `;
+    canvas.appendChild(div);
+    makeDraggable(div);
+}
+
+function makeDraggable(el) {
+    let pos1=0, pos2=0, pos3=0, pos4=0;
+    const handle = el.querySelector('.handle');
+    handle.onmousedown = (e) => {
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = () => { document.onmouseup = null; document.onmousemove = null; };
+        document.onmousemove = (e) => {
+            e.preventDefault();
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            el.style.top = (el.offsetTop - pos2) + "px";
+            el.style.left = (el.offsetLeft - pos1) + "px";
+        };
+    };
+}
+
+applyAdminUI();
+</script>
+
+</body>
 </html>
