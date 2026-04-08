@@ -91,13 +91,13 @@
             }
             
             function checkLogin() {
-                const user = document.getElementById('admin-user-input').value;
-                const pass = document.getElementById('admin-pass-input').value;
+                var userIn = document.getElementById('admin-user-input').value;
+                var passIn = document.getElementById('admin-pass-input').value;
             
-                if (user === 'username' && pass === 'password') {
-                    document.body.classList.add('admin-mode');
-                    closeLogin();
-                    alert("Welcome back, Jonie!");
+                if (btoa(userIn) === "Sm9uaWVSb2Npbw==" && btoa(passIn) === "MjkxOTE1M1BsZHQ=") {
+                    localStorage.setItem("adminMode", "true");
+                    alert("Access Granted");
+                    location.reload(); 
                 } else {
                     alert("Access Denied");
                 }
