@@ -1223,7 +1223,9 @@ input[type=text], select, textarea {
 }
 
 * { 
-	border: 1px solid green !important; }
+	border: 1px solid green !important; 
+	margin-top: 0 !important;
+}
 
 .blogc  {
     display: block !important;
@@ -1306,6 +1308,11 @@ input[type=text], select, textarea {
 nav, .menu, .header {
     margin-top: 0;
 }
+
+#blogc {
+	margin-top: 0 !important;
+}
+	
 
 
 
