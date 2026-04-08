@@ -1410,6 +1410,27 @@ body#blogc, #blog-container {
     line-height: 1.2;
 }
 
+#blog-container {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 auto;
+}
+
+#canvas p {
+    font-size: 0.9rem;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
+#canvas h1 {
+    font-size: 1.5rem; /* smaller than current 3rem */
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
 	
 
 
