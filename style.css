@@ -1287,15 +1287,15 @@ input[type=text], select, textarea {
 	 
 	 
 #canvas {
-  	position: relative;
+    position: relative;
     width: 95%;
-    height: auto;
+    height: auto !important;
     min-height: 300px;
+    padding: 0 !important;
     margin: 0 auto;
-    padding: 0;
     border: 2px dashed blue;
     box-sizing: border-box;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 header, .header, nav, .nav, .masthead, #header {
@@ -1363,10 +1363,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
     margin: 0;
-    padding: 0;
-    line-height: 1.2;
 }
 
 #blog-container, #canvas {
