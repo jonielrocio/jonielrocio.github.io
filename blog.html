@@ -157,36 +157,45 @@
             </script>
             <script>
                 async function loadPosts() {
-                    const feed = document.getElementById('blog-feed');
-                    try {
-                        const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts');
-                        const files = await response.json();
-                        feed.innerHTML = ''; 
-                    
-                        for (let file of files) {
-                          const postDataResponse = await fetch(file.download_url);
-                          const text = await postDataResponse.text();
-                          
-                          const title = text.split('title: ')[1]?.split('\n')[0].replace(/"/g, '') || "New Post";
-                          const image = text.split('image: ')[1]?.split('\n')[0] || "https://via.placeholder.com/300x200";
-                    
-                          const card = document.createElement('div');
-                          card.className = 'blog-card';
-                          
-                          card.innerHTML = `
-                            <img src="${image}" class="card-photo"> 
-                            <div class="blog-card-content">
-                                <h3>${title}</h3>
-                                <a href="${file.html_url}" class="read-more">Read More</a>
-                            </div>
-                          `;
-                        }
-                      } catch (e) {
-                        console.error("Error loading posts:", e);
-                        feed.innerHTML = "<p>No posts found yet. Check your repository settings!</p>";
-                      }
+                  const feed = document.getElementById('blog-feed');
+                  try {
+                    // 1. Fetching the data from your GitHub folder
+                    const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts');
+                    const files = await response.json();
+                    feed.innerHTML = ''; 
+                
+                    for (let file of files) {
+                      // 2. Getting the actual content of each post
+                      const postDataResponse = await fetch(file.download_url);
+                      const text = await postDataResponse.text();
+                      
+                      // 3. Extracting the Title and Image link from your Markdown
+                      const title = text.split('title: ')[1]?.split('\n')[0].replace(/"/g, '') || "New Post";
+                      const image = text.split('image: ')[1]?.split('\n')[0] || "https://via.placeholder.com/300x200";
+                
+                      // 4. Building the "Card" (This is where the resizing happens!)
+                      const card = document.createElement('div');
+                      card.className = 'blog-card';
+                      
+                      card.innerHTML = `
+                        <img src="${image}" class="card-photo"> 
+                        <div class="blog-card-content">
+                            <h3>${title}</h3>
+                            <a href="${file.html_url}" class="read-more">Read More</a>
+                        </div>
+                      `;
+                      
+                      // 5. Putting the card into your #blog-feed container
+                      feed.appendChild(card);
                     }
-                    loadPosts();
+                  } catch (e) {
+                    console.error("Error loading posts:", e);
+                    feed.innerHTML = "<p>No posts found yet. Check your repository settings!</p>";
+                  }
+                }
+                
+                // 6. Run the function
+                loadPosts();
             </script>
                     <footer style="text-align: center; padding: 20px; opacity: 0.5;">
                     <p>© 2026 Joniel | <a href="javascript:void(0)" onclick="openLogin()" style="color: inherit; text-decoration: none;">Admin Access</a></p>
