@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: jonielrocio/jonielrocio.github.io
-  branch: main
+  branch: master
 
 media_folder: "images/blog"
 public_folder: "/images/blog"
