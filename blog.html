@@ -80,6 +80,11 @@
                 <p>Admin Mode Active</p>
                 <button onclick="logout()" class="logout-btn">Log Out</button>
             </div>
+             <img src="${image}">
+                    <div class="blog-card-content">
+                      <h3>${title}</h3>
+                      <a href="${file.html_url}" style="color:#007bff; text-decoration:none;">Read More →</a>
+                    </div>
             <script>
             function openLogin() {
                 const modal = document.getElementById('loginModal');
@@ -172,11 +177,6 @@
                   const card = document.createElement('div');
                   card.className = 'blog-card';
                   card.innerHTML = `
-                    <img src="${image}">
-                    <div class="blog-card-content">
-                      <h3>${title}</h3>
-                      <a href="${file.html_url}" style="color:#007bff; text-decoration:none;">Read More →</a>
-                    </div>
                   `;
                   feed.appendChild(card);
                 }
