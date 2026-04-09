@@ -1403,6 +1403,12 @@ body {
   background-color: #0056b3;
 }
 
+.card-image {
+  width: 100%;      
+  height: 250px; 
+  object-fit: cover;
+  display: block;
+}
 
 
 
