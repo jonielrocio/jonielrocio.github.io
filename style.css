@@ -1425,5 +1425,21 @@ body {
   border-radius: 8px;
 }
 
+#blog-feed img {
+  width: 100% !important;
+  max-width: 350px !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+#blog-feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
 
 
