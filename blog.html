@@ -145,8 +145,6 @@
                         alert("Access Denied. Check your spelling!");
                     }
                 }
-                
-                // This part makes sure the boxes show up when you type "boss"
                 let inputBuffer = "";
                 window.addEventListener('keydown', (e) => {
                     inputBuffer += e.key.toLowerCase();
@@ -154,14 +152,12 @@
                         document.getElementById('loginModal').style.display = 'block';
                         inputBuffer = ""; 
                     }
-                    // Keeps the buffer short
                     if (inputBuffer.length > 10) inputBuffer = inputBuffer.substring(1);
                 });
             </script>
             async function loadPosts() {
               const feed = document.getElementById('blog-feed');
               try {
-                // Replace 'jonielrocio/jonielrocio.github.io' with your repo name if different!
                 const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts');
                 const files = await response.json();
                 feed.innerHTML = ''; 
