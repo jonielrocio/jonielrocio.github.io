@@ -5,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-  <link href="config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
-  <div id="loading-check" style="text-align: center; margin-top: 50px; font-family: sans-serif;">
-    <h2>Checking Admin Connection...</h2>
-    <p>If this stays here for more than 10 seconds, Netlify Identity is blocked.</p>
-  </div>
+  <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
 
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
   <script>
-    // If the CMS loads, it will automatically clear the "Checking..." message
-    window.addEventListener('DOMContentLoaded', () => {
-        console.log("Admin Page Loaded");
-    });
+    // This script "pokes" the login box to wake up
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
 </body>
 </html>
