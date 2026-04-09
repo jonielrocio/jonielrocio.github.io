@@ -1409,11 +1409,20 @@ body {
   display: block;
 }
 
-.blog-feed {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.blog-card-content img {
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.blog-card-content {
   padding: 20px;
+  text-align: left;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 
