@@ -1378,6 +1378,31 @@ body {
 	margin: 0; color: #333; font-size: 1.3rem; 
 }
 
+/* Add a smooth fade-in so the posts don't just "pop" in */
+.blog-card {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-read {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white !important;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.btn-read:hover {
+  background-color: #0056b3;
+}
+
 
 
 
