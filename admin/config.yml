@@ -12,6 +12,13 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    frontmatter_delimiter: "---"
+    default_registration: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     identifier_fields: title
     fields:
       - {label: "Title", name: "title", widget: "string"}
