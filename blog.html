@@ -134,8 +134,8 @@
                     const typedPass = passBox.value.trim();
                 
                     // 3. Compare with your secret scrambled keys
-                    const secretUser = "Sm9uaWVSb2Npbw=="; // JonieRocio
-                    const secretPass = "MjkxOTE1M1BsZHQ="; // 2919153Pldt
+                    const secretUser = "Sm9uaWVSb2Npbw=="; // username
+                    const secretPass = "MjkxOTE1M1BsZHQ="; // password
                 
                     if (btoa(typedUser) === secretUser && btoa(typedPass) === secretPass) {
                         localStorage.setItem("adminMode", "true");
