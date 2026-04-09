@@ -161,5 +161,36 @@
                     if (inputBuffer.length > 10) inputBuffer = inputBuffer.substring(1);
                 });
             </script>
+            async function loadPosts() {
+              const feed = document.getElementById('blog-feed');
+              try {
+                // Replace 'jonielrocio/jonielrocio.github.io' with your repo name if different!
+                const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts');
+                const files = await response.json();
+                feed.innerHTML = ''; 
+            
+                for (let file of files) {
+                  const postData = await fetch(file.download_url);
+                  const text = await postData.text();
+                  
+                  const title = text.split('title: ')[1]?.split('\n')[0].replace(/"/g, '') || "New Post";
+                  const image = text.split('image: ')[1]?.split('\n')[0] || "https://via.placeholder.com/300x200";
+            
+                  const card = document.createElement('div');
+                  card.className = 'blog-card';
+                  card.innerHTML = `
+                    <img src="${image}">
+                    <div class="blog-card-content">
+                      <h3>${title}</h3>
+                      <a href="${file.html_url}" style="color:#007bff; text-decoration:none;">Read More →</a>
+                    </div>
+                  `;
+                  feed.appendChild(card);
+                }
+              } catch (e) {
+                feed.innerHTML = "<p>No posts found yet. Go to /admin to create one!</p>";
+              }
+            }
+            loadPosts();
     </body>
 </html>    
