@@ -1378,7 +1378,6 @@ body {
 	margin: 0; color: #333; font-size: 1.3rem; 
 }
 
-/* Add a smooth fade-in so the posts don't just "pop" in */
 .blog-card {
   animation: fadeIn 0.8s ease-in-out;
 }
