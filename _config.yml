@@ -1,12 +1,11 @@
-# Site Settings
 url: "https://jonielrocio.github.io"
 baseurl: ""
 
-# Permalinks
-permalink: /:title/
+permalink: /:title.html
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:title/
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
