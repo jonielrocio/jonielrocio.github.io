@@ -1437,5 +1437,9 @@ img {
     border: none !important;
     text-decoration: none !important;
 }
+	#shasta-1:hover, #shasta-2:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
 }
+
 
