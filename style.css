@@ -1112,9 +1112,9 @@ html, body {
 }
 
 .wlast {
-    width: 50%;
+    width: 20%;
     height: 250px;
-	margin-bottom: 10%;
+	margin-bottom: 0%;
 }
 .email {
    font-size: 20px;
@@ -1204,7 +1204,7 @@ input[type=text], select, textarea {
 	 margin-top: 5%;
 	 display: block;
 	 clear: both;
-	 margin-top: 50px !important;
+	 margin-top: 15%;
  }
  .UC {
 	 font-size: 100pt;
