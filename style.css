@@ -1366,7 +1366,6 @@ body {
   height: 220px;
   object-fit: cover;
   display: block;
-  border: 10px solid red;
 }
 
 .blog-card-content {
@@ -1394,10 +1393,6 @@ body {
 
 .btn-read:hover {
   background: #0056b3;
-}
-
-body {
-	background: purple !important;
 }
 
 img.card-photo {
