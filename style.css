@@ -1419,8 +1419,10 @@ img {
 }
 
 #shasta1, #shasta2 {
-	height: 500px;
-	width: 620px; !important
+	height: auto;
+	width: 45%; !important
+	max-width: 400px;
+	margin: 2%;
 	display: block; !important
 	text-decoration: none;
 }
