@@ -1150,6 +1150,7 @@ input[type=text], select, textarea {
 	justify-content: center;
 	align-items: center;
 	color: #3A0A0A;}
+
 .text0 {
     width: 100%;
     position: relative;
@@ -1171,9 +1172,9 @@ input[type=text], select, textarea {
     color:29EA47 ;
     opacity: .7;
     font-size: 10px;
-    font-family: s
-		ans-serif;
+    font-family: sans-serif;
 }
+
 .text3 {
 	text-align: center;
 	color: 29EA47;
@@ -1185,7 +1186,7 @@ input[type=text], select, textarea {
 .page3 {
 	height: auto;
 	width: 100%;
-{
+}
 
  .lastw {
 	margin-bottom: 10%;
@@ -1216,7 +1217,7 @@ input[type=text], select, textarea {
 }
 
 body {
-    background-color: #f0f2f5; /* Light grey background */
+    background-color: #f0f2f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
