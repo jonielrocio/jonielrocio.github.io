@@ -1441,5 +1441,16 @@ body {
   padding: 20px;
 }
 
+.post-content img, 
+ article img,
+.blog-post img {
+  width: 100% !important;
+  max-width: 800px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 20px auto !important;
+  border-radius: 10px;
+}
+
 
 
