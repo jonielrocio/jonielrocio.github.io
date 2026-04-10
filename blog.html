@@ -185,6 +185,7 @@
                     // 1. Fetching the data from your GitHub folder
                      const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts');
                      const files = await response.json();
+                     const response = await fetch('https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts?t=' + new Date().getTime());
                      feed.innerHTML = ''; 
                 
                      for (let file of files) {
