@@ -1418,9 +1418,10 @@ img {
     margin: 20px auto;
 }
 
-.shasta1 {
+#shasta1, #shasta2 {
 	height: 220px;
+	width: auto;
+	display: inline-block; !important
+	text-decoration: none;
 }
-.shasta2 {
-	height: 220px;
-}
+
