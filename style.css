@@ -1419,11 +1419,11 @@ img {
 }
 
 #shasta1, #shasta2 {
-	height: auto;
-	width: 45%; !important
-	max-width: 400px;
-	margin: 2%;
+	height: 350px;
+	width: auto; !important
+	max-width: 100%;
+	margin: 5px;
 	display: block; !important
-	text-decoration: none;
+	border: none !important;
 }
 
