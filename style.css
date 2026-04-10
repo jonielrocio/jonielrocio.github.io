@@ -1441,26 +1441,27 @@ body {
   padding: 20px;
 }
 
-.post-content img, 
- article img,
-.blog-post img {
-  width: 100% !important;
-  max-width: 800px !important;
-  height: auto !important;
-  display: block !important;
-  margin: 20px auto !important;
-  border-radius: 10px;
+.blog-card img, 
+#blog-feed img, 
+.card-image {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 12px 12px 0 0;
 }
 
- article img, 
+article img, 
 .post-content img, 
-.post img {
-  width: 100% !important;
-  max-width: 700px !important;
-  height: auto !important;
-  display: block !important;
-  margin: 30px auto !important;
-  border-radius: 15px;
+.blog-post img, 
+main img,
+.blog-card-content img {
+    width: 100% !important;
+    max-width: 750px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 30px auto !important;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 
