@@ -1413,23 +1413,16 @@ img {
 	font-size: 50px !important;
 }
 .sparkle-text {
-    color: #F58426; 
-    background-color: #F58426; /* Fallback */
-
-    background: linear-gradient(90deg, #F58426, #ffffff, #F58426);
-    background-size: 200% auto;
-
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     display: inline-block;
-    animation: trailShimmer 2s linear infinite !important;
+	font-weight: bold;
+	animation: simpleTest 1s infinite !important;
 }
 
-@keyframes trailShimmer {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+
+@keyframes simpleTest {
+    0% { color: #F58426; }
+	50% { color: #ffffff; }
+    100% { color: #F58426; }
 }
 
 .post-content img {
