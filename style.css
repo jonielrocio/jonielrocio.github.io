@@ -1190,18 +1190,19 @@ input[type=text], select, textarea {
 }
 
  .lastw {
-	margin-bottom: 10%;
-	margin-left: 50%
-	position: absolute;
-	text-align: center;
-    align-content: center;
-    background: black;
-    opacity: .7;
-    width: 69%;
-    margin-left: 15%;
-    height: 300px;
-    clear:both;
-	margin-top: 5%;
+	 margin-bottom: 10%;
+	 margin-left: 50%
+	 position: absolute;
+	 text-align: center;
+     align-content: center;
+     background: black;
+     opacity: .7;
+     width: 69%;
+     margin-left: 15%;
+     height: 300px;
+     clear:both;
+	 margin-top: 5%;
+	 display: block;
 	 
  }
  .UC {
