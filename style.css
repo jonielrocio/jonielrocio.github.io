@@ -1403,3 +1403,8 @@ img.card-photo {
   border: 10px solid red !important;
   width: 100% !important;
 }
+
+img {
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
