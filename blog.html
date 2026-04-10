@@ -141,7 +141,6 @@
             <p id="UC">UNDER CONSTRUCTION</p>
             <script>
                 function checkLogin() {
-                    // 1. Double check the elements exist
                     const userBox = document.getElementById('admin-user-input');
                     const passBox = document.getElementById('admin-pass-input');
                 
@@ -150,11 +149,9 @@
                         return;
                     }
                 
-                    // 2. Get values and trim spaces (spaces are common login killers!)
                     const typedUser = userBox.value.trim();
                     const typedPass = passBox.value.trim();
                 
-                    // 3. Compare with your secret scrambled keys
                     const secretUser = "Sm9uaWVSb2Npbw=="; // username
                     const secretPass = "MjkxOTE1M1BsZHQ="; // password
                 
@@ -180,7 +177,6 @@
                   async function loadPosts() {
                     const feed = document.getElementById('blog-feed');
                     try {
-                        // 1. Fetching the data with a cache-buster to bypass GitHub's delay
                         const apiUrl = 'https://api.github.com/repos/jonielrocio/jonielrocio.github.io/contents/_posts?t=' + new Date().getTime();
                         const response = await fetch(apiUrl);
                         const files = await response.json();
@@ -188,31 +184,26 @@
                         feed.innerHTML = ''; 
                 
                         for (let file of files) {
-                            // SKIP folders or anything that isn't a markdown file
                             if (file.type === 'dir' || !file.name.endsWith('.md')) continue;
                 
-                            // 2. Getting the actual content of the post
                             const postDataResponse = await fetch(file.download_url);
                             const text = await postDataResponse.text();
                 
-                            // 3. Extracting Title and Image (Smart search for quotes and spaces)
                             const titleMatch = text.match(/title:\s*["']?(.*?)["']?\s*(\n|\r)/);
                             const imageMatch = text.match(/image:\s*["']?(.*?)["']?\s*(\n|\r)/);
                 
                             const title = titleMatch ? titleMatch[1] : "New Post";
                             const image = imageMatch ? imageMatch[1] : "https://via.placeholder.com/300x200";
-                
-                            // 4. Building the Link (Removes YYYY-MM-DD-)
-                            // This turns "2022-08-09-mount-shasta.md" into "mount-shasta.html"
                             const cleanLink = file.name.substring(11).replace('.md', '.html');
-                
                             const card = document.createElement('div');
                             card.className = 'blog-card';
-                            card.innerHTML = `
-                                <img src="${image}" class="card-photo" alt="${title}"> 
-                                <div class="blog-card-content">
-                                    <h3>${title}</h3>
-                                    <a href="./${cleanLink}" class="read-more">Read More</a>
+                           card.innerHTML = `
+                                <div style="border: 1px solid #ddd; border-radius: 12px; overflow: hidden; background: white; display: flex; flex-direction: column;">
+                                    <img src="${image}" style="width: 100% !important; height: 220px !important; object-fit: cover !important; display: block;"> 
+                                    <div style="padding: 15px;">
+                                        <h3 style="margin: 0 0 10px 0; font-family: sans-serif;">${title}</h3>
+                                        <a href="./${cleanLink}" style="display: inline-block; padding: 8px 16px; background: #006BB6; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Read More</a>
+                                    </div>
                                 </div>
                             `;
                 
@@ -224,7 +215,6 @@
                     }
                 }
                 
-                // Start the engine
                 loadPosts();
             </script>
                     <footer style="text-align: center; padding: 20px; opacity: 0.5;">
