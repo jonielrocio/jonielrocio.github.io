@@ -1446,7 +1446,10 @@ img {
     transition: 0.3s;
 }
 	#wpaa {
-		margin-left: 50%;
+		mdisplay: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
 	}
 
 
