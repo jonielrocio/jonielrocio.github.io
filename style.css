@@ -1362,11 +1362,10 @@ body {
 
 .card-photo {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border: 10px; !important
-  outline: 5px solid blue !important
   display: block;
+  border: 10px solid red;
 }
 
 .blog-card-content {
