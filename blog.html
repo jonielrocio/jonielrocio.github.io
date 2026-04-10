@@ -178,12 +178,13 @@ title: Blog
                             const card = document.createElement('div');
                             card.className = 'blog-card';
                            card.innerHTML = `
-                                <div style="border: 1px solid #ddd; border-radius: 12px; overflow: hidden; background: white; display: flex; flex-direction: column;">
-                                    <img src="${image}" class="card-photo"> 
-                                    <div style="padding: 15px;">
-                                        <h3 style="margin: 0 0 10px 0; font-family: sans-serif;">${title}</h3>
-                                        <a href="./${cleanLink}" style="display: inline-block; padding: 8px 16px; background: #006BB6; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Read More</a>
-                                    </div>
+                                <div class="blog-card">
+                                  <img src="${image}" class="card-photo">
+                                
+                                  <div class="blog-card-content">
+                                    <h3>${title}</h3>
+                                    <a href="./${cleanLink}" class="btn-read">Read More</a>
+                                  </div>
                                 </div>
                             `;
                 
