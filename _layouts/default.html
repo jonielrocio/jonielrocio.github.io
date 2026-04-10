@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
-  
   <link rel="stylesheet" href="/style.css">
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
 
-  <footer style="text-align: center; padding: 20px; font-size: 0.8rem; color: #777;">
-    <p>&copy; {{ "now" | date: "%Y" }} Joniel Rocio</p>
+  <main>
+    {{ content }} 
+  </main>
+
+  <footer style="text-align: center; padding: 40px 0;">
+    <p>&copy; {{ "now" | date: "%Y" }} Where the Trail Starts</p>
   </footer>
 
 </body>
