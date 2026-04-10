@@ -9,3 +9,4 @@ permalink: /:title.html
 collections:
   posts:
     output: true
+    permalink: /:title.html
