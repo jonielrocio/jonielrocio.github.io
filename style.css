@@ -1232,11 +1232,6 @@ body {
     object-fit: cover;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .nav {
     margin-bottom: 0 !important;
     padding-bottom: 0;
