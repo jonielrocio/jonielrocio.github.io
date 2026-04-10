@@ -1405,7 +1405,7 @@ img {
   overflow-clip-margin: content-box;
 }
 
-.yosi {
+#yosi {
 	border: 10px solid red !important;
 	font-size: 50px !important; 
 }
