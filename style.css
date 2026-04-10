@@ -1412,6 +1412,7 @@ img {
 #yosi {
 	border: 10px solid red !important;
 	font-size: 50px !important;
+}
 	.sparkle-text {
     /* Set the base color (Knicks Blue or Orange) */
     color: #F58426; 
@@ -1428,14 +1429,13 @@ img {
     
     /* The Animation */
     animation: shine 3s linear infinite;
-}
 
+	}
 /* The movement logic */
 @keyframes shine {
     to {
         background-position: 200% center;
-    }
-}
+	}
 }
 
 .post-content img {
