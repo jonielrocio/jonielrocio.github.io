@@ -1464,4 +1464,13 @@ main img,
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+main img {
+    width: 100% !important;
+    max-width: 650px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 30px auto !important;
+    border-radius: 12px;
+}
+
 
