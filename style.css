@@ -1409,3 +1409,11 @@ img {
 	border: 10px solid red !important;
 	font-size: 50px !important; 
 }
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
