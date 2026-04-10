@@ -1420,7 +1420,7 @@ img {
 
 #shasta1, #shasta2 {
 	height: 500px;
-	width: auto;
+	width: 500px; !important
 	display: block; !important
 	text-decoration: none;
 }
