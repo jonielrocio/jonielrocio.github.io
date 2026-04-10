@@ -1399,3 +1399,8 @@ body {
 body {
 	background: purple !important;
 }
+
+img.card-photo {
+  border: 10px solid red !important;
+  width: 100% !important;
+}
