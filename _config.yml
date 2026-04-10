@@ -3,10 +3,10 @@ url: "https://jonielrocio.github.io"
 baseurl: ""
 
 # Permalinks
-permalink: /:title.html
+permalink: /:title/
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /:title.html
+    permalink: /blog/:title/
