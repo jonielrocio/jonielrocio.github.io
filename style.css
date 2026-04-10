@@ -1203,8 +1203,9 @@ input[type=text], select, textarea {
      clear:both;
 	 display: block;
 	 clear: both;
-	 margin-top: 450%;
+	 margin-top: 250%;
  }
+
  .UC {
 	 font-size: 100pt;
 	 display: flex;
