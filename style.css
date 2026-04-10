@@ -1419,11 +1419,23 @@ img {
 }
 
 #shasta1, #shasta2 {
-	height: 350px;
-	width: auto; !important
-	max-width: 100%;
-	margin: 5px;
-	display: block; !important
-	border: none !important;
+	#shasta-1, #shasta-2 {
+    /* 1. The Size */
+    width: 46%;         /* Uses almost half the screen width */
+    height: auto;       /* Keeps the mountain from looking squished */
+    
+    /* 2. The Limits */
+    max-width: 450px;   /* Stops them from getting too huge on big screens */
+    min-width: 150px;   /* Stops them from becoming ants on tiny screens */
+    
+    /* 3. The Layout */
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.5%;       /* Adds a little 'breathing room' between them */
+    
+    /* 4. The Cleaners */
+    border: none !important;
+    text-decoration: none !important;
+}
 }
 
