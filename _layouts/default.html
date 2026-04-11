@@ -11,16 +11,31 @@
   <main>
     {{ content }} 
   </main>
-  <script>
-    let slideIndex = 1;
-    setInterval(() => {
-      document.getElementById('i' + slideIndex).checked = true;
-      slideIndex++;
-      if (slideIndex > 4) slideIndex = 1;
-      }, 5000); // Changes every 5 seconds
-  </script>
+  
     <footer style="text-align: center; padding: 40px 0;">
      <p>© 2026 Joniel|</p>
     </footer>
+  <script>
+    let slideIndex = 1;
+    
+    setInterval(() => {
+      // This finds ALL radio buttons inside your 'slides' container
+      const totalSlides = document.querySelectorAll('.slides input[type="radio"]').length;
+      
+      if (totalSlides > 0) {
+        let radio = document.getElementById('i' + slideIndex);
+        if (radio) {
+            radio.checked = true;
+        }
+        
+        slideIndex++;
+        
+        // Instead of '4', it uses whatever the actual count is
+        if (slideIndex > totalSlides) {
+            slideIndex = 1;
+        }
+      }
+    }, 5000);
+  </script>
 </body>
 </html>
