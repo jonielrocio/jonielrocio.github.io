@@ -1,59 +1,26 @@
 ---
-# Layout reset
+# This is the Master Frame
 ---
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora&display=swap" rel="stylesheet">
-    
     <style>
-        /* 1. THE KILLER RESET: This stops the "Fighting" */
-        * { box-sizing: border-box; }
-        body, html { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
-
-        /* 2. FORCE THE GRID */
-        .trip-grid {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            gap: 20px !important;
-            padding: 40px !important;
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-        }
-
-        /* 3. FORCE THE CARDS TO SHRINK */
-        .trip-card {
-            width: 350px !important; /* Forces them to stay this size */
-            flex: 0 1 350px !important;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            background: #fff;
-        }
-
-        .card-image img {
-            width: 100% !important;
-            height: 250px !important;
-            object-fit: cover !important;
-        }
-
-        /* 4. HERO SECTION */
-        .hero-image img {
-            width: 100% !important;
-            height: 400px !important;
-            object-fit: cover !important;
-        }
+        body { margin: 0; font-family: sans-serif; background: #f4f4f4; }
         
-        .hero-text { text-align: center; padding: 40px; font-family: 'Montserrat', sans-serif; }
+        /* THE FIX: This forces images to be small */
+        img { 
+            max-width: 400px !important; 
+            height: auto !important; 
+            display: block;
+            margin: 10px auto;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
     </style>
 </head>
 <body>
-
-    <main>
+    <div class="container">
         {{ content }}
-    </main>
-
+    </div>
 </body>
 </html>
