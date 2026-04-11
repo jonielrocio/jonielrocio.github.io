@@ -1516,7 +1516,7 @@ body {
 	}
 	.container {
     	width: 96%: !important;          /* Leaves a 5% gap on each side on phones */
-    	max-width: none;   /* Won't get wider than this on a big monitor */
+    	max-width: 100% !important;   /* Won't get wider than this on a big monitor */
     	padding: 0 10px;      /* Centers the website */
 	}
     
