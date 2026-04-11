@@ -1,11 +1,11 @@
-url: "https://jonielrocio.github.io"
-baseurl: ""
+url: "https://jonielrocio.github.io" 
+baseurl: "" 
 
-permalink: /:title.html
+permalink: /:title.html 
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+defaults: 
+  - scope: 
+      path: "" 
+      type: "posts" 
+    values: 
+      layout: "post" 
