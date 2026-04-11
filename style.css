@@ -1410,18 +1410,23 @@ img {
 }
 
 #yosi {
-	font-size: 100px !important;
-}
-.sparkle-text {
-	text-align: center;
-	font-weight: bold;
-	animation: simpleTest 1s infinite !important;
+#yosi {
+    font-size: 100px !important;
 }
 
+.sparkle-text {
+    display: block;        /* CRITICAL: margin: auto needs this to center the box */
+    text-align: center;    /* This centers the text inside the box */
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;     /* Added some top/bottom margin for breathing room */
+    font-weight: bold;
+    animation: simpleTest 1s infinite !important;
+}
 
 @keyframes simpleTest {
     0% { color: #F58426; }
-	50% { color: #ffffff; }
+    50% { color: #ffffff; }
     100% { color: #F58426; }
 }
 
