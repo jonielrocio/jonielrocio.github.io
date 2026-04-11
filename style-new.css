@@ -1,41 +1,21 @@
-/* Add/Update these specific rules in your <style> section */
-
-.trip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* More space between cards makes it look "expensive" */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.card-image img {
-    width: 100%;
-    height: 250px; /* This locks all images to the exact same height */
-    object-fit: cover; /* This crops them perfectly so they don't stretch */
-    border-radius: 8px 8px 0 0; /* Rounds only the top corners */
-}
-
-.card-content {
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #eee; /* Adds a subtle border to the text area */
-    border-top: none;
-    border-radius: 0 0 8px 8px; /* Rounds the bottom corners */
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 0;
+/* This makes the titles inside the cards appear */
+.card-content h3 {
     font-family: 'Montserrat', sans-serif;
-}
-
-.hero-text p {
     font-size: 1.2rem;
-    color: #666;
-    margin-top: 5px;
+    margin: 10px 0;
+    color: #222;
+    display: block !important; /* Forces it to show up */
 }
 
+/* This styles the location text above the heading */
+.category {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #556b2f; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block !important;
+}
 .card-image img {
     width: 100% !important;     /* Makes them fill the card width */
     height: 250px !important;    /* Keeps them all the same height */
