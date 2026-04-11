@@ -1,1 +1,37 @@
+---
+# This is your layout file
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            padding: 50px; 
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1 style="color: #556b2f;">MeonFoot Redesign</h1>
+        <hr>
+    </header>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <footer style="margin-top: 50px; font-size: 0.8rem; color: #888;">
+        © 2026 Joniel
+    </footer>
+
+</body>
+</html>
