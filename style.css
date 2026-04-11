@@ -1410,19 +1410,37 @@ img {
 }
 
 #yosi {
-    /* Font and Sizing */
+    /* Font and Centering (Already working!) */
     font-size: 100px !important;
     font-weight: bold;
-    
-    /* Centering for Widescreen */
     display: block;
     width: 100%;
     margin: 20px auto;
     text-align: center;
 
-    /* The Animation (The Orange & White blink) */
-    color: #F58426; 
-    animation: simpleTest 1s infinite !important;
+    /* The Sparkle Foundation */
+    color: #F58426; /* Fallback for older browsers */
+    background: linear-gradient(
+        to right, 
+        #F58426 20%, 
+        #ffffff 40%, 
+        #ffffff 60%, 
+        #F58426 80%
+    );
+    background-size: 200% auto; /* Stretches the gradient so it can "slide" */
+    
+    /* The Magic Trick: This cuts the background into the shape of the letters */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* The Animation */
+    animation: sparkleSlide 3s linear infinite !important;
+}
+
+@keyframes sparkleSlide {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
 
 .post-content img {
