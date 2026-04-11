@@ -1482,27 +1482,6 @@ img {
 		height: 2px !important;
 	}
 
-	/* This only triggers on screens smaller than 768px */
-@media (max-width: 768px) {
-}
-	
-  .blog-container {
-    /* Forces blog cards to stack in one column */
-    grid-template-columns: 1fr; 
-    padding: 10px;
-  }
-
-  /* Makes sure images don't go off-screen */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Adjusts font sizes so they aren't massive on a small screen */
-  h1 {
-    font-size: 1.5rem;
-  }
-
 .wrapper {
   width: 100%; /* Fill the screen */
   max-width: 1200px; /* But don't get TOO big on ultrawide monitors */
@@ -1517,5 +1496,66 @@ img {
 	text-align: center;
 	min-height: 200px;
 }
+
+/* Force everything to stay within the screen boundaries */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Keeps the aspect ratio of your trail photos */
+    display: block;
+}
+
+/* Apply this to your main wrapper or body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Or your preferred font */
+    width: 100%;
+    overflow-x: hidden; /* Prevents annoying side-scrolling */
+}
+
+.container {
+    width: 90%;          /* Leaves a 5% gap on each side on phones */
+    max-width: 1000px;   /* Won't get wider than this on a big monitor */
+    margin: 0 auto;      /* Centers the website */
+}
+
+/* --- MOBILE FIXES --- */
+@media screen and (max-width: 600px) {
+    
+    /* 1. Stack the Navigation vertically */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* 2. Fix the Slider for thumbs */
+    .slides {
+        width: 100%;
+        height: 250px; /* Adjust height for mobile screens */
+    }
+
+    .nav_dots {
+        bottom: 5px;
+    }
+
+    .dots {
+        width: 12px; /* Makes dots slightly larger for easier tapping */
+        height: 12px;
+    }
+
+    /* 3. Adjust Text Size */
+    h1 {
+        font-size: 1.8rem; /* Shrinks the title slightly so it fits in one line */
+    }
 
 
