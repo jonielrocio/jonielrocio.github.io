@@ -5,23 +5,40 @@
 <html>
 <head>
     <title>{{ page.title }}</title>
-   <style>
-    /* This rule will win the fight */
-    .card-image img {
-        width: 100% !important;
-        height: 250px !important;
-        object-fit: cover !important;
-        display: block !important;
-    }
-
+<style>
+    /* 1. Force the Grid to exist */
     .trip-grid {
         display: grid !important;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
         gap: 30px !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 40px 20px !important;
     }
-    
-    /* Hide anything that might be coming from the old style.css */
-    .old-class-names { display: none; }
+
+    /* 2. Force the Images to shrink */
+    .trip-card .card-image img {
+        width: 100% !important;
+        height: 250px !important;
+        object-fit: cover !important;
+        display: block !important;
+        max-width: 100% !important; /* This stops them from exploding in size */
+    }
+
+    /* 3. Hero Image fix */
+    .hero-image img {
+        width: 100% !important;
+        max-height: 450px !important;
+        object-fit: cover !important;
+    }
+
+    /* 4. The Card styling */
+    .trip-card {
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 </style>
 </head>
 <body>
