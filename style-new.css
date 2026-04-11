@@ -116,3 +116,43 @@ footer {
     background: #fcfcfc;
     border-top: 1px solid #eee;
 }
+.content-container {
+    max-width: 800px; /* Keeps the text from stretching too wide */
+    margin: 0 auto;   /* Centers the content */
+    padding: 60px 20px;
+}
+
+.post-preview {
+    margin-bottom: 80px; /* Space between each post */
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #2e7d32; /* That same forest green from your line */
+    letter-spacing: 2px;
+}
+
+.post-preview h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.post-preview p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid #eee;
+    transition: border-color 0.3s;
+}
+
+.read-more:hover {
+    border-bottom-color: #2e7d32;
+}
