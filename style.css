@@ -1511,7 +1511,10 @@ img {
 }
 
 .balita {
-	padding-bottom: 800px;
+	min-height: 200vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 
