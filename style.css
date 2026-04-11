@@ -1127,13 +1127,6 @@ html, body {
     background-color: white;
 }
 
-.container {
-    border: 1px solid black;
-    margin-left: 15%;
-    width: 68.8%;
-    background-color: white;  
-}
-
 .email {
     padding-top: 20px;
     margin-left: 0;
