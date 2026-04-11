@@ -1410,23 +1410,19 @@ img {
 }
 
 #yosi {
+    /* Font and Sizing */
     font-size: 100px !important;
-}
-
-.sparkle-text {
-    display: block;        /* CRITICAL: margin: auto needs this to center the box */
-    text-align: center;    /* This centers the text inside the box */
-    max-width: 800px;
-    width: 90%;
-    margin: 40px auto;     /* Added some top/bottom margin for breathing room */
     font-weight: bold;
-    animation: simpleTest 1s infinite !important;
-}
+    
+    /* Centering for Widescreen */
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
 
-@keyframes simpleTest {
-    0% { color: #F58426; }
-    50% { color: #ffffff; }
-    100% { color: #F58426; }
+    /* The Animation (The Orange & White blink) */
+    color: #F58426; 
+    animation: simpleTest 1s infinite !important;
 }
 
 .post-content img {
