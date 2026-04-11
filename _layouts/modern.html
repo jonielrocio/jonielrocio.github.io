@@ -1,60 +1,59 @@
 ---
-# This is your layout file
+# Layout reset
 ---
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ page.title }}</title>
-<style>
-    /* 1. Force the Grid to exist */
-    .trip-grid {
-        display: grid !important;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-        gap: 30px !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 40px 20px !important;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. THE KILLER RESET: This stops the "Fighting" */
+        * { box-sizing: border-box; }
+        body, html { margin: 0; padding: 0; width: 100%; overflow-x: hidden; }
 
-    /* 2. Force the Images to shrink */
-    .trip-card .card-image img {
-        width: 100% !important;
-        height: 250px !important;
-        object-fit: cover !important;
-        display: block !important;
-        max-width: 100% !important; /* This stops them from exploding in size */
-    }
+        /* 2. FORCE THE GRID */
+        .trip-grid {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 20px !important;
+            padding: 40px !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+        }
 
-    /* 3. Hero Image fix */
-    .hero-image img {
-        width: 100% !important;
-        max-height: 450px !important;
-        object-fit: cover !important;
-    }
+        /* 3. FORCE THE CARDS TO SHRINK */
+        .trip-card {
+            width: 350px !important; /* Forces them to stay this size */
+            flex: 0 1 350px !important;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
 
-    /* 4. The Card styling */
-    .trip-card {
-        background: #fff;
-        border: 1px solid #eee;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-</style>
+        .card-image img {
+            width: 100% !important;
+            height: 250px !important;
+            object-fit: cover !important;
+        }
+
+        /* 4. HERO SECTION */
+        .hero-image img {
+            width: 100% !important;
+            height: 400px !important;
+            object-fit: cover !important;
+        }
+        
+        .hero-text { text-align: center; padding: 40px; font-family: 'Montserrat', sans-serif; }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1 style="color: #556b2f;">MeonFoot Redesign</h1>
-        <hr>
-    </header>
-
-    <main class="container">
+    <main>
         {{ content }}
     </main>
-
-    <footer style="margin-top: 50px; font-size: 0.8rem; color: #888;">
-        © 2026 Joniel
-    </footer>
 
 </body>
 </html>
