@@ -1576,6 +1576,58 @@ body {
     width: 100% !important;
     height: auto;
   }
+@media (max-width: 768px) {
+
+  /* 🔥 Stack flex layouts */
+  .choices,
+  .choices2 {
+    flex-direction: column !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  /* Make inner blocks full width */
+  .photos,
+  .aboutme,
+  .contact,
+  .trails {
+    width: 100% !important;
+  }
+
+  /* Fix images */
+  .photos_img,
+  .aboutme_img,
+  .contact_img,
+  .trails_img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Fix text overlays (center them properly) */
+  .textphotos a,
+  .textaboutme a,
+  .textcontact a,
+  .texttrails a {
+    left: 50% !important;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Fix footer (BIG one) */
+  .last {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /* Optional: fix pemi height */
+  .pemi {
+    height: auto;
+  }
+
+  .pemi_img {
+    height: auto;
+  }
+}
 }
 
 
