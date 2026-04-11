@@ -1463,4 +1463,30 @@ img {
 		height: 100vh;
 	}
 
+	/* This only triggers on screens smaller than 768px */
+@media (max-width: 768px) {
+  .blog-container {
+    /* Forces blog cards to stack in one column */
+    grid-template-columns: 1fr; 
+    padding: 10px;
+  }
+
+  /* Makes sure images don't go off-screen */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjusts font sizes so they aren't massive on a small screen */
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.wrapper {
+  width: 100%; /* Fill the screen */
+  max-width: 1200px; /* But don't get TOO big on ultrawide monitors */
+  margin: 0 auto; /* Center it */
+}
+
 
