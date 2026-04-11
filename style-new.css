@@ -179,3 +179,11 @@ footer {
     object-fit: cover;       /* Crops photos so they are all the same height */
     border-radius: 8px;
 }
+
+.trip-card {
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px); /* Makes the card pop up slightly */
+}
