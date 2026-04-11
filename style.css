@@ -1405,7 +1405,7 @@ img {
   overflow-clip-margin: content-box;
 }
 
-  #yosi, #rev {
+  #yosi, #rev, #aboutU {
     /* Font and Centering (Stay the same) */
     font-size: 100px !important;
     font-weight: bold;
