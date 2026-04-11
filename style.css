@@ -1486,6 +1486,8 @@ img {
 
 	/* This only triggers on screens smaller than 768px */
 @media (max-width: 768px) {
+}
+	
   .blog-container {
     /* Forces blog cards to stack in one column */
     grid-template-columns: 1fr; 
