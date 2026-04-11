@@ -1554,6 +1554,29 @@ body {
     h1 {
         font-size: 1.8rem; /* Shrinks the title slightly so it fits in one line */
     }
+
+  /* Stack all main sections */
+  .gc, .whitney, .pemi,
+  .choices, .choices2 {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Stack inner items */
+  .photos, .aboutme,
+  .contact, .trails {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  /* Fix images inside */
+  .gc_img, .whitney_img, .pemi_img,
+  .photos_img, .aboutme_img,
+  .contact_img, .trails_img {
+    width: 100% !important;
+    height: auto;
+  }
 }
+
 
 
