@@ -1,13 +1,13 @@
 html, body {
 	background-color: white;
     width: 100%;
-    min-height: 100vh;
 	margin: 0;
 	overflow-x: hidden;
     padding: 0;
 	backgroun-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: scroll;
     background-image: url(photos/background.png)  
 }
 
@@ -1507,14 +1507,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-	
-	.container {
-    	width: 90%;          /* Leaves a 5% gap on each side on phones */
-    	max-width: 1000px;   /* Won't get wider than this on a big monitor */
-    	margin: 0 auto;      /* Centers the website */
+	html, body {
+		back-ground-attachment: scroll !important;
+		background-size: cover;
+		backgound-position: center top;
 	}
-}
-
+	.container {
+    	width: 96%: !important;          /* Leaves a 5% gap on each side on phones */
+    	max-width: none;   /* Won't get wider than this on a big monitor */
+    	padding: 0 10px;      /* Centers the website */
+	}
     
     /* 1. Stack the Navigation vertically */
     nav ul {
@@ -1548,5 +1550,6 @@ body {
     h1 {
         font-size: 1.8rem; /* Shrinks the title slightly so it fits in one line */
     }
+}
 
 
