@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | {{ site.title }}</title>
@@ -11,10 +11,16 @@
   <main>
     {{ content }} 
   </main>
-
-  <footer style="text-align: center; padding: 40px 0;">
-    <p>© 2026 Joniel|</p>
-  </footer>
-
+  <script>
+    let slideIndex = 1;
+    setInterval(() => {
+      document.getElementById('i' + slideIndex).checked = true;
+      slideIndex++;
+      if (slideIndex > 4) slideIndex = 1;
+      }, 5000); // Changes every 5 seconds
+  </script>
+    <footer style="text-align: center; padding: 40px 0;">
+     <p>© 2026 Joniel|</p>
+    </footer>
 </body>
 </html>
