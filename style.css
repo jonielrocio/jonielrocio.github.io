@@ -1480,7 +1480,7 @@ img {
 		mdisplay: flex;
 		justify-content: center;
 		align-items: center;
-		height: 0 !important;
+		height: 2px !important;
 	}
 
 	/* This only triggers on screens smaller than 768px */
@@ -1511,10 +1511,8 @@ img {
 }
 
 .balita {
-	min-height: 200vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
+	padding-bottom: 500px;
+	display: block;
 }
 
 
