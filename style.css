@@ -1405,7 +1405,6 @@ img {
   overflow-clip-margin: content-box;
 }
 
-
   #yosi {
     /* Font and Centering (Stay the same) */
     font-size: 100px !important;
@@ -1508,11 +1507,14 @@ body {
     overflow-x: hidden; /* Prevents annoying side-scrolling */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	html, body {
 		back-ground-attachment: scroll !important;
 		background-size: cover;
 		backgound-position: center top;
+	}
+	.row {
+		flex-direction: column; 
 	}
 	.container {
     	width: 96%: !important;          /* Leaves a 5% gap on each side on phones */
