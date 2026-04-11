@@ -1455,7 +1455,6 @@ img {
 }
 
 #shasta1, #shasta2 {
-	#shasta-1, #shasta-2 {
     /* 1. The Size */
     width: 46%;         /* Uses almost half the screen width */
     height: auto;       /* Keeps the mountain from looking squished */
