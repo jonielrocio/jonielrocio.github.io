@@ -1,24 +1,118 @@
-/* This makes the titles inside the cards appear */
-.card-content h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #222;
-    display: block !important; /* Forces it to show up */
+:root {
+    --primary: #006BB6;    /* Knicks Blue */
+    --accent: #F58426;     /* Knicks Orange */
+    --bg: #ffffff;
+    --type-dark: #1e1e1e;
+    --type-light: #666666;
 }
 
-/* This styles the location text above the heading */
+body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    background-color: var(--bg);
+    color: var(--type-dark);
+}
+
+/* HERO - Clean and Impactful */
+.hero-section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #000;
+}
+
+.hero-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-text p {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+/* THE TRIP GRID - Airy & Modern */
+.trip-grid {
+    max-width: 1200px;
+    margin: -60px auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* THE TRIP CARD - Clean Borderless Design */
+.trip-card {
+    background: white;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 400px; /* Taller images for that "Magazine" feel */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card-content {
+    padding: 25px 0; /* No side padding creates a modern "flush" look */
+}
+
 .category {
     font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    color: #556b2f; 
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block !important;
-}
-.card-image img {
-    width: 100% !important;     /* Makes them fill the card width */
-    height: 250px !important;    /* Keeps them all the same height */
-    object-fit: cover !important; /* Crops them perfectly so they don't look squished */
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
     display: block;
+}
+
+.trip-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.read-more {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.read-more:hover {
+    border-bottom-color: var(--accent);
+}
+
+footer {
+    padding: 100px 20px;
+    text-align: center;
+    background: #fcfcfc;
+    border-top: 1px solid #eee;
 }
