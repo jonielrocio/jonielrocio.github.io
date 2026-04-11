@@ -1506,14 +1506,13 @@ body {
     overflow-x: hidden; /* Prevents annoying side-scrolling */
 }
 
-.container {
-    width: 90%;          /* Leaves a 5% gap on each side on phones */
-    max-width: 1000px;   /* Won't get wider than this on a big monitor */
-    margin: 0 auto;      /* Centers the website */
-}
-
-/* --- MOBILE FIXES --- */
 @media screen and (max-width: 600px) {
+	
+	.container {
+    	width: 90%;          /* Leaves a 5% gap on each side on phones */
+    	max-width: 1000px;   /* Won't get wider than this on a big monitor */
+    	margin: 0 auto;      /* Centers the website */
+}
     
     /* 1. Stack the Navigation vertically */
     nav ul {
@@ -1521,6 +1520,7 @@ body {
         flex-direction: column;
         padding: 0;
     }
+}
 
     nav li {
         text-align: center;
