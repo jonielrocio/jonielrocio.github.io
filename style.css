@@ -1475,9 +1475,11 @@ img {
 	
 }
 	#wpaa {
-		mdisplay: flex;
-		justify-content: center;
-		align-items: center;
+		display: block;
+		text-align: center;
+		width: 100;
+		margin-left: auto;
+		margin-right: auto;
 		height: 2px !important;
 	}
 
