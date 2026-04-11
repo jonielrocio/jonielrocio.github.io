@@ -1414,6 +1414,7 @@ img {
 }
 .sparkle-text {
     display: inline-block;
+	text-align: center;
 	font-weight: bold;
 	animation: simpleTest 1s infinite !important;
 }
