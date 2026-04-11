@@ -35,3 +35,10 @@
     color: #666;
     margin-top: 5px;
 }
+
+.card-image img {
+    width: 100% !important;     /* Makes them fill the card width */
+    height: 250px !important;    /* Keeps them all the same height */
+    object-fit: cover !important; /* Crops them perfectly so they don't look squished */
+    display: block;
+}
