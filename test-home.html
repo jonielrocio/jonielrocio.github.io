@@ -1,108 +1,48 @@
 ---
-# This is your new Master Layout
+layout: modern
+title: My Adventures
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <img src="{{ site.baseurl }}/photos/Awesome.jpg" style="width: 200px !important;">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | MeonFoot</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        /* 1. Global Styles */
-        body { 
-            font-family: 'Lora', serif; 
-            line-height: 1.6; 
-            color: #333; 
-            margin: 0; 
-            background-color: #fdfdfd; 
-        }
 
-        /* 2. Header & Navigation */
-        .site-header { 
-            text-align: center; 
-            padding: 50px 0; 
-            background: #fff;
-            border-bottom: 1px solid #eee;
-        }
-        .site-header h1 { 
-            font-family: 'Montserrat', sans-serif; 
-            text-transform: uppercase; 
-            letter-spacing: 4px;
-            margin: 0;
-        }
+<section class="hero-section">
+    <div class="hero-image">
+        <img src="photos/banner.jpg" alt="Adventure Banner">
+    </div>
+    <div class="hero-text">
+        <p>Where the Trail Starts</p>
+    </div>
+</section>
 
-        /* 3. The Grid Magic (Fixes the Huge/Stacked Photos) */
-        .trip-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
+<div class="trip-grid">
+    <div class="trip-card">
+        <div class="card-image">
+            <img src="photos/Awesome.jpg" alt="Grand Canyon">
+        </div>
+        <div class="card-content">
+            <span class="category">Arizona</span>
+            <h3>Grand Canyon National Park</h3>
+            <a href="#" class="read-more">Read the Story →</a>
+        </div>
+    </div>
 
-        /* 4. The Card Look */
-        .trip-card {
-            background: #fff;
-            transition: transform 0.3s ease;
-        }
-        .trip-card:hover { transform: translateY(-10px); }
+    <div class="trip-card">
+        <div class="card-image">
+            <img src="photos/Pemi.jpg" alt="Pemi Loop">
+        </div>
+        <div class="card-content">
+            <span class="category">New Hampshire</span>
+            <h3>The Pemi Loop</h3>
+            <a href="#" class="read-more">Read the Story →</a>
+        </div>
+    </div>
 
-        .card-image img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover; /* This crops all photos to be the same size! */
-            border-radius: 4px;
-        }
-
-        .card-content { padding: 20px 0; }
-
-        .category {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            color: #556b2f; /* Olive Green */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .read-more {
-            text-decoration: none;
-            color: #222;
-            font-weight: bold;
-            font-size: 0.85rem;
-            border-bottom: 2px solid #556b2f;
-        }
-
-        /* 5. Hero Section Styling */
-        .hero-section { text-align: center; padding: 40px 20px; }
-        .hero-image img { 
-            width: 100%; 
-            max-height: 500px; 
-            object-fit: cover; 
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-
-    <header class="site-header">
-        <h1>MeonFoot</h1>
-    </header>
-
-    <main>
-        {{ content }}
-    </main>
-
-    <footer style="text-align: center; padding: 80px 20px; color: #888;">
-        <p>© 2026 Joniel | Where the Trail Starts</p>
-    </footer>
-
-</body>
-</html>
+    <div class="trip-card">
+        <div class="card-image">
+            <img src="photos/Whitney.jpg" alt="Mt. Whitney">
+        </div>
+        <div class="card-content">
+            <span class="category">California</span>
+            <h3>Mt. Whitney Summit</h3>
+            <a href="#" class="read-more">Read the Story →</a>
+        </div>
+    </div>
+</div>
