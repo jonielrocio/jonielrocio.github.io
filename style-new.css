@@ -97,3 +97,37 @@ img {
     height: 250px;
     object-fit: cover; /* This crops them so they are all the same height */
 }
+/* Update these specific sections in your <style> tag */
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px; /* More space around the title */
+    background-color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; /* Bigger, bolder title */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.hero-text p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 450px; /* Keeps the banner from being too tall */
+    object-fit: cover;
+    border-radius: 0px; /* Clean, edge-to-edge look */
+}
+
+/* Add a "Container" to the grid so it doesn't hit the edges of the screen */
+.trip-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
