@@ -1511,9 +1511,13 @@ img {
 }
 
 .balita {
-	padding-bottom: 500px;
+	padding-bottom: 600px;
 	display: block;
 	background: white;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 200px;
 }
 
 
