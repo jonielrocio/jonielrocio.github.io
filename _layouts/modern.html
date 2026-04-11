@@ -4,10 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/style.css">
+    
     <style>
         body { margin: 0; font-family: sans-serif; background: #f4f4f4; }
         
-        /* THE FIX: This forces images to be small */
         img { 
             max-width: 400px !important; 
             height: auto !important; 
@@ -19,8 +20,14 @@
     </style>
 </head>
 <body>
+
+    {% include header.html %}
+
     <div class="container">
         {{ content }}
     </div>
+
+    {% include footer.html %}
+
 </body>
 </html>
