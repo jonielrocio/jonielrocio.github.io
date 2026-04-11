@@ -18,7 +18,7 @@ body {
 }
 
 /* 2. HERO SECTION */
-.hero-section {
+.th-hero-section {
     height: 75vh;
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-.hero-image img {
+.th-hero-image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,13 +38,13 @@ body {
     opacity: 0.65;
 }
 
-.hero-text {
+.th-hero-text {
     position: relative;
     z-index: 2;
     text-align: center;
 }
 
-.hero-text p {
+.th-hero-text p {
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
@@ -55,14 +55,14 @@ body {
 }
 
 /* 3. LAYOUT CONTAINERS */
-.content-container {
+.th-content-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 80px 20px;
 }
 
-/* 4. THE TRIP GRID (Merged Logic) */
-.trip-grid {
+/* 4. THE TRIP GRID (Renamed to avoid conflict) */
+.th-trip-grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -72,7 +72,7 @@ body {
     margin-top: -60px; /* Modern overlap effect */
 }
 
-.trip-card {
+.th-trip-card {
     flex: 1;
     min-width: 300px;
     max-width: 350px;
@@ -82,59 +82,59 @@ body {
     flex-direction: column;
 }
 
-.trip-card:hover {
+.th-trip-card:hover {
     transform: translateY(-8px);
 }
 
-.card-image img {
+.th-card-image img {
     width: 100%;
     height: 350px; 
     object-fit: cover;
     border-radius: 4px;
 }
 
-.card-content {
+.th-card-content {
     padding: 25px 0;
 }
 
 /* 5. TYPOGRAPHY & ELEMENTS */
-.category {
+.th-category {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--accent); /* Consistent orange highlights */
+    color: var(--accent); 
     letter-spacing: 1.5px;
     margin-bottom: 10px;
     display: block;
 }
 
-.trip-card h3 {
+.th-trip-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     margin: 0 0 12px 0;
     font-weight: 700;
 }
 
-.read-more {
+.th-read-more {
     display: inline-block;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--primary); /* Consistent blue links */
+    color: var(--primary); 
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
 }
 
-.read-more:hover {
+.th-read-more:hover {
     color: var(--accent);
     border-bottom-color: var(--accent);
 }
 
 /* 6. FOOTER */
-footer {
+.th-footer {
     padding: 80px 20px;
     text-align: center;
     background: #fcfcfc;
