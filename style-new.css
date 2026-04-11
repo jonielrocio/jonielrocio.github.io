@@ -156,3 +156,26 @@ footer {
 .read-more:hover {
     border-bottom-color: #2e7d32;
 }
+
+.trip-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the group of cards */
+    gap: 30px;               /* Adds equal space between cards */
+    padding: 40px 20px;
+    flex-wrap: wrap;         /* Allows cards to move to a new line on smaller screens */
+}
+
+.trip-card {
+    flex: 1;                 /* Makes cards equal width */
+    max-width: 350px;        /* Prevents them from getting too wide on huge screens */
+    display: flex;
+    flex-direction: column;  /* Keeps the text below the image inside the card */
+}
+
+.card-image img {
+    width: 100% !important;  /* Overrides the inline 300px to fill the card */
+    height: 250px;
+    object-fit: cover;       /* Crops photos so they are all the same height */
+    border-radius: 8px;
+}
