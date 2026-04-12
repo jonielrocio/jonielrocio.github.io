@@ -228,3 +228,23 @@ nav a {
     height: 80vh;
     overflow: hidden;
 }
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    margin-top: -60px;
+}
+
+.whitsum {
+    width: 280px !important;
+    height: 280 !important;
+}
+
+.sama {
+    width: 280px !important;
+    height: 280 !important;
+}
