@@ -20,16 +20,16 @@ body {
 .full-screen-header {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     align-items: center !important;
-    padding: 10px 5% !important;
-    min-height: 80px !important;
+    padding: 10px 0 !important;
+    width: 100%;
     background-color: var(--bg);
 }
 
 .logo-ko {
     width: 100px !important;
-    height: 100px !important;
+    height: auto !important;
     object-fit: contain !important;
     margin: 0 !important;
 }
