@@ -42,8 +42,8 @@ body {
 }
 
 nav {
-    text-decoration: underline;
-    gap: 300px !important;
+    text-decoration: none;
+    gap: 500px !important;
     margin: 0 !important;
     align-items: center;
 }
