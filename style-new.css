@@ -44,8 +44,9 @@ body .header-content {
     min-height: 80px !important;
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: var(--bg);
 }
 
 .header-content {
@@ -55,10 +56,10 @@ body .header-content {
 }
 
 .logo-ko {
-    width: 150px !important;
-    height: 150px !important;
+    width: 100px !important;
+    height: 100px !important;
     object-fit: contain !important;
-    marging: 0 !important;
+    margin: 0 !important;
 }
 
 .subtitle {
@@ -70,7 +71,7 @@ body .header-content {
 nav {
     margin: 0 !important;
     display: flex;
-    gap: 20px;
+    gap: 25px !important;
 }
 
 nav a {
