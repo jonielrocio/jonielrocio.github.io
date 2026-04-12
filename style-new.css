@@ -250,15 +250,12 @@ nav a {
 .balita {
     background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url('photos/pader.jpg');
     background-size: cover;
+    background-position: 50% 40%;
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
     display: flex;
-    min-height: 500px;
-    color: white;
-    flex-direction: column;
-    text-align: center;
-    color: #222;
+    min-height: 550px;
 }
 
 
