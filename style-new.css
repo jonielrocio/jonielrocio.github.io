@@ -242,10 +242,10 @@ nav a {
 }
 
 .whitsum, .sama {
-    flex: 1 1 300px;
-    max-width: 100%;
+    width: 100% !important;
     height: 320px !important;
-    object-fit: cover;
+    object-fit: cover !important;
+    object-position: center !important;
     border-radius: 8px;
 }
 
