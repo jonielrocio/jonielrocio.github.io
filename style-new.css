@@ -247,4 +247,15 @@ nav a {
     border-radius: 8px;
 }
 
+.balita {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('photos/pader.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 450px;
+    color: white;
+}
+
 
