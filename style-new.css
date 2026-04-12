@@ -41,7 +41,11 @@ body .header-content {
 .full-screen-header {
     padding: 10px 0 !important;
     height: auto !important;
-    padding: 10px 0 !important;
+    min-height: 80px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-content {
@@ -53,7 +57,8 @@ body .header-content {
 .logo-ko {
     width: 150px !important;
     height: 150px !important;
-    object-fit: contain;
+    object-fit: contain !important;
+    marging: 0 !important;
 }
 
 .subtitle {
@@ -63,7 +68,16 @@ body .header-content {
 }
 
 nav {
-    margin: 0 !important; 
+    margin: 0 !important;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .th-hero-section {
