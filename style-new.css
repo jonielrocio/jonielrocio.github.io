@@ -257,5 +257,30 @@ nav a {
     display: flex;
     min-height: 550px;
 }
+@media (min-width: 768px) {
+    .about-me {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        test-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .about-me {
+        flex-basis: 100%;
+        rext-align: center;
+    }
+    .whitsum, .sama {
+        width: 45% !important;
+        max-width: 500px;
+        height: 450px !important;
+    }
+    .balita {
+        min-height: 650px;
+        background-position: 50% 4%;
+    }
+}
+
+        
 
 
