@@ -18,14 +18,17 @@ body {
 }
 
 .full-screen-header {
-    min-height: 0 !important;
+    padding: 10px 0 !important;
     height: auto !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+.header-content {
+    font-size: 1.2rem;
+    margin: 0 !important; 
+}
+
+nav {
+    margin: 0 !important; 
 }
 
 .th-hero-section {
