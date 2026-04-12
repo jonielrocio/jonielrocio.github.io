@@ -24,7 +24,7 @@ body {
     align-items: center !important;
     padding: 15px 0 !important;
     width: 100% !important;
-    position; sticky !important;
+    position: sticky !important;
     top: 0 !important;
     z-index: 1000 !important;
     background-color: rgba(0, 128, 0.05) !important;
