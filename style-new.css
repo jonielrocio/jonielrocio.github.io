@@ -36,7 +36,7 @@ body {
 
 nav {
     text-decoration: none;
-    gap: 25px !important;
+    gap: 50px !important;
     margin: 0 !important;
     align-items: center;
 }
@@ -44,8 +44,10 @@ nav {
 nav a {
     text-decoration: none;
     color: var (--primary);
+    color: var (--accent);
+    transition: 0.3s;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 .th-hero-section {
