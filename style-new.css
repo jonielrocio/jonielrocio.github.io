@@ -49,9 +49,19 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #ffffff !important;
+    color: var(--type-dark);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px !important;
+    transition: color 0.3s ease;
+}
+
+.subtitle {
+    font-size: 0.7rem !important;
+    fonr-weight: 400;
+    letter-spacing: 4px !important;
+    test-transformation: uppercase !important;
+    margin: 5px 0 0 0 !important; 
 }
 
 nav a: hover {
