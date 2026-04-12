@@ -242,8 +242,8 @@ nav a {
 }
 
 .whitsum, .sama {
-    width: 45% !important;
-    height: 360px !important;
+    width: 25% !important;
+    height: 420px !important;
     object-fit: cover !important;
 }
 
