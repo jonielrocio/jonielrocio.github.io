@@ -43,6 +43,7 @@ body {
 
 nav {
     text-decoration: none;
+    display: flex !important;
     margin: 0 !important;
     align-items: center;
     gap: 120px !important;
