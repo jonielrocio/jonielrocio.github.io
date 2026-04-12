@@ -19,15 +19,23 @@ body {
 
 body .full-screen-header {
     height: auto !important;
-    min-height: 0 !important;
+    min-height: 250px !important;
     max-height: 180 !important;
-    padding: 5px 0 !important;
+    padding: 15px 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-ccontent; center;
 }
     
 body .header-content {
     height: 80px !important;
     width: 275px !important;
     margin: 0 auto !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .full-screen-header {
