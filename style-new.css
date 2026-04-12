@@ -18,8 +18,10 @@ body {
 }
 
 .full-screen-header {
-    min-height: 30vh;
-    padding: 20px 0;
+    min-height: 0 !important;
+    height: auto !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
