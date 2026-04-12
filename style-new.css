@@ -73,12 +73,12 @@ body {
 }
 
 .th-trip-card {
+    background: #ffffff; /* Add this to make the card "solid" for the mouse */
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border-radius: 8px; /* Optional: rounds the whole card slightly */
-}
-
-.th-trip-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    border-radius: 8px;
+    flex: 1; /* Ensures they grow to fill the row */
+    min-width: 280px; /* Keeps them from getting too skinny */
+    transition: all 0.4s ease;
 }
 
 .th-card-image img {
@@ -117,7 +117,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--primary); /* Knicks Blue */
+    color: var(--primary); 
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
@@ -125,14 +125,9 @@ body {
 }
 
 .th-read-more:hover {
-    color: var(--accent); /* Knicks Orange */
-    border-bottom-color: var(--accent);
-    padding-left: 5px; /* Tiny "nudge" effect on hover */
-}
-
-.th-read-more:hover {
-    color: var(--accent);
-    border-bottom-color: var(--accent);
+    color: var(--accent) !important; 
+    border-bottom-color: var(--accent) !important;
+    padding-left: 5px; 
 }
 
 /* 6. FOOTER */
