@@ -242,11 +242,9 @@ nav a {
 }
 
 .whitsum, .sama {
-    width: 100% !important;
-    height: 320px !important;
+    width: 45% !important;
+    height: 360px !important;
     object-fit: cover !important;
-    object-position: center !important;
-    border-radius: 8px;
 }
 
 
