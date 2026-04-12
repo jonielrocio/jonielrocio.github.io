@@ -63,6 +63,21 @@ nav a: hover {
     color: var(--accent) !important;
 }
 
+@media (max-width: 768px) {
+    .full-screen-header: column !important;
+    padding: 15px 0 !important;
+    gap: 10px !important;
+}
+nav a {
+    font-size: 0.75rem !important;
+    letter-spacing: 1px !important;
+}
+
+.th-hero-text p {
+    font-size: 2rem !important; 
+}
+}
+
 .th-hero-section {
     height: 75vh;
     display: flex;
