@@ -20,11 +20,19 @@ body {
 .full-screen-header {
     padding: 10px 0 !important;
     height: auto !important;
+    padding: 10px 0 !important;
 }
 
 .header-content {
-    font-size: 1.2rem;
-    margin: 0 !important; 
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.subtitle {
+    font-size: 0.75rem !importan;
+    margin: 2px 0 10 px 0 !important;
+    letter-spacing: 1px; 
 }
 
 nav {
