@@ -17,6 +17,19 @@ body {
     line-height: 1.6;
 }
 
+body .full-screen-header {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 180 !important;
+    padding: 5px 0 !important;
+}
+    
+body .header-content {
+    height: 80px !important;
+    width: 275px !important;
+    margin: 0 auto !important;
+}
+
 .full-screen-header {
     padding: 10px 0 !important;
     height: auto !important;
