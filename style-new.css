@@ -43,7 +43,7 @@ body {
 
 nav {
     text-decoration: none;
-    gap: 500px !important;
+    gap: 600px !important;
     margin: 0 !important;
     align-items: center;
 }
@@ -53,7 +53,7 @@ nav a {
     color: var(--type-dark);
     font-weight: bold;
     font-size: 1.2rem;
-    letter-spacing: 5px !important;
+    letter-spacing: 2px !important;
     transition: color 0.3s ease;
 }
 
