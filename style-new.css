@@ -29,6 +29,11 @@ body {
     line-height: 1 !important;
 }
 
+.logo-ko {
+    width: 150px !important;
+    height: 150px !important:
+}
+
 .subtitle {
     font-size: 0.75rem !importan;
     margin: 2px 0 10 px 0 !important;
