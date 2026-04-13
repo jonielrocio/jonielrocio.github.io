@@ -62,6 +62,13 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+    .ulo {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 15px 5% !important;
+        width: 100% !important;
+        height: auto !important;
+        
     nav {
         gap: 10px !important;      /* Much smaller gap for phones */
         flex-wrap: wrap !important; /* Allows links to drop to a 2nd row instead of pushing the screen wide */
