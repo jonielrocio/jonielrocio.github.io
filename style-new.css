@@ -22,7 +22,7 @@ body {
     flex-direction: row !important;
     justify-content: space-between !important; 
     align-items: center !important;
-    padding: 10px 10% !important; 
+    padding: 10px 5% !important; 
     width: 100% !important;
     position: sticky !important;
     top: 0;
@@ -46,8 +46,20 @@ nav {
 }
 
 #nav-menu {
-    display: flex;
-    gap: 30px; 
+    display: flex !important;
+    gap: 30px !important;
+    margin: 0 !important;
+    align-items: center !important;
+}
+
+#nav-menu a:hover {
+    color: var(--aaccent) !important; 
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none !important;
+    }
 }
 
 .menu-icon {
@@ -101,6 +113,33 @@ nav a {
 
 nav a:hover {
     color: var(--accent) !important;
+}
+
+@media (max-width: 768px) {
+    .ulo {
+        /* Removed flex-direction: column to keep Logo and Burger on one line */
+        padding: 15px 5% !important;
+    }
+
+    .menu-icon {
+        display: flex; 
+    }
+
+    #nav-menu {
+        display: none !important; /* Hidden by default on mobile */
+        flex-direction: column !important;
+        background-color: #dff1f1;
+        position: absolute;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 2px solid #008080;
+    }
+
+    #nav-menu.active {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 768px) {
