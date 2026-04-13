@@ -65,37 +65,26 @@ body {
 /* ==========================================================================
    3. MOBILE MENU (Burger & Dropdown)
    ========================================================================== */
+/* ==========================================================================
+    MOBILE NAVIGATION (ONE BLOCK TO RULE THEM ALL)
+   ========================================================================== */
 @media (max-width: 768px) {
     .ulo { 
         height: 70px !important; 
-        justify-content: space-between !important; /* Forces logo left, icon right */
+        display: flex !important;
+        justify-content: space-between !important; /* Pushes Logo Left, Menu Right */
+        align-items: center !important;
+        padding: 0 5% !important;
     }
     
     .menu-icon { 
         display: flex !important; 
-        margin-left: auto !important; /* This is the "magnet" that pushes it to the right */
-        padding-right: 5%; /* Adds a little breathing room from the screen edge */
+        margin-left: auto !important; /* The Magnet move */
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 1001;
     }
-}
-      
-.menu-icon {
-    display: none; 
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.menu-icon span {
-    width: 30px;
-    height: 4px;
-    background-color: var(--type-dark);
-    border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-    .ulo { height: 70px !important; }
-    
-    .menu-icon { display: flex !important; }
 
     #nav-menu {
         display: none !important; /* Hidden until toggled in JS */
@@ -118,17 +107,27 @@ body {
         padding: 15px;
         font-size: 1.1rem !important;
     }
-}
 
-@media (max-width: 768px) {
+    /* Centering the Hero Text */
     .bago, 
     .th-content-container h1, 
     .th-content-container p {
         text-align: center !important;
         width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        margin: 0 auto !important;
     }
+}
+
+/* KEEP THIS OUTSIDE THE MEDIA QUERY (Default state) */
+.menu-icon {
+    display: none; 
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--type-dark);
+    border-radius: 2px;
 }
 
 /* ==========================================================================
