@@ -73,12 +73,14 @@ nav a:hover {
         gap: 10px !important;      /* Much smaller gap for phones */
         flex-wrap: wrap !important; /* Allows links to drop to a 2nd row instead of pushing the screen wide */
         justify-content: center !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
+        width: 100% !important;
     }
 
     nav a {
-        font-size: 1.1rem !important; /* Smaller text is a must on mobile */
+        font-size: 1rem !important; /* Smaller text is a must on mobile */
         letter-spacing: 0.5px !important; /* Tighten the letters so they take up less horizontal room */
+        padding: 5px;
     }
 }
 
