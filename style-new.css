@@ -364,10 +364,8 @@ nav a:hover {
         test-align: left;
         max-width: 1200px;
         margin: 0 auto;
-    }
-    .about-me {
         flex-basis: 100%;
-        rext-align: center;
+        text-align: center;
     }
     .whitsum, .sama {
         width: 45% !important;
