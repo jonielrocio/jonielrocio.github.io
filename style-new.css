@@ -64,7 +64,9 @@ nav a:hover {
 /* 1. THE MAIN HERO BOX */
 .th-hero-section {
     background-image: url('photos/subok1.jpg');
-    height: 75vh;           /* 75% of the screen height */
+    background-position: 50% 40%;
+    height: 75vh;
+    max-height: 80%;
     display: flex;
     align-items: center;    /* Vertically centers the text */
     justify-content: center; /* Horizontally centers the text */
