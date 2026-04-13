@@ -207,6 +207,7 @@ body {
     height: 500px !important;
     object-fit: cover !important;
     display: block;
+   border-radius: 8px 8px 0 0;
 }
 
 /* --- 4. TEXT SPACING --- */
@@ -229,16 +230,14 @@ body {
     text-transform: uppercase;
 }
 
-.th-card-image img {
-    height: 250px !important; /* This is the "Magic Number" for alignment */
-    width: 100% !important;
-    object-fit: cover !important; /* This prevents the "squish" effect */
-    border-radius: 8px 8px 0 0; /* Rounds the top corners only */
-}
-
 @media (max-width: 768px) {
-    .th-card-image img {
-        height: 280px !important; /* Back to normal for phones */
+    .th-card-image img, 
+    .th-big-feature img {
+        height: 280px !important; /* Prevents infinite scrolling on phones */
+    }
+    
+    .th-hero-section {
+        height: 50vh; /* Shorter hero for mobile so users see content faster */
     }
 }
 
