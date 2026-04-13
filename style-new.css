@@ -61,6 +61,20 @@ nav a:hover {
     color: var(--accent) !important;
 }
 
+@media (max-width: 768px) {
+    nav {
+        gap: 12px !important;      /* Much smaller gap for phones */
+        flex-wrap: wrap !important; /* Allows links to drop to a 2nd row instead of pushing the screen wide */
+        justify-content: center !important;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 1.1rem !important; /* Smaller text is a must on mobile */
+        letter-spacing: 0.5px !important; /* Tighten the letters so they take up less horizontal room */
+    }
+}
+
 /* 1. THE MAIN HERO BOX */
 .th-hero-section {
     background-image: url('photos/subok1.jpg');
