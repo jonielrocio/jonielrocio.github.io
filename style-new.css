@@ -25,7 +25,6 @@ body {
     padding: 15px 0 !important;
     width: 100% !important;
     position: sticky !important;
-    top: 0 !important;
     z-index: 1000 !important;
     background-color: rgba(223, 239, 241) !important;
     border-bottom: 2px solid #008080;
@@ -53,7 +52,8 @@ nav a {
     text-decoration: none;
     color: var(--type-dark);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
+    line-height: 1;
     letter-spacing: 1.2px !important;
     transition: color 0.3s ease;
 }
