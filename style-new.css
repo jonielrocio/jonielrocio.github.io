@@ -382,19 +382,29 @@ nav a:hover {
     }
 }
 
-/* This is the one you already have - the "Closed" state */
 @media (max-width: 768px) {
+    /* The hidden state */
     nav {
-        display: none; 
-        /* ... your other mobile nav styles ... */
+        display: none;
     }
 
-    /* ADD THIS ONE BELOW IT - the "Open" state */
+    /* The 'I am clicked' state */
     nav.active {
-        display: flex !important;
+        display: block !important; /* Changed flex to block just for testing */
+        background-color: orange !important; /* Temporary bright color to see it */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 9999 !important; /* Sits on top of EVERYTHING */
+    }
+    
+    nav.active a {
+        display: block;
+        padding: 15px;
+        color: black;
     }
 }
-
         
 
 
