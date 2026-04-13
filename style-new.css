@@ -60,6 +60,64 @@ nav a:hover {
     color: var(--accent) !important;
 }
 
+.th-featured-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Gives the left side more room */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Sizing the Big Image (Targeting 500x400ish) */
+.th-big-feature .th-card-image img {
+    height: 400px !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Styling the Side Stack */
+.th-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.th-stack-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: left; /* Keeps small story text left-aligned for readability */
+}
+
+.th-stack-item img {
+    width: 120px;
+    height: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.th-stack-info h4 {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.th-stack-info a {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Responsive: Stack them on top of each other on mobile */
+@media (max-width: 850px) {
+    .th-featured-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
 .kwento {
     text-align: center !important;
     margin-top: 0;
@@ -150,16 +208,6 @@ nav a:hover {
     margin-right: auto;
 }
 
-.th-trip-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    width: 100%;
-    padding: 40px 20px;
-    flex-wrap: wrap;
-    margin-top: -60px auto 0 auto;  /* Modern overlap effect */
-}
 
 .th-trip-card {
     background: #ffffff; /* Add this to make the card "solid" for the mouse */
