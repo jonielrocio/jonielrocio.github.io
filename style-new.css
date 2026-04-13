@@ -219,6 +219,13 @@ body {
     text-transform: uppercase;
 }
 
+.th-card-image img {
+    height: 250px !important; /* This is the "Magic Number" for alignment */
+    width: 100% !important;
+    object-fit: cover !important; /* This prevents the "squish" effect */
+    border-radius: 8px 8px 0 0; /* Rounds the top corners only */
+}
+
 /* ==========================================================================
    6. ABOUT, NEWS & FOOTER
    ========================================================================== */
