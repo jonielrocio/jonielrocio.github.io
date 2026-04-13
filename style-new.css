@@ -68,6 +68,7 @@ nav a:hover {
         padding: 15px 5% !important;
         width: 100% !important;
         height: auto !important;
+    }
         
     nav {
         gap: 10px !important;      /* Much smaller gap for phones */
