@@ -382,9 +382,18 @@ nav a:hover {
     }
 }
 
-nav.active {
-    display: flex !important;
-} 
+/* This is the one you already have - the "Closed" state */
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+        /* ... your other mobile nav styles ... */
+    }
+
+    /* ADD THIS ONE BELOW IT - the "Open" state */
+    nav.active {
+        display: flex !important;
+    }
+}
 
         
 
