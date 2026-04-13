@@ -65,6 +65,19 @@ body {
 /* ==========================================================================
    3. MOBILE MENU (Burger & Dropdown)
    ========================================================================== */
+@media (max-width: 768px) {
+    .ulo { 
+        height: 70px !important; 
+        justify-content: space-between !important; /* Forces logo left, icon right */
+    }
+    
+    .menu-icon { 
+        display: flex !important; 
+        margin-left: auto !important; /* This is the "magnet" that pushes it to the right */
+        padding-right: 5%; /* Adds a little breathing room from the screen edge */
+    }
+}
+      
 .menu-icon {
     display: none; 
     cursor: pointer;
