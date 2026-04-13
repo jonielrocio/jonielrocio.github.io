@@ -20,7 +20,7 @@ body {
 .ulo {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     align-items: center !important;
     padding: 0 5px 0 !important;
     width: 100% !important;
