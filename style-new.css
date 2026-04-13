@@ -360,6 +360,7 @@ nav a:hover {
     display: flex;
     min-height: 550px;
 }
+
 @media (min-width: 768px) {
     .about-me {
         flex-direction: row;
@@ -370,6 +371,13 @@ nav a:hover {
         margin: 0 auto;
         flex-basis: 100%;
         text-align: center;
+    }
+
+    nav {
+        display: flex;
+    }
+    .menu-icon {
+        display: none;
     }
     .whitsum, .sama {
         width: 45% !important;
@@ -390,13 +398,12 @@ nav a:hover {
 
     /* The 'I am clicked' state */
     nav.active {
-        display: block !important; /* Changed flex to block just for testing */
-        background-color: orange !important; /* Temporary bright color to see it */
+        display: flex !important; /* Changed flex to block just for testing */
+        background-color: #dff1f1; /* Temporary bright color to see it */
         position: absolute;
         top: 60px;
-        left: 0;
         width: 100%;
-        z-index: 9999 !important; /* Sits on top of EVERYTHING */
+        z-index: 1000;
     }
     
     nav.active a {
