@@ -23,11 +23,10 @@ body {
    ========================================================================== */
 .ulo {
     display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important; 
     align-items: center !important;
+    justify-content: flex-start !important;
     padding: 10px 5% !important; 
-    width: 100% !important;
+    height: 80px;
     position: sticky !important;
     top: 0;
     z-index: 1000 !important;
@@ -35,7 +34,6 @@ body {
     border-bottom: 2px solid #008080;
     backdrop-filter: blur(5px);
     box-sizing: border-box;
-    height: 80px;
 }
 
 .logo-ko {
@@ -45,8 +43,9 @@ body {
 
 #nav-menu {
     display: flex !important;
-    gap: 30px !important;
-    margin: 0 !important;
+    margin-left: auto !important;  /* Pushes away from logo */
+    margin-right: auto !important; /* Pushes away from the right edge */
+    gap: 40px !important; 
     align-items: center !important;
 }
 
