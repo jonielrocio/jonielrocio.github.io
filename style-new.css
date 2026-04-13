@@ -41,10 +41,49 @@ body {
 
 nav {
     text-decoration: none;
-    display: flex !important;
-    margin: 0 !important;
+    display: flex;
+    margin: 0;
     align-items: center;
-    gap: 40px !important;
+    gap: 40px;
+}
+
+.menu-icon {
+    display: none; /* Hidden on Desktop */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: var(--type-dark);
+    border-radius: 2px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex; /* Show the burger on mobile */
+    }
+
+    nav {
+        display: none; /* Now it WILL hide because we removed !important above */
+        flex-direction: column;
+        background-color: #dff1f1;
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 9999;
+        border-bottom: 2px solid #008080;
+    }
+
+    /* This rule finally has the power to show the menu */
+    nav.active {
+        display: flex !important;
+    }
 }
 
 nav a {
