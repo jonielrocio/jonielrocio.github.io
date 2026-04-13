@@ -30,7 +30,7 @@ body {
     border-bottom: 2px solid #008080;
     top: 0;
     backdrop-filter: blur(5px);
-    gap: 80px !important;
+    gap: 30px !important;
     box-sizing: border-box;
 }
 
@@ -199,16 +199,6 @@ nav a:hover {
     position: relative;
     background-color: #000;
     overflow: hidden;
-}
-
-.th-hero-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.65;
 }
 
 .th-hero-text p {
