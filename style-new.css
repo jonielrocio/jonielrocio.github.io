@@ -20,17 +20,16 @@ body {
 .ulo {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: center !important;
+    justify-content: space-between !important; 
     align-items: center !important;
-    padding: 25px 5% !important;
+    padding: 10px 10% !important; 
     width: 100% !important;
     position: sticky !important;
-    z-index: 1000 !important;
-    background-color: rgba(223, 239, 241) !important;
-    border-bottom: 2px solid #008080;
     top: 0;
+    z-index: 1000 !important;
+    background-color: rgba(223, 239, 241, 0.95) !important;
+    border-bottom: 2px solid #008080;
     backdrop-filter: blur(5px);
-    gap: 30px !important;
     box-sizing: border-box;
 }
 
@@ -44,6 +43,11 @@ nav {
     margin: 0;
     align-items: center;
     gap: 40px;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 30px; 
 }
 
 .menu-icon {
