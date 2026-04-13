@@ -65,6 +65,7 @@ nav a:hover {
 .th-hero-section {
     background-image: url('photos/subok1.jpg');
     background-position: 50% 40%;
+    background-repeat: no-repeat;
     height: 75vh;
     max-height: 80%;
     display: flex;
