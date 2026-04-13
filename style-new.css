@@ -63,10 +63,10 @@ nav a:hover {
 
 @media (max-width: 768px) {
     nav {
-        gap: 12px !important;      /* Much smaller gap for phones */
+        gap: 10px !important;      /* Much smaller gap for phones */
         flex-wrap: wrap !important; /* Allows links to drop to a 2nd row instead of pushing the screen wide */
         justify-content: center !important;
-        width: 100%;
+        flex-direction: column !important;
     }
 
     nav a {
