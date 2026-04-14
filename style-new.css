@@ -137,14 +137,15 @@ body {
    4. HOME PAGE: HERO & FEATURED SECTIONS
    ========================================================================== */
 .th-hero-section {
-    background-image: url('photos/subok1.jpg');
-    background-position: 50% 40%;
-    background-size: cover;
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+   background-image: url('photos/subok1.jpg');
+   background-position: 50% 40%;
+   background-size: cover;
+   height: 75vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 20px;
 }
 
 .th-hero-text h1  {
