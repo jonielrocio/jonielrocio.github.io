@@ -1,11 +1,34 @@
-url: "https://jonielrocio.github.io" 
-baseurl: "" 
+# Site Settings
+title: Where the Trail Starts
+url: "https://jonielrocio.github.io"
+baseurl: ""
 
-permalink: /:title.html 
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title.html
 
-defaults: 
-  - scope: 
-      path: "" 
-      type: "posts" 
-    values: 
-      layout: "post" 
+# Collections (Important for custom folders)
+collections:
+  posts:
+    output: true
+
+# Defaults (This tells Jekyll which layout to use automatically)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .sass-cache
