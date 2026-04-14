@@ -145,7 +145,6 @@ body {
    align-items: center;
    justify-content: center;
    width: 100%;
-   margin-bottom: 20px;
 }
 
 .th-hero-text h1  {
@@ -165,6 +164,10 @@ body {
   
   /* The Animation: Moving the light slowly */
   animation: shine 8s linear infinite;
+}
+
+.th-hero-text {
+   margin-bottom: 20px
 }
 
 @keyframes shine {
