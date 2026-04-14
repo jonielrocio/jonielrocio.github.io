@@ -146,8 +146,7 @@ body {
     width: 100%;
 }
 
-.th-hero-text h1 
-.th-hero-text p {
+.th-hero-text h1  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,6 +154,14 @@ body {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     text-transform: uppercase;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.th-hero-text p {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem
 }
 
 .th-featured-layout {
