@@ -24,7 +24,7 @@ body {
 .ulo {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     padding: 10px 5% !important; 
     height: 80px;
     position: sticky !important;
