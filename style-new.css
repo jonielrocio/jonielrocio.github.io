@@ -24,7 +24,7 @@ body {
 .ulo {
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
     padding: 10px 5% !important; 
     height: 80px;
     position: sticky !important;
@@ -43,7 +43,6 @@ body {
 
 #nav-menu {
     display: flex !important;
-    margin-left: auto !important;  /* Pushes away from logo */
     margin-right: auto !important; /* Pushes away from the right edge */
     gap: 40px !important; 
     align-items: center !important;
