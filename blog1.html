@@ -106,7 +106,15 @@
         <p>&copy; 2026 Where the Trail Starts</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+         function toggleMenu() {
+        // This finds your navigation menu by its ID
+        const navMenu = document.getElementById('nav-menu');
+        
+        // This adds the "active" class if it's missing, or removes it if it's there
+        navMenu.classList.toggle('active');
+    }
+    </script>
 
 </body>
 </html>
