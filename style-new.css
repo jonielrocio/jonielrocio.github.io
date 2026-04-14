@@ -251,10 +251,10 @@ body {
 /* ==========================================================================
    6. ABOUT SECTION FIX
    ========================================================================== */
-/* The Main Container (Vertical Stack) */
+/* The Main Container */
 .about-me {
     display: flex;
-    flex-direction: column; /* Forces Title on top, Content below */
+    flex-direction: column; /* Pushes Title up, Content Row down */
     align-items: center;
     padding: 60px 20px;
     max-width: 1200px;
@@ -263,30 +263,31 @@ body {
 
 .about-me h1 {
     margin-bottom: 40px;
-    text-align: center;
+    font-size: 2.5rem;
 }
 
 /* The Side-by-Side Wrapper */
 .content-row {
     display: flex;
-    flex-direction: row; /* Text Left, Photos Right */
-    gap: 40px;
+    flex-direction: row; /* Text on left, Photos on right */
+    gap: 50px;
     width: 100%;
     align-items: flex-start;
 }
 
+/* The Text Block */
 .content-row p {
-    flex: 1;
+    flex: 1; /* Takes up the remaining space */
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
-/* The Photo Column */
+/* The Photo Vertical Stack */
 .photo-stack {
     display: flex;
-    flex-direction: column; /* Stacks the two images vertically */
+    flex-direction: column; /* Keeps Whitney above Shasta */
     gap: 20px;
-    flex: 0 0 450px; /* Keeps photos at your desired width */
+    flex: 0 0 450px; /* Locks the photo width at 450px */
 }
 
 .whitsum, .sama {
@@ -296,10 +297,10 @@ body {
     border-radius: 8px;
 }
 
-/* Mobile Fix */
+/* Mobile Fix: Stack everything vertically on small screens */
 @media (max-width: 768px) {
     .content-row {
-        flex-direction: column; /* Stacks everything for phones */
+        flex-direction: column;
     }
     .photo-stack {
         flex: 1;
