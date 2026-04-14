@@ -220,7 +220,7 @@ body {
     border-radius: 12px 12px 0 0;
 }
 
-.content-container, .th-content-container {
+.content-container, .th-content-container, .featured {
    max-width: 1200px
    margin: 0 auto;
    padding: 60px 20px;
@@ -282,28 +282,33 @@ footer {
    BLOG PAGE
 ========================================================================== */
 
-.featured-story {
-  display: flex; /* Puts image and text side-by-side */
-  align-items: center;
-  gap: 30px;
-  background: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 50px; /* Separates it from the 6 cards */
-  border-radius: 8px;
+/* Container 1: The Top Hero */
+.featured {
+    max-width: 1100px; /* Must match the one below */
+    margin: 0 auto;    /* Centers it */
+    display: flex;
+    gap: 40px;
+    padding: 40px 20px;
+    align-items: center;
 }
 
-.featured-story img {
-  width: 50%; /* Image takes up half the space */
-  border-radius: 5px;
+/* Container 2: The Main Grid */
+.th-content-container {
+    max-width: 1100px; /* Must match the one above */
+    margin: 0 auto;    /* Centers it */
+    padding: 40px 20px;
 }
 
 /* On mobile, make the text go UNDER the image */
 @media (max-width: 768px) {
-  .featured-story {
+  .featured { /* Changed from .featured-story to match your class */
     flex-direction: column;
+    text-align: center; /* Optional: centers text on mobile */
   }
-  .featured-story img {
+  
+  .featured img { /* Changed from .featured-story img */
     width: 100%;
+    height: auto; /* Let it scale naturally on small screens */
   }
 }
 
