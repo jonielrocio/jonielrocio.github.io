@@ -251,50 +251,59 @@ body {
 /* ==========================================================================
    6. ABOUT SECTION FIX
    ========================================================================== */
+/* The Main Container (Vertical Stack) */
 .about-me {
     display: flex;
-    flex-wrap: wrap; /* Allows the title to stay on top */
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column; /* Forces Title on top, Content below */
+    align-items: center;
     padding: 60px 20px;
-    max-width: 1200px; /* Keeps it aligned with your blog grid */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 1. Force Title to be full width so it's a "Top Row" */
 .about-me h1 {
-    flex: 0 0 100%; /* Take up 100% width */
+    margin-bottom: 40px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-/* 2. The Text (Left Column) */
-.about-me p {
-    flex: 1; 
-    min-width: 320px; /* On mobile, it will drop below the title */
+/* The Side-by-Side Wrapper */
+.content-row {
+    display: flex;
+    flex-direction: row; /* Text Left, Photos Right */
+    gap: 40px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.content-row p {
+    flex: 1;
     font-size: 1.1rem;
     line-height: 1.8;
-    text-align: left;
 }
 
-/* 3. The Photos (Right Column) */
-/* This specific rule forces the two photos to stack vertically */
+/* The Photo Column */
+.photo-stack {
+    display: flex;
+    flex-direction: column; /* Stacks the two images vertically */
+    gap: 20px;
+    flex: 0 0 450px; /* Keeps photos at your desired width */
+}
+
 .whitsum, .sama {
-    flex: 0 0 450px; /* Keeps your 450px width */
+    width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
-    display: block; 
-    margin-bottom: 20px; /* Adds the vertical gap between the images */
 }
 
-/* Mobile Tweak: Center everything for phones */
+/* Mobile Fix */
 @media (max-width: 768px) {
-    .about-me p {
-        text-align: center;
+    .content-row {
+        flex-direction: column; /* Stacks everything for phones */
     }
-    .whitsum, .sama {
-        max-width: 100%; /* Makes photos fit phone screens */
+    .photo-stack {
+        flex: 1;
+        width: 100%;
     }
 }
 
