@@ -147,14 +147,28 @@ body {
 }
 
 .th-hero-text h1  {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2.0rem;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.2;
+  margin: 40px auto;
+  max-width: 850px;
+
+  /* The Magic: A subtle color transition */
+  background: linear-gradient(90deg, #006BB6, #F58426, #006BB6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* The Animation: Moving the light slowly */
+  animation: shine 8s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .th-hero-text p {
