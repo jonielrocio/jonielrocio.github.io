@@ -334,7 +334,7 @@ footer {
    display: flex;
    gap: 40px;
    padding: 60px 20px;
-   align-items: center;
+   justify-content: center;
    flex-direction: column-reverse;
 }
 
