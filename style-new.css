@@ -115,6 +115,10 @@ body {
         text-align: center !important;
         width: 100% !important;
         margin: 0 auto !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
     }
 }
 
