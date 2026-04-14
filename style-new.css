@@ -248,40 +248,54 @@ body {
 /* ==========================================================================
    6. ABOUT, NEWS & FOOTER
    ========================================================================== */
-/* 1. The Container */
+/* ==========================================================================
+   6. ABOUT SECTION FIX
+   ========================================================================== */
 .about-me {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows the title to stay on top */
     justify-content: center;
-    gap: 40px; /* Space between text and photos */
+    gap: 40px;
     padding: 60px 20px;
+    max-width: 1200px; /* Keeps it aligned with your blog grid */
+    margin: 0 auto;
 }
 
-/* 2. Force Title to be full width so it stays on top */
+/* 1. Force Title to be full width so it's a "Top Row" */
 .about-me h1 {
-    width: 100%;
+    flex: 0 0 100%; /* Take up 100% width */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* 3. The Text (Left Column) */
+/* 2. The Text (Left Column) */
 .about-me p {
-    flex: 1; /* Grows to fill available space */
-    min-width: 320px; /* On small screens, it will break to its own line */
+    flex: 1; 
+    min-width: 320px; /* On mobile, it will drop below the title */
     font-size: 1.1rem;
-    line-height: 1.7;
+    line-height: 1.8;
+    text-align: left;
 }
 
-/* 4. The Photos (Right Column) */
-/* To keep them on the right, we put them in a vertical stack */
+/* 3. The Photos (Right Column) */
+/* This specific rule forces the two photos to stack vertically */
 .whitsum, .sama {
-    width: 100%;
-    max-width: 450px; /* Matches your desired width */
+    flex: 0 0 450px; /* Keeps your 450px width */
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
-    display: block;
-    margin-bottom: 15px; /* Space between the two photos */
+    display: block; 
+    margin-bottom: 20px; /* Adds the vertical gap between the images */
+}
+
+/* Mobile Tweak: Center everything for phones */
+@media (max-width: 768px) {
+    .about-me p {
+        text-align: center;
+    }
+    .whitsum, .sama {
+        max-width: 100%; /* Makes photos fit phone screens */
+    }
 }
 
 .balita {
