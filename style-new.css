@@ -50,9 +50,10 @@ body {
 #nav-menu a {
     text-decoration: none;
     color: var(--type-dark);
-    font-weight: bold;
-    font-size: 1.2rem;
-    letter-spacing: 1.2px;
+    font-weight: 800 !important;
+    font-size: 1.3rem !important;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
