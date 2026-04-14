@@ -221,9 +221,10 @@ body {
 }
 
 .content-container, .th-content-container, .featured {
-   max-width: 1200px
+   max-width: 1200px;
    margin: 0 auto;
-   padding: 60px 20px;
+   padding: 60px 20px; 
+}
 
 /* --- RESPONSIVE BREAKPOINTS --- */
 
@@ -281,34 +282,34 @@ footer {
 /* ==========================================================================
    BLOG PAGE
 ========================================================================== */
-
 /* Container 1: The Top Hero */
-.featured {
-    max-width: 1100px; /* Must match the one below */
-    margin: 0 auto;    /* Centers it */
+.hala {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     gap: 40px;
-    padding: 40px 20px;
+    padding: 60px 20px;
     align-items: center;
 }
 
-/* Container 2: The Main Grid */
-.th-content-container {
-    max-width: 1100px; /* Must match the one above */
-    margin: 0 auto;    /* Centers it */
-    padding: 40px 20px;
+.hala img {
+    flex: 1;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* On mobile, make the text go UNDER the image */
-@media (max-width: 768px) {
-  .featured { /* Changed from .featured-story to match your class */
-    flex-direction: column;
-    text-align: center; /* Optional: centers text on mobile */
-  }
-  
-  .featured img { /* Changed from .featured-story img */
-    width: 100%;
-    height: auto; /* Let it scale naturally on small screens */
-  }
+.hala-text {
+    flex: 1;
 }
+
+/* Mobile Fix for .hala */
+@media (max-width: 768px) {
+    .hala {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
