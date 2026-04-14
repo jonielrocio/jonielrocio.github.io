@@ -43,7 +43,6 @@ body {
 
 #nav-menu {
     display: flex !important;
-    margin-right: auto !important; /* Pushes away from the right edge */
     gap: 40px !important; 
     align-items: center !important;
 }
