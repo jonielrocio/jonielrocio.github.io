@@ -373,6 +373,14 @@ nav a {
       flex: 1;
       width: auto; 
    }
+
+   footer {
+      padding: 15px 0 !important;
+      height: auto; 
+   }
+   margin: 0 !important;
+   font-size: 0.75rem; 
+   }
 }
 
 .balita {
@@ -386,7 +394,7 @@ nav a {
 }
 
 footer {
-    padding: 40px;
+    padding: 10px;
     text-align: center;
     border-top: 1px solid #eee;
 }
