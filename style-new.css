@@ -66,12 +66,12 @@ body {
     letter-spacing: 2.5px !important;
     color: #55555 !important;
     text-decoration: none !important;
-   transition: color 0.3 ease, transform 0.2 ease;
+    transition: color 0.3 ease, transform 0.2 ease;
     display: inline-block !important;
 }
 
 nav a: hover {
-   color: #001C58;
+   color: #005596;
    transform: translateY(-1px);
 }
 
