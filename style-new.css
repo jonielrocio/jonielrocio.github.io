@@ -31,9 +31,14 @@ body {
     border-bottom: 3px solid #008080 !important;
 }
 
-.logo-ko, .dnd {
-    height: 200px;
+.logo-ko, {
+    height: 160px;
     width: auto;
+}
+
+.dnd {
+   height: 200px;
+   width: auto;
 }
 
 #nav-menu {
