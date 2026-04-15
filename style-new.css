@@ -29,28 +29,28 @@ body {
     gap: 40px !important;
     background-color: rgba(223, 239, 241, 0.98) !important;
     border-bottom: 3px solid #008080 !important;
+   padding: 0 5%;
 }
 
 .tara {
-   display: block;
+   display: flex;
    align-items: center;
-   gap: 12px;
-   justify-content: flex-start;
+   gap: 15px;
 }
 
 .logo-ko {
-    height: 110px;
+    height: 70px !important;
     width: auto;
 }
 
 .dnd {
-   height: 650px;
+   height: 45px !important;
    width: auto;
 }
 
 #nav-menu {
     display: flex !important;
-    gap: 45px !important;
+    gap: 30px !important;
     align-items: center !important;
 }
 
@@ -85,7 +85,7 @@ body {
     }
 
    .tara {
-      display: block;
+      display: flex;
       align-items: center;
       gap: 4px; 
    }
@@ -98,7 +98,6 @@ body {
    .dnd {
       height: 40px;
       width: auto;
-      font-size: 20px;
    }
     
     .menu-icon { 
