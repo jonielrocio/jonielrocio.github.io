@@ -46,7 +46,7 @@ body {
 }
 
 .dnd {
-   height: 100px;
+   height: 25%;
    display: flex;
    align-items: center;
    gap: 10px;
@@ -101,7 +101,7 @@ body {
    }
    
    .dnd {
-      height: 100px;
+      height: 180px;
       width: auto;
    }
     
