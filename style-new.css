@@ -75,6 +75,18 @@ nav a: hover {
    transform: translateY(-1px);
 }
 
+nav a {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    text-transform: none !important;
+    
+    /* A cool, stone grey */
+    color: #666666; 
+    
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
 #nav-menu a:hover {
     color: #008080 !important;
     transform: scale(1.1);
