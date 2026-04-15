@@ -455,6 +455,15 @@ Try Page
     letter-spacing: 1px;
 }
 
+/* ==========================================================================
+    OUTDOOR GEAR REVIEW PAGE (MAIN PAGE)
+   ========================================================================== */
 
-
+.suri {
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
