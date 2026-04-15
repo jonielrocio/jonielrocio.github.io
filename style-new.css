@@ -26,13 +26,13 @@ body {
     align-items: center !important;
     justify-content: center !important; 
     height: 100px !important;
-    gap: 70px !important;
+    gap: 40px !important;
     background-color: rgba(223, 239, 241, 0.98) !important;
     border-bottom: 3px solid #008080 !important;
 }
 
 .logo-ko {
-    height: 130px;
+    height: 110px;
     padding-left: 100px;
     width: auto;
 }
