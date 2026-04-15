@@ -31,7 +31,7 @@ body {
     border-bottom: 3px solid #008080 !important;
 }
 
-.logo-ko {
+.logo-ko, .dnd {
     height: 200px;
     width: auto;
 }
