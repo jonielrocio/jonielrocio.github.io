@@ -34,12 +34,12 @@ body {
 .tara {
    display: flex;
    align-items: center;
-   gap: 12px; 
+   gap: 12px;
+   justify-content: flex-start;
 }
 
 .logo-ko {
     height: 110px;
-    padding-left: 100px;
     width: auto;
 }
 
