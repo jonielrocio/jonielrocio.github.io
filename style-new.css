@@ -31,6 +31,12 @@ body {
     border-bottom: 3px solid #008080 !important;
 }
 
+.tara {
+   display: flex;
+   align-items: center;
+   gap: 12px; 
+}
+
 .logo-ko {
     height: 110px;
     padding-left: 100px;
@@ -78,13 +84,19 @@ body {
         padding: 0 5% !important;
     }
 
+   .tara {
+      display: flex;
+      align-items: center;
+      gap: 4px; 
+   }
+
    .logo-ko {
        height: 70px;
        width: auto;
    }
    
    .dnd {
-      height: 100px;
+      height: 400px;
       width: auto;
    }
     
