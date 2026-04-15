@@ -489,6 +489,44 @@ Try Page
     z-index: 1;
 }
 
+/* Mobile and Tablet adjustments */
+@media (max-width: 768px) {
+    .under1 {
+        letter-spacing: 4px !important; /* Tightens the wide tracking for smaller screens */
+        line-height: 1.2 !important;
+        padding: 0 20px; /* Prevents text from hitting the screen edges */
+        text-align: center;
+    }
+
+    .under2 {
+        font-size: 1.1rem !important;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .construction-box {
+        padding: 12px 30px !important; /* Slightly smaller button for thumbs */
+    }
+
+    /* Adjust the stars to be smaller so they don't look like giant blobs */
+    .under::before {
+        background-size: 150px 150px !important;
+    }
+}
+
+/* Handle landscape mode on phones (where height is very short) */
+@media (max-height: 500px) {
+    .under {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 40px 0; /* Gives space if the user has to scroll */
+    }
+    
+    .under1 {
+        font-size: 2.5rem !important;
+    }
+}
+
 /* ==========================================================================
     OUTDOOR GEAR REVIEW PAGE (MAIN PAGE)
    ========================================================================== */
