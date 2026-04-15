@@ -32,13 +32,13 @@ body {
 }
 
 .logo-ko {
-    height: 160px;
-   padding-left: 100px;
+    height: 130px;
+    padding-left: 100px;
     width: auto;
 }
 
 .dnd {
-   height: 400px;
+   height: 650px;
    width: auto;
 }
 
@@ -77,6 +77,16 @@ body {
         align-items: center !important;
         padding: 0 5% !important;
     }
+
+   .logo-ko {
+       height: 70px;
+       width: auto;
+   }
+   
+   .dnd {
+      height: 100px;
+      width: auto;
+   }
     
     .menu-icon { 
         display: flex !important; 
