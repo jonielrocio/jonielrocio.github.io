@@ -96,6 +96,11 @@ body {
       gap: 4px; 
    }
 
+   .logo-container a img {
+    border: none;
+    outline: none;
+}
+
    .logo-ko {
        height: 70px;
        width: auto;
