@@ -26,7 +26,6 @@ body {
     align-items: center !important;
     justify-content: center !important; 
     height: 100px !important;
-    gap: 0 !important;
     background-color: rgba(223, 239, 241, 0.98) !important;
     border-bottom: 3px solid #008080 !important;
    padding: 0 5%;
@@ -35,8 +34,10 @@ body {
 .tara {
    display: flex;
    align-items: center;
-   justify-content: flex-start;
-   gap: 8px;
+   flex-direction: row;
+   gap: 5px;
+   margin: ) !important;
+   padding: 0 !important;
 }
 
 .logo-ko {
@@ -45,10 +46,10 @@ body {
 }
 
 .dnd {
-   height: 90%;
+   height: 80%;
    display: flex;
    align-items: center;
-   gap: 15px;
+   gap: 10px;
 }
 
 #nav-menu {
@@ -99,7 +100,7 @@ body {
    }
    
    .dnd {
-      height: 90%;
+      height: 40%;
       width: auto;
    }
     
