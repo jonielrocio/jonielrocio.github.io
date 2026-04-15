@@ -37,13 +37,14 @@ title: Blog
 
     <hr>
 
+    {% assign featured_post = site.posts.first %}
     <div class="hala">
-        <img src="#.jpg">
+        <img src="{{ featured_post.image | default: 'photos/subok1.jpg' }}" alt="{{ featured_post.title }}">
         <div class="hala-text">
             <span class="category-tag">Latest Story</span>
-            <h2>Whatever text...</h2>
-            <p>Whatever text again...</p>
-            <a href="#" class="read-btn">Read the Full Story →</a>
+            <h2>{{ featured_post.title }}</h2>
+            <p>{{ featured_post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a href="{{ featured_post.url }}" class="read-btn">Read the Full Story →</a>
         </div>
     </div>
 
@@ -54,71 +55,27 @@ title: Blog
         
         <div class="blog-grid-layout">
             
+            {% for post in site.posts offset:1 %}
             <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/subok1.jpg" alt="Trail"></div>
+                <div class="th-card-image">
+                    <img src="{{ post.image | default: 'photos/subok1.jpg' }}" alt="{{ post.title }}">
+                </div>
                 <div class="th-card-content">
-                    <span class="th-category">Hiking</span>
-                    <h3>Mount Whitney Summit</h3>
-                    <a href="#" class="th-read-more">Read More</a>
+                    <span class="th-category">{{ post.category | default: 'Hiking' }}</span>
+                    <h3>{{ post.title }}</h3>
+                    <a href="{{ post.url }}" class="th-read-more">Read More</a>
                 </div>
             </article>
-    
-            <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/shasta.jpg" alt="Trail"></div>
-                <div class="th-card-content">
-                    <span class="th-category">Adventure</span>
-                    <h3>Shasta Base Camp</h3>
-                    <a href="#" class="th-read-more">Read More</a>
-                </div>
-            </article>
-    
-            <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/pader.jpg" alt="Trail"></div>
-                <div class="th-card-content">
-                    <span class="th-category">Review</span>
-                    <h3>Essential Gear List</h3>
-                    <a href="#" class="th-read-more">Read More</a>
-                </div>
-            </article>
-    
-            <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/subok1.jpg" alt="Trail"></div>
-                <div class="th-card-content">
-                    <span class="th-category">Hiking</span>
-                    <h3>Grand Canyon South Rim</h3>
-                    <a href="#" class="th-read-more">Read More</a>
-                </div>
-            </article>
-    
-            <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/shasta.jpg" alt="Trail"></div>
-                <div class="th-card-content">
-                    <span class="th-category">Nature</span>
-                    <h3>Lake Tahoe Sunsets</h3>
-                    <a href="#" class="th-read-more">Read More</a>
-                </div>
-            </article>
-    
-            <article class="th-trip-card">
-                <div class="th-card-image"><img src="photos/pader.jpg" alt="Trail"></div>
-                <div class="th-card-content">
-                    <span class="th-category">Tips</span>
-                    <h3>Trail Safety 101</h3>
-                    <a href="#" class="th-read-more">Read More</a>
-                </div>
-            </article>
+            {% endfor %}
     
         </div>
     </main>
 
     <script>
          function toggleMenu() {
-        // This finds your navigation menu by its ID
-        const navMenu = document.getElementById('nav-menu');
-        
-        // This adds the "active" class if it's missing, or removes it if it's there
-        navMenu.classList.toggle('active');
-    }
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
     </script>
 
 </body>
