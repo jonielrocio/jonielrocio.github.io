@@ -32,12 +32,13 @@ body {
 }
 
 .logo-ko {
-    height: 200px;
+    height: 160px;
+   padding-left: 100px;
     width: auto;
 }
 
 .dnd {
-   height: 200px;
+   height: 400px;
    width: auto;
 }
 
