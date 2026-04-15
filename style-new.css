@@ -45,8 +45,8 @@ body {
 
 .dnd {
    height: 90px !important;
-   width: auto;
-   object-fit: contain;
+   transform: scale(1.4);
+   transform-origin: left-center;
 }
 
 #nav-menu {
