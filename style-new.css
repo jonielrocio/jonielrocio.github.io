@@ -44,8 +44,9 @@ body {
 }
 
 .dnd {
-   height: 45px !important;
+   height: 90px !important;
    width: auto;
+   object-fit: contain;
 }
 
 #nav-menu {
