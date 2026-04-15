@@ -60,13 +60,12 @@ body {
 }
 
 #nav-menu a {
-    font-size: 1.6rem !important;
-    font-weight: 650 !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
     text-transform: none !important;
-    letter-spacing: 2.5px !important;
-    color: #55555 !important;
+    color: #666666 !important;
     text-decoration: none !important;
-    transition: color 0.3 ease, transform 0.2 ease;
+    transition: all 0.2 ease-i-out;
     display: inline-block !important;
 }
 
@@ -88,8 +87,8 @@ nav a {
 }
 
 #nav-menu a:hover {
-    color: #008080 !important;
-    transform: scale(1.1);
+    color: #005596 !important;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
