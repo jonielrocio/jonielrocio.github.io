@@ -46,7 +46,7 @@ body {
 }
 
 .dnd {
-   height: 50px;
+   height: 75%;
    display: flex;
    align-items: center;
    gap: 10px;
@@ -91,6 +91,7 @@ body {
    .tara {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 4px; 
    }
 
