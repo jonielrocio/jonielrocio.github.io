@@ -50,7 +50,7 @@ body {
    display: flex;
    align-items: center;
    gap: 10px;
-   margin-left: -40px;
+   margin-left: -35px;
 }
 
 #nav-menu {
@@ -104,7 +104,7 @@ body {
    .dnd {
       height: 180px;
       width: auto;
-      margin-left: -10px;
+      margin-left: -15px;
    }
     
     .menu-icon { 
