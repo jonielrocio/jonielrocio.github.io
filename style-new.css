@@ -627,3 +627,30 @@ Try Page
     letter-spacing: 1px;
 }
 
+@media (max-width: 600px) {
+    .suri {
+        min-height: auto; /* Let the content decide the height on mobile */
+        padding: 40px 15px;
+        width: 95%; /* Give it a tiny bit of breathing room on the edges */
+    }
+
+    .surih1 {
+        font-size: 32px; /* Half the size so it fits on one line */
+        letter-spacing: -1px;
+    }
+
+    .surip {
+        font-size: 22px; /* Scale down the 40px text */
+        margin-bottom: 20px;
+    }
+
+    .una1 {
+        font-size: 18px; /* Make the "Coming Soon" readable but small */
+    }
+
+    .aerios35 {
+        height: 250px; /* Shrink the pack so it doesn't eat the screen */
+        width: auto;
+        transform: rotate(0deg); /* Straighten it out on mobile for better fit */
+    }
+}
