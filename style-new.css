@@ -692,3 +692,48 @@ Try Page
    max-width:800px;
    line-height: 1.4;
 }
+
+/* ==========================================================================
+        ( COMMENT SECTION )
+   ========================================================================== */
+.comment1 {
+    max-width: 800px;      /* Matches your contained text width */
+    margin: 50px auto;     /* Centers it and gives space from the review */
+    padding: 20px;
+    border-top: 2px solid #333; /* A nice rugged divider line */
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;             /* Space between inputs */
+}
+
+.comment-input, .comment-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #f9f9f9;
+}
+
+.comment-textarea {
+    min-height: 120px;     /* Gives them room to write a real review */
+    resize: vertical;      /* Only lets them stretch it downwards */
+}
+
+.comment-submit {
+    align-self: flex-start; /* Keeps the button on the left */
+    padding: 10px 25px;
+    background-color: #333; /* Dark, rugged button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.comment-submit:hover {
+    background-color: #555; /* Lightens slightly on hover */
+}
