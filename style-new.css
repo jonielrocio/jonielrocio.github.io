@@ -625,23 +625,23 @@ Try Page
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #FFD700; /* Primary Gold */
+    text-shadow: 
+        0 0 5px #fff,        /* White core for brightness */
+        0 0 10px #FFD700,    /* Solid gold middle */
+        0 0 20px #FF8C00,    /* Darker orange-gold for depth */
+        0 0 40px #FFD700;    /* Wide outer radiance */
+    font-weight: bold;
 }
 
 .sabiko1 {
-   font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
   line-height: 1.2;
   margin: 40px auto;
   max-width: 850px;
-  color: #FFD700; /* Primary Gold */
-  text-shadow: 
-        0 0 5px #fff,        /* White core for brightness */
-        0 0 10px #FFD700,    /* Solid gold middle */
-        0 0 20px #FF8C00,    /* Darker orange-gold for depth */
-        0 0 40px #FFD700;    /* Wide outer radiance */
-  font-weight: bold;
 }
 
 @media (max-width: 600px) {
