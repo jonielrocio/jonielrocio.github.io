@@ -619,19 +619,20 @@ Try Page
     margin-bottom: 15px;
 }
 
-.una1 {
-    /* Bumping this from 30px to 36px */
+.una1 { /* Replace with .sabiko1 or whatever you named it */
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #fdfd96; /* A pale, bright "bulb" color */
-    font-weight: bold;
+    color: #fdfd96;
     text-shadow: 
-        0 0 10px #FFD700,   /* Inner Golden light */
-        0 0 20px #FFD700,   /* Middle radiance */
-        0 0 40px #ADFF2F,   /* The "Firefly Green" bleed */
-        0 0 70px #ADFF2F;   /* Wide ambient glow */
+        0 0 10px #FFD700, 
+        0 0 20px #FFD700, 
+        0 0 40px #ADFF2F, 
+        0 0 70px #ADFF2F;
+
+    /* ADD THIS LINE BELOW TO ACTIVATE THE FIREFLY */
+    animation: firefly-flicker 3s infinite alternate; 
 }
 
 @keyframes firefly-flicker {
