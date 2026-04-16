@@ -577,30 +577,43 @@ Try Page
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #f4f4f4; /* A slight "off-white" looks more like paper */
+    padding: 40px 20px;
 }
 
 .surih1 {
-   font-size: 60px;
-   font-weight: 900; 
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px; /* Tighter letters look modern and "tough" */
+    margin: 0;
+    color: #333;
 }
 
 .surip {
-   font-size: 40px;
-   font-weight: 600; 
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: -10px; /* Pulls the brand name closer to the title */
+    color: #005596; /* Giants Blue */
 }
 
 .una1 {
-   font-size: 30px;
-   font-weight: 20px; 
+    font-size: 20px; /* Scaled down slightly for contrast */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top: 2px solid #333; /* Adds a "divider" line above the text */
+    border-bottom: 2px solid #333;
+    padding: 5px 0;
+    margin-bottom: 20px;
 }
 
 .aerios35 {
-   width: auto;
-   height: 400px;
-   object-fit: cover;
-   border-radius: 8px; 
+    height: 400px;
+    width: auto;
+    /* This makes the pack look like it's floating */
+    filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.1)); 
 }
-
       
    
 
