@@ -738,11 +738,20 @@ Try Page
     background-color: #555; /* Lightens slightly on hover */
 }
 
+/* Styling specifically for the comment area on the Review page */
 #cusdis_thread {
-    background: #ffffff; /* Or a dark color if your site is dark */
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    border: 1px solid #eee;
+    max-width: 800px; /* Keeps the text from stretching too wide */
+    margin: 40px auto; /* Centers it */
+    padding: 30px;
+    background-color: #f9f9f9; 
+    border-radius: 15px;
+    border: 1px dashed #ccc; /* Gives it a "review/feedback" look */
+}
+
+/* Optional: Add a heading before the box in your HTML */
+.review-header {
+    text-align: center;
+    font-family: sans-serif;
+    color: #444;
+    margin-bottom: 10px;
 }
