@@ -571,49 +571,22 @@ Try Page
 /* ==========================================================================
     OUTDOOR GEAR REVIEW PAGE (MAIN PAGE)
    ========================================================================== */
-.suri {
-    min-height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4; /* A slight "off-white" looks more like paper */
-    padding: 40px 20px;
+.suri::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Creates a subtle 50px grid */
+    background-image: 
+        linear-gradient(to right, rgba(0,85,150,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,85,150,0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0; /* Keeps it behind the text and photo */
+    pointer-events: none;
 }
 
-.surih1 {
-    font-size: 60px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -2px; /* Tighter letters look modern and "tough" */
-    margin: 0;
-    color: #333;
+/* Make sure your content stays above the grid */
+.surih1, .surip, .una1, .aerios35 {
+    position: relative;
+    z-index: 1;
 }
-
-.surip {
-    font-size: 40px;
-    font-weight: 600;
-    margin-top: -10px; /* Pulls the brand name closer to the title */
-    color: #005596; /* Giants Blue */
-}
-
-.una1 {
-    font-size: 20px; /* Scaled down slightly for contrast */
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-top: 2px solid #333; /* Adds a "divider" line above the text */
-    border-bottom: 2px solid #333;
-    padding: 5px 0;
-    margin-bottom: 20px;
-}
-
-.aerios35 {
-    height: 400px;
-    width: auto;
-    /* This makes the pack look like it's floating */
-    filter: drop-shadow(10px 10px 15px rgba(0,0,0,0.1)); 
-}
-      
-   
 
