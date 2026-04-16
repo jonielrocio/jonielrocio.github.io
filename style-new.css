@@ -660,6 +660,7 @@ Try Page
    ========================================================================== */
 .review .sabiko {
    display: inline-block !important;
+   flex-direction: row;
    align-items: center;
    width: auto;
    min-height: 550px;
