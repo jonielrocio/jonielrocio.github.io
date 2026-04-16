@@ -625,13 +625,24 @@ Try Page
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FFD700; /* Primary Gold */
-    text-shadow: 
-        0 0 5px #fff,        /* White core for brightness */
-        0 0 10px #FFD700,    /* Solid gold middle */
-        0 0 20px #FF8C00,    /* Darker orange-gold for depth */
-        0 0 40px #FFD700;    /* Wide outer radiance */
+    color: #fdfd96; /* A pale, bright "bulb" color */
     font-weight: bold;
+    text-shadow: 
+        0 0 10px #FFD700,   /* Inner Golden light */
+        0 0 20px #FFD700,   /* Middle radiance */
+        0 0 40px #ADFF2F,   /* The "Firefly Green" bleed */
+        0 0 70px #ADFF2F;   /* Wide ambient glow */
+}
+
+@keyframes firefly-flicker {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 40px #ADFF2F;
+    }
+    50% {
+        opacity: 0.8; /* Subtle dimming like a bug breathing */
+        text-shadow: 0 0 15px #FFD700, 0 0 35px #FFD700, 0 0 60px #ADFF2F, 0 0 100px #FFD700;
+    }
 }
 
 .sabiko1 {
