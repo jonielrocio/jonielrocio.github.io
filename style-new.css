@@ -654,3 +654,14 @@ Try Page
         transform: rotate(0deg); /* Straighten it out on mobile for better fit */
     }
 }
+
+/* ==========================================================================
+      REVIEW PAGE (Arcteryx Aerios 35)
+   ========================================================================== */
+.sabiko {
+   display: block;
+   align-items: center;
+   justify-content: center;
+   text-alignment: left;
+   text-font: 1em; 
+}
