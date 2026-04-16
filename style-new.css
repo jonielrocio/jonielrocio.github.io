@@ -658,6 +658,23 @@ Try Page
 /* ==========================================================================
       REVIEW PAGE (Arcteryx Aerios 35)
    ========================================================================== */
+/* This "sensor" triggers when the screen is 768px or smaller (tablets/phones) */
+@media (max-width: 768px) {
+    .review .sabiko {
+        /* On mobile, we keep it vertical but add more space */
+        flex-direction: column-reverse; 
+        padding: 20px; 
+        min-height: auto; /* Let the content decide the height on mobile */
+    }
+
+    .sabiko1 {
+        font-size: 1.5rem; /* Shrink the text slightly for smaller screens */
+        width: 100%;       /* Fill the screen... */
+        max-width: 90%;    /* ...but leave a 5% "buffer" on each side */
+        margin: 0 auto;    /* Keep that block centered */
+    }
+}
+
 .review .sabiko {
    display: flex !important; /* This turns the engine back on */
    flex-direction: column-reverse;       /* Side-by-side for desktop */
@@ -671,4 +688,7 @@ Try Page
    font-size: 2rem;
    text-align: left;
    flex: 1;
+   width: 100%;
+   max-width:800px;
+   line-height: 1.4;
 }
