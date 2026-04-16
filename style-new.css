@@ -683,10 +683,10 @@ Try Page
         flex-direction: column-reverse; 
         padding: 20px; 
         min-height: auto; /* Let the content decide the height on mobile */
-    }
+        box-sizing: border-box; /* Tells Safari: "Keep the padding INSIDE the 100% width" */
 
     .sabiko1 {
-        font-size: 1.0rem; /* Shrink the text slightly for smaller screens */
+        font-size: 1.2rem; /* Shrink the text slightly for smaller screens */
         width: 100%;       /* Fill the screen... */
         max-width: 90%;    /* ...but leave a 5% "buffer" on each side */
         margin: 0 auto;    /* Keep that block centered */
