@@ -660,9 +660,11 @@ Try Page
    ========================================================================== */
 .review .sabiko {
    flex-direction: block !important;
-   display: flex;
+   display: none !important;
    align-items: center;
    justify-content: center;
    text-alignment: left;
-   text-font: 1em; 
+   text-font: 1em;
+   width: auto;
+   min-height: 550px;
 }
