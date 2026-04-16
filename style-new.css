@@ -686,7 +686,7 @@ Try Page
     }
 
     .sabiko1 {
-        font-size: 1.2rem; /* Shrink the text slightly for smaller screens */
+        font-size: 1.0rem; /* Shrink the text slightly for smaller screens */
         width: 100%;       /* Fill the screen... */
         max-width: 90%;    /* ...but leave a 5% "buffer" on each side */
         margin: 0 auto;    /* Keep that block centered */
