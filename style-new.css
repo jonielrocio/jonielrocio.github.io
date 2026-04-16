@@ -696,6 +696,40 @@ Try Page
 /* ==========================================================================
         ( COMMENT SECTION )
    ========================================================================== */
+/* --- Desktop View (Big and Wide) --- */
+@media (min-width: 1024px) {
+    #cusdis_thread {
+        width: 80%;           /* Doesn't stretch to the very edges, looks cleaner */
+        margin: 50px auto;    /* Centers it with plenty of breathing room */
+        padding: 40px;
+        min-height: 600px;    /* Gives it that "big table" presence */
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+    }
+}
+
+/* --- Tablet View --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #cusdis_thread {
+        width: 90%;
+        margin: 30px auto;
+        padding: 25px;
+    }
+}
+
+/* --- Mobile View (Edge-to-Edge) --- */
+@media (max-width: 767px) {
+    #cusdis_thread {
+        width: 100%;          /* Full width so text isn't squished */
+        margin: 20px 0;
+        padding: 15px;        /* Smaller padding to save screen space */
+        border: none;         /* Remove borders to keep it flush with the screen */
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+}
+
 .comment1 {
     max-width: 800px;      /* Matches your contained text width */
     margin: 50px auto;     /* Centers it and gives space from the review */
