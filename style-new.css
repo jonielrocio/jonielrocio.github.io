@@ -611,3 +611,19 @@ Try Page
     z-index: 1;
 }
 
+.surip {
+    /* Bumping this up from 40px to 48px to keep up with the H1 */
+    font-size: 48px; 
+    font-weight: 600; 
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.una1 {
+    /* Bumping this from 30px to 36px */
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
