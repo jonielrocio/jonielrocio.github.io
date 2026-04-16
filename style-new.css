@@ -661,9 +661,11 @@ Try Page
 .review .sabiko {
    display: inline-block !important;
    align-items: center;
-   justify-content: center;
-   text-alignment: left;
-   text-font: 1em;
    width: auto;
    min-height: 550px;
+}
+
+.sabiko1 {
+   text-font: 1em;
+   text-alignmet: left;
 }
