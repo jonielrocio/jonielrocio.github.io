@@ -662,7 +662,7 @@ Try Page
    display: flex !important; /* This turns the engine back on */
    flex-direction: row;       /* Side-by-side for desktop */
    align-items: center;
-   justify-content: space-between; 
+   justify-content: center; 
    width: 100%;               
    min-height: 550px;
 }
@@ -671,4 +671,5 @@ Try Page
    font-size: 1em;
    text-alignmet: left;
    flex: 1
+   display: block;
 }
