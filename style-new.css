@@ -621,10 +621,30 @@ Try Page
 
 .una1 {
     /* Bumping this from 30px to 36px */
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.sabiko1 {
+   font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.2;
+  margin: 40px auto;
+  max-width: 850px;
+
+  /* The Magic: A subtle color transition */
+  background: linear-gradient(90deg, #006BB6, #F58426, #006BB6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* The Animation: Moving the light slowly */
+  animation: shine 8s linear infinite;
+
 }
 
 @media (max-width: 600px) {
