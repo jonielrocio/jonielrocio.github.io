@@ -740,14 +740,20 @@ Try Page
 
 /* Styling specifically for the comment area on the Review page */
 #cusdis_thread {
-    max-width: 800px; /* Keeps the text from stretching too wide */
-    margin: 40px auto; /* Centers it */
-    padding: 30px;
-    background-color: #f9f9f9; 
-    border-radius: 15px;
-    border: 1px dashed #ccc; /* Gives it a "review/feedback" look */
+    width: 100% !important;
+    min-height: 500px; /* Forces a large starting area */
+    display: block;
+    overflow: visible !important; /* Prevents internal scrollbars */
+    margin: 40px 0;
 }
 
+/* If your Review page has a "container" that is too narrow, 
+   we can force the comments to break out slightly */
+#cusdis_thread iframe {
+    width: 100% !important;
+    min-height: 500px !important;
+    border: none !important;
+}
 /* Optional: Add a heading before the box in your HTML */
 .review-header {
     text-align: center;
