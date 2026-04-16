@@ -737,3 +737,12 @@ Try Page
 .comment-submit:hover {
     background-color: #555; /* Lightens slightly on hover */
 }
+
+#cusdis_thread {
+    background: #ffffff; /* Or a dark color if your site is dark */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 1px solid #eee;
+}
