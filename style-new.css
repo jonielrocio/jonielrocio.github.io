@@ -660,7 +660,7 @@ Try Page
    ========================================================================== */
 .review .sabiko {
    display: flex !important; /* This turns the engine back on */
-   flex-direction: row;       /* Side-by-side for desktop */
+   flex-direction: column;       /* Side-by-side for desktop */
    align-items: center;
    justify-content: center; 
    width: 100%;               
@@ -668,8 +668,7 @@ Try Page
 }
 
 .sabiko1 {
-   font-size: 1em;
+   font-size: 2rem;
    text-alignmet: left;
    flex: 1
-   display: block;
 }
