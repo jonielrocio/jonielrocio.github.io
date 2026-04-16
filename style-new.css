@@ -659,14 +659,15 @@ Try Page
       REVIEW PAGE (Arcteryx Aerios 35)
    ========================================================================== */
 .review .sabiko {
-   display: inline-block !important;
-   flex-direction: row;
+   display: flex !important; /* This turns the engine back on */
+   flex-direction: row;       /* Side-by-side for desktop */
    align-items: center;
-   width: auto;
+   justify-content: space-between; 
+   width: 100%;               
    min-height: 550px;
 }
 
 .sabiko1 {
-   text-font: 1em;
+   font-size: 1em;
    text-alignmet: left;
 }
