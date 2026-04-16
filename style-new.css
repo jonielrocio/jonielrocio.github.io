@@ -644,6 +644,13 @@ Try Page
   
   /* The Animation: Moving the light slowly */
   animation: shine 8s linear infinite;
+  color: #FFD700; /* Primary Gold */
+    text-shadow: 
+        0 0 5px #fff,        /* White core for brightness */
+        0 0 10px #FFD700,    /* Solid gold middle */
+        0 0 20px #FF8C00,    /* Darker orange-gold for depth */
+        0 0 40px #FFD700;    /* Wide outer radiance */
+    font-weight: bold;
 
 }
 
