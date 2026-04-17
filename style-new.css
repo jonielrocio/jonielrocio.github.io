@@ -646,6 +646,19 @@ Try Page
     }
 }
 
+.una1 {
+    color: #E2725B; /* Our Terracotta */
+    text-decoration: none; /* This kills the line for good */
+    display: inline-block;
+    /* Add your "ember" glow here if you want it to glow! */
+    text-shadow: 0 0 8px rgba(226, 114, 91, 0.5); 
+}
+
+.una1:hover {
+    text-decoration: none; /* Ensures the line stays gone even when hovering */
+    color: #b34d39; /* Darks slightly on hover for a nice effect */
+}
+
 .sabiko1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
