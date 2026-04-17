@@ -349,7 +349,7 @@ nav a {
 .usap {
    display: flex;
    flex-direction: column;
-   text-alignment: left;
+   text-align: left;
    align-items: center;
 }
 
