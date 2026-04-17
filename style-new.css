@@ -353,6 +353,10 @@ nav a {
    align-items: center;
 }
 
+.x1 {
+   text-align: left; 
+}
+
 .whitsum, .sama {
     width: 100%;
     height: 400px;
