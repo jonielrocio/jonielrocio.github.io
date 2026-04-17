@@ -348,8 +348,9 @@ nav a {
 
 .usap {
    display: flex;
-   flex-direction: column;
-   text-alignment: left; 
+   flex-direction: row;
+   text-alignment: left;
+   align-items: center;
 }
 
 .whitsum, .sama {
