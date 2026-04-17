@@ -325,10 +325,10 @@ nav a {
 /* The Side-by-Side Wrapper */
 .content-row {
     display: flex;
-    flex-direction: row; /* Text on left, Photos on right */
+    flex-direction: column; /* Text on left, Photos on right */
     gap: 50px;
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
 }
 
 /* The Text Block */
