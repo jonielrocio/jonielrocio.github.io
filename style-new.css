@@ -624,12 +624,12 @@ Try Page
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #fdfd96;
+    color: #E2725B; /* Base Terracotta */
+    color: #E2725B; /* Base Terracotta */
     text-shadow: 
-        0 0 10px #FFD700, 
-        0 0 20px #FFD700, 
-        0 0 40px #ADFF2F, 
-        0 0 70px #ADFF2F;
+      0 0 5px #E2725B, 
+      0 0 10px #E2725B, 
+      0 0 20px #b34d39;
 
     /* ADD THIS LINE BELOW TO ACTIVATE THE FIREFLY */
     animation: firefly-flicker 3s infinite alternate; 
