@@ -310,7 +310,7 @@ nav a {
 /* The Main Container */
 .about-me {
     display: flex;
-    flex-direction: column; /* Pushes Title up, Content Row down */
+    flex-direction: row; /* Pushes Title up, Content Row down */
     align-items: center;
     padding: 60px 20px;
     max-width: 1200px;
@@ -348,7 +348,7 @@ nav a {
 
 .usap {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    text-alignment: left;
    align-items: center;
 }
