@@ -310,7 +310,7 @@ nav a {
 /* The Main Container */
 .about-me {
     display: flex;
-    flex-direction: row; /* Pushes Title up, Content Row down */
+    flex-direction: column; /* Pushes Title up, Content Row down */
     align-items: center;
     padding: 60px 20px;
     max-width: 1200px;
@@ -325,7 +325,7 @@ nav a {
 /* The Side-by-Side Wrapper */
 .content-row {
     display: flex;
-    flex-direction: column; /* Text on left, Photos on right */
+    flex-direction: row; /* Text on left, Photos on right */
     gap: 50px;
     width: 100%;
     align-items: center;
