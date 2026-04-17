@@ -348,9 +348,14 @@ nav a {
 
 .usap {
    display: flex;
+   flex: 1;
    flex-direction: column;
    text-align: left;
    align-items: center;
+}
+
+.usap h {
+   font-weight: 900; 
 }
 
 .x1 {
