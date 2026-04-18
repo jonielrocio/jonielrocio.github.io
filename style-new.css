@@ -875,40 +875,6 @@ Try Page
   animation: mistDrift 20s infinite alternate ease-in-out;
 }
 
-/* 2. The Text: From "Slasher" to "Golden Hour" */
-.twinkle-p {
-  font-size: 2.2rem;
-  font-weight: 300; /* Thinner weight is more modern/premium */
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-  
-  /* A warm, glowing Gold/Orange (like a campfire) */
-  color: #ffca28; 
-  
-  /* The "Breathe" Animation: Slower and softer than a "twinkle" */
-  animation: glowBreathe 8s infinite ease-in-out;
-  letter-spacing: 1px;
-}
-
-@keyframes glowBreathe {
-  0%, 100% {
-    opacity: 0.9;
-    text-shadow: 0 0 10px rgba(255, 202, 40, 0.3);
-  }
-  50% {
-    opacity: 0.6;
-    text-shadow: 0 0 25px rgba(255, 202, 40, 0.6);
-    transform: translateY(-2px); /* Very subtle float */
-  }
-}
-
-@keyframes mistDrift {
-  from { background-position: 45% 45%; }
-  to { background-position: 55% 55%; }
-}
-
-
 .akoyan {
    width: 90%;
    max-width: 800px;
