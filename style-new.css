@@ -861,7 +861,12 @@ Try Page
    justify-content: center;
    text-align: center;
    min-height: 60vh; /* Centers it vertically on the page */
-   padding: 20px; 
+   padding: 20px;
+   background: linear-gradient(rgba0, 0, 0, 0.5)' rgba(0, 0, 0, 0.5)),
+      url('asset/wagi.jpg');
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 .akoyan p {
