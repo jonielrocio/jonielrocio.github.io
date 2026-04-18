@@ -852,40 +852,62 @@ Try Page
       ABOUT ME (MAIN PAGE)
    ========================================================================== */
 .akonga {
-   margin: 0;
-  padding: 0;
-  background: #000; /* The base "darkness" */
-  height: 100vh;
-  overflow: hidden;
-}
-
+   /* 1. The Background: From "Horror Smoke" to "Mountain Mist" */
 .smoky-background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   z-index: -1;
+  /* Use Deep Navy and Slate instead of Pure Black */
+  background: #0b0d17; 
   
-  /* The "Smoke" colors: Deep reds and dark grays */
-  background: radial-gradient(circle at 50% 50%, rgba(40, 0, 0, 0.5), transparent),
-              radial-gradient(circle at 20% 80%, rgba(20, 20, 20, 0.8), transparent),
-              radial-gradient(circle at 80% 20%, rgba(60, 0, 0, 0.3), transparent);
-  background-size: 200% 200%;
-  animation: smokeDrift 15s infinite alternate ease-in-out;
+  /* Shifting the smoke to a subtle, misty blue/grey */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(100, 149, 237, 0.1), transparent),
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05), transparent),
+    url('assets/dnd.png'); /* Your silhouette image */
   
-  /* This adds your "Ghostly Silhouette" image over the smoke */
-  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                    url('assets/wagi.JPG'); 
-  background-blend-mode: multiply; /* Blends the smoke into the image */
-  filter: blur(8px) brightness(0.6); /* Makes the background hazy/ghostly */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  
+  /* The "Ghostly" part: soft blur, not scary sharp */
+  filter: brightness(0.7) blur(5px) contrast(1.1);
+  animation: mistDrift 20s infinite alternate ease-in-out;
 }
 
-@keyframes smokeDrift {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 50% 100%; }
+/* 2. The Text: From "Slasher" to "Golden Hour" */
+.twinkle-p {
+  font-size: 2.2rem;
+  font-weight: 300; /* Thinner weight is more modern/premium */
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  
+  /* A warm, glowing Gold/Orange (like a campfire) */
+  color: #ffca28; 
+  
+  /* The "Breathe" Animation: Slower and softer than a "twinkle" */
+  animation: glowBreathe 8s infinite ease-in-out;
+  letter-spacing: 1px;
 }
+
+@keyframes glowBreathe {
+  0%, 100% {
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(255, 202, 40, 0.3);
+  }
+  50% {
+    opacity: 0.6;
+    text-shadow: 0 0 25px rgba(255, 202, 40, 0.6);
+    transform: translateY(-2px); /* Very subtle float */
+  }
+}
+
+@keyframes mistDrift {
+  from { background-position: 45% 45%; }
+  to { background-position: 55% 55%; }
+}
+
 
 .akoyan {
    width: 90%;
