@@ -851,6 +851,42 @@ Try Page
 /* ==========================================================================
       ABOUT ME (MAIN PAGE)
    ========================================================================== */
+.akoyan {
+   width: 90%;
+   max-width: 800px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   min-height: 60vh; /* Centers it vertically on the page */
+   padding: 20px; 
+}
 
+.akoyan p {
+   font-size: 2.5rem; /* Large and impactful */
+   font-weight: 500;
+   line-height: 1.4;
+   text-align: center;
+   max-width: 900px; /* Keeps the sentence contained */
+   color: #006bb6;    /* A nice Knicks Blue */
+  
+  /* The Twinkle Effect */
+   animation: shimmer 3s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 102, 0, 0.2); /* Soft Orange glow */
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: 0 0 25px rgba(255, 102, 0, 0.8); /* Brighter Orange glow */
+    transform: scale(1.02); /* Very slight pulse */
+  }
+}
+   
 
 
