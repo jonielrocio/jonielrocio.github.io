@@ -864,7 +864,7 @@ Try Page
   background-image: 
     radial-gradient(circle at 50% 50%, rgba(100, 149, 237, 0.1), transparent),
     radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05), transparent),
-    url('assets/dnd.png'); /* Your silhouette image */
+    url('assets/wagi.JPG'); /* Your silhouette image */
   
   background-size: cover;
   background-position: center;
