@@ -851,71 +851,66 @@ Try Page
 /* ==========================================================================
       ABOUT ME (MAIN PAGE)
    ========================================================================== */
+/* The Main Container (Full screen, centered) */
 .akonga {
-   /* 1. The Background: From "Horror Smoke" to "Mountain Mist" */
-  position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -1;
-  /* Use Deep Navy and Slate instead of Pure Black */
-  background: #0b0d17; 
-  
-  /* Shifting the smoke to a subtle, misty blue/grey */
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(100, 149, 237, 0.1), transparent),
-    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05), transparent),
-    url('assets/wagi.JPG'); /* Your silhouette image */
-  
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  
-  /* The "Ghostly" part: soft blur, not scary sharp */
-  filter: brightness(0.7) blur(5px) contrast(1.1);
-  animation: mistDrift 20s infinite alternate ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #05070a; /* Deep midnight blue-black */
+  position: relative;
+  overflow: hidden;
 }
 
+/* The Smoky Background Effect */
+.akonga::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 80%);
+  background-size: 200% 200%;
+  animation: driftMist 15s infinite alternate ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The Contained Text Box */
 .akoyan {
-   width: 90%;
-   max-width: 800px;
-   margin: 0 auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   min-height: 60vh; /* Centers it vertically on the page */
-   padding: 20px;
-}
-
-.akoyan p {
-   font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+  max-width: 75ch; /* Perfectly contained for readability */
+  padding: 2rem;
   text-align: center;
-  max-width: 900px;
-  margin: auto;
-  
-  /* A vibrant, "Trail Marker" Red */
-  color: #ff3131; 
-  
-  /* The Twinkle & Glow Animation */
-  animation: redGhostlyTwinkle 4s infinite ease-in-out;
 }
 
-@keyframes redGhostlyTwinkle {
+/* The Big, Twinkling (Smoky) Text */
+.akoyan p {
+  font-size: 2.5rem; /* Big and bold */
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ff3131; /* Your shade of red */
+  
+  /* The "Smoke/Twinkle" animation */
+  animation: smokeTwinkle 6s infinite ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes driftMist {
+  from { background-position: 0% 0%; }
+  to { background-position: 100% 100%; }
+}
+
+@keyframes smokeTwinkle {
   0%, 100% {
-    opacity: 1;
-    /* Soft crimson glow */
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.2);
-    transform: scale(1);
+    opacity: 0.9;
+    filter: blur(0px);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
   }
   50% {
-    opacity: 0.5;
-    /* Intense eerie red glow for the "twinkle" */
-    text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.4);
-    transform: scale(1.01); /* Very subtle pulse */
+    opacity: 0.4;
+    filter: blur(1.5px); /* This creates the "smoke" look */
+    transform: translateY(-5px); /* Subtle drift up */
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
   }
 }
-   
-
-
