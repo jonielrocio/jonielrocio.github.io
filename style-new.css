@@ -869,7 +869,6 @@ Try Page
   top: 0; left: 0; right: 0; bottom: 0;
   background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 80%);
               url('assets/wagi.JPG');
-  background-size: 200% 200%;
   animation: driftMist 15s infinite alternate ease-in-out;
   pointer-events: none;
   z-index: 1;
