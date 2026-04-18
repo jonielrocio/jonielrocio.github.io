@@ -852,12 +852,40 @@ Try Page
       ABOUT ME (MAIN PAGE)
    ========================================================================== */
 .akonga {
-   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-      url('assets/wagi.JPG');
-   background-size: cover;
-   background-position: center;
-   background-attachment: fixed;
-   filter: brightness(0.4) contrast(1.5);
+   margin: 0;
+  padding: 0;
+  background: #000; /* The base "darkness" */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.smoky-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  
+  /* The "Smoke" colors: Deep reds and dark grays */
+  background: radial-gradient(circle at 50% 50%, rgba(40, 0, 0, 0.5), transparent),
+              radial-gradient(circle at 20% 80%, rgba(20, 20, 20, 0.8), transparent),
+              radial-gradient(circle at 80% 20%, rgba(60, 0, 0, 0.3), transparent);
+  background-size: 200% 200%;
+  animation: smokeDrift 15s infinite alternate ease-in-out;
+  
+  /* This adds your "Ghostly Silhouette" image over the smoke */
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                    url('assets/wagi.JPG'); 
+  background-blend-mode: multiply; /* Blends the smoke into the image */
+  filter: blur(8px) brightness(0.6); /* Makes the background hazy/ghostly */
+}
+
+@keyframes smokeDrift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 50% 100%; }
+}
 
 .akoyan {
    width: 90%;
