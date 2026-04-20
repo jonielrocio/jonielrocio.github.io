@@ -23,6 +23,7 @@ By Joniel Rocio
 The Lesson for the Trail: This is why we talk about the "10 Essentials" so much. Whether it's an unexpected injury or a sudden shift in weather, the mountain doesn't care about your plans. Having a way to seek shelter and a way to call for help are non-negotiable when you're dancing with Big George.
 
 Source: For the official report on this incident, visit the [NH Fish and Game Newsroom](https://www.google.com/search?q=https://nhfishgame.com/2026/04/20/two-hikers-rescued-from-mt-washington/).
+
 *Note: Image for illustrative purposes; not from the actual incident.*
 
 \*Photos  by Erwin Perez\*
