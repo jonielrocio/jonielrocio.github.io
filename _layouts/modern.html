@@ -46,6 +46,8 @@
         <img src="https://komarev.com/ghpvc/?username=joniel-trail&color=006BB6&style=flat-square&label=HIKERS+SPOTTED" alt="Visitor Count">
       </a>
     </footer>
+  
+    <div id="visitor-counter"></div>
 
     <script>
     function toggleMenu() {
@@ -55,6 +57,18 @@
         // This adds the "active" class if it's missing, or removes it if it's there
         navMenu.classList.toggle('active');
     }
+
+      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+  const counterDiv = document.getElementById('visitor-counter');
+  if (counterDiv) {
+    counterDiv.innerHTML = `
+      <a href="https://github.com/antonkomarev/github-profile-views-counter">
+        <img src="https://komarev.com/ghpvc/?username=joniel-trail&color=006BB6&style=flat-square&label=HIKERS+SPOTTED" alt="Visitor Count">
+      </a>
+    `;
+    }
+  }
+
 </script>
 
 </body>
