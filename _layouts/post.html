@@ -1,19 +1,54 @@
 ---
-layout: default
+layout: modern
+title: Blog
 ---
-<article class="post-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-date" style="color: #666;">{{ page.date | date: "%B %d, %Y" }}</p>
-  </header>
 
-  <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-  <footer style="margin-top: 50px;">
-    <a href="blog.html" class="back-link" style="text-decoration: none; font-weight: bold;">← Back to Blog</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=devie-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+<main style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    <article class="modern-post">
+        <h1 style="font-size: 2.8rem; color: #222; margin-bottom: 10px;">{{ page.title }}</h1>
+        <p style="color: #666; margin-bottom: 30px;">Published on {{ page.date | date: "%B %e, %Y" }}</p>
+            
+          <div class="entry-content">
+              {{ content }}
+          </div>
+        </article>
+  </main>
+  <footer style="text-align: center; padding: 40px 0;">
+     <p>© 2026 Joniel|</p>
   </footer>
-</article>
+  
+  <script>
+    let slideIndex = 1;
+    
+    setInterval(() => {
+      // This finds ALL radio buttons inside your 'slides' container
+      const totalSlides = document.querySelectorAll('.slides input[type="radio"]').length;
+      
+      if (totalSlides > 0) {
+        let radio = document.getElementById('i' + slideIndex);
+        if (radio) {
+            radio.checked = true;
+        }
+        
+        slideIndex++;
+        
+        // Instead of '4', it uses whatever the actual count is
+        if (slideIndex > totalSlides) {
+            slideIndex = 1;
+        }
+      }
+    }, 5000);
+  </script>
+  
+</body>
+</html>
