@@ -920,3 +920,32 @@ Try Page
     justify-content: center;
     width: 100%;
 }
+
+/* ==========================================================================
+            NEWS RESCUE WASHINGTON APRIL 20 POST DATE
+   ========================================================================== */
+/* 1. Boost the specific text blocks you labeled */
+.bg11, .bg12, .bg13 {
+  font-size: 1.25rem !important; /* Makes text 25% larger */
+  line-height: 1.8;              /* Adds breathing room between lines */
+  margin-bottom: 1.5rem;
+  color: #222;                   /* Makes it a bit sharper to read */
+}
+
+/* 2. Tame the "Big George" Photos */
+/* This targets all images inside your post */
+article img, .post-content img, p > img {
+  max-width: 100%;               /* Shrinks them to fit the screen width */
+  height: auto;                  /* Keeps them from looking "squashed" */
+  display: block;
+  margin: 2rem auto;             /* Centers them with space above and below */
+  border-radius: 8px;            /* Gives them those clean modern corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Adds a professional subtle shadow */
+}
+
+/* 3. Style the "By Joniel Rocio" line */
+.post-content {
+  max-width: 800px;              /* Keeps the text from stretching too wide */
+  margin: 0 auto;
+  padding: 0 20px;
+}
