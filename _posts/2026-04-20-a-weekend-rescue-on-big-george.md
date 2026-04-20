@@ -4,7 +4,7 @@ title: A Weekend Rescue on Big George
 date: 2026-04-20
 image: /images/blog/bg2.jpeg
 ---
-By Joniel Rocio    April 20, 2026
+By Joniel Rocio     April 20, 2026
 <p class="bg11">Even as the valleys start to see spring, the summit of Mount Washington remains a high-alpine winter environment. This past Saturday night (April 18th), we saw a stark reminder of why the White Mountains demand our respect.</p>
 
 ![](/images/blog/bg2.jpeg "Photo taken from the Summit of Mt. Washington")
