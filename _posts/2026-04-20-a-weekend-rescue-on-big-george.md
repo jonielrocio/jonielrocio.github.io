@@ -25,3 +25,4 @@ The Lesson for the Trail: This is why we talk about the "10 Essentials" so much
 Source: For the official report on this incident, visit the [NH Fish and Game Newsroom](https://www.google.com/search?q=https://nhfishgame.com/2026/04/20/two-hikers-rescued-from-mt-washington/).
 
 \*Photos  by Erwin Perez\*
+*Note: Image for illustrative purposes; not from the actual incident.*
