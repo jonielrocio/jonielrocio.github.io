@@ -1003,3 +1003,13 @@ article img, .post-content img, p > img {
     margin: 0 auto;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+.news-teaser {
+   background-color: #ffffff;
+   max-width: 500px;
+   margin: 30px auto;
+   border-radius: 12px;
+   overflow: hidden; /* This keeps the image corners rounded */
+   border: 2px solid #006BB6; /* Knicks Blue border */
+   box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Heavy shadow so it "pops" */
+}
