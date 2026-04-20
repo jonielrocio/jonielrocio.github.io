@@ -4,12 +4,11 @@ title: A Weekend Rescue on Big George
 date: 2026-04-20
 image: /images/blog/bg2.jpeg
 ---
-
+By Joniel Rocio    April 20, 2026
 <p class="bg11">Even as the valleys start to see spring, the summit of Mount Washington remains a high-alpine winter environment. This past Saturday night (April 18th), we saw a stark reminder of why the White Mountains demand our respect.</p>
 
 ![](/images/blog/bg2.jpeg "Photo taken from the Summit of Mt. Washington")
 
-By Joniel Rocio     April 20, 2026
 
 <p class="bg12">The Incident: At approximately 7:30 PM, a 911 call came in for two young hikers who had reached the summit but were unable to descend. They were trapped by high winds and "wind-driven precipitation"—that classic mix of freezing rain and snow that turns everything to ice in minutes. To make matters worse, one of the hikers was suffering from significant leg pain, making any attempt to hike down on foot impossible as the weather deteriorated. </p>
 
