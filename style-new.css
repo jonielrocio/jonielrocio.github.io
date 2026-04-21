@@ -1029,9 +1029,10 @@ article img, .post-content img, p > img {
 
 .cmet {
    font-weight: bold;
-   text-align: center;
-   font-size: 21px;
+   display: flex;
+   font-size: 32px;
    justify-content: center;
+   position: relative;
    align-items: center;
    color: white;
    min-height: 500px;
