@@ -1037,4 +1037,41 @@ article img, .post-content img, p > img {
    color: white;
    min-height: 500px;
 }
+
+.cme1 {
+   max-width: 450px;       /* Keeps the form from being too wide */
+   margin: 20px auto;      /* Centers it horizontally */
+   padding: 25px;
+   background: rgba(255, 255, 255, 0.1); /* Subtle glass tint */
+   border-radius: 8px;
+   color: white;           /* Makes your labels visible */
+}
+
+.cme1 input, .cme1 textarea {
+   width: 100%;
+   padding: 10px;
+   margin: 8px 0 20px 0;   /* Space between fields */
+   border: none;
+   border-radius: 4px;
+}
+
+.cme1 textarea {
+   height: 120px;          /* Gives people room to write */
+}
+
+.cme2 {
+   width: 100%;
+   padding: 12px;
+   background-color: #8b4513; /* Your terracotta trail color */
+   color: white;
+   font-weight: bold;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+
+.cme2:hover {
+   background-color: #a0522d; /* Slightly lighter on hover */
+}
    
