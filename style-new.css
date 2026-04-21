@@ -1066,6 +1066,7 @@ article img, .post-content img, p > img {
     border-radius: 6px;
     font-family: inherit;
     display: block;
+    resize: vertical;
 }
 
 /* The "Send" Button */
