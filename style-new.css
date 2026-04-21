@@ -1019,15 +1019,12 @@ article img, .post-content img, p > img {
    ========================================================================== */
 
 .cme {
-   background-image: url("/assets/phone.jpg");
-   background-position: center -10%;
+   background-image: linear-gradient(rgba(20, 20, 25, 0.8), rgba(20, 20, 25, 0.8))
+      url("/assets/phone.jpg");
+   background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   filter: blur(5px);
-   -webkit-filter: blur(5px);
    min-height: 500px;
-   transform: scale(1.1);
-   overflow: hidden;
 }
 
 .cmet {
