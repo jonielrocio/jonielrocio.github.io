@@ -1038,17 +1038,49 @@ article img, .post-content img, p > img {
    min-height: 500px;
 }
 
+/* The main container box */
+.cme1 {
+    max-width: 500px;
+    margin: 40px auto;      /* Centers it and adds breathing room */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* A clean, solid white box */
+    border-radius: 12px;    /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft shadow to make it pop */
+    text-align: left;
+}
+
+/* Styling the labels to sit outside/above the boxes */
 .cme1 label {
-    display: block;      /* This forces the label to stay ABOVE the box */
-    margin-bottom: 5px;  /* Space between the text and the box */
-    font-weight: bold;
-    color: white;        /* Or whatever color matches your privacy glass */
-    text-align: left;    /* You can change this to center if you prefer */
-}
-
-.cme1 input, .cme1 textarea {
     display: block;
-    width: 100%;
-    margin-bottom: 20px; /* Space before the NEXT label starts */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 
+/* Making the input fields look like actual boxes */
+.cme1 input, .cme1 textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    display: block;
+}
+
+/* The "Send" Button */
+.cme2 {
+    width: 100%;
+    padding: 15px;
+    background-color: #8b4513; /* Terracotta trail color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cme2:hover {
+    background-color: #5d2e0d; /* Darkens slightly when you hover */
+}
