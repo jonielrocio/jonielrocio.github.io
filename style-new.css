@@ -1038,35 +1038,17 @@ article img, .post-content img, p > img {
    min-height: 500px;
 }
 
-/* This creates the actual box container */
-.cme1 {
-    background-color: rgba(255, 255, 255, 0.9); /* A solid light box */
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 450px;
-    margin: 20px auto; /* Centers the box */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Adds a little depth */
-    color: #333; /* Dark text for the labels */
-}
-
-/* This styles the input and textarea boxes so they look like boxes */
-.cme1 input, .cme1 textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-}
-
-/* This is your button */
-.cme2 {
-    background-color: #8b4513; /* Terracotta trail color */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
+.cme1 label {
+    display: block;      /* This forces the label to stay ABOVE the box */
+    margin-bottom: 5px;  /* Space between the text and the box */
     font-weight: bold;
+    color: white;        /* Or whatever color matches your privacy glass */
+    text-align: left;    /* You can change this to center if you prefer */
 }
+
+.cme1 input, .cme1 textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Space before the NEXT label starts */
+}
+
