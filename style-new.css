@@ -1032,8 +1032,9 @@ article img, .post-content img, p > img {
    font-weight: bold;
    text-align: center;
    font-size: 21px;
-   display: flex;
-   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    color: white;
+   min-height: 500px;
 }
    
