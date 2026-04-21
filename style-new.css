@@ -1025,7 +1025,7 @@ article img, .post-content img, p > img {
    background-size: cover;
    filter: blur(8px);
    -webkit-filter: blur(8px);
-   min-height: 550px;
+   min-height: 450px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -1041,5 +1041,6 @@ article img, .post-content img, p > img {
    flex-direction: center;
    height: 100%;
    width: auto;
+   color: white;
 }
    
