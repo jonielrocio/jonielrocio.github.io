@@ -1023,8 +1023,8 @@ article img, .post-content img, p > img {
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   filter: blur(8px);
-   -webkit-filter: blur(8px);
+   filter: blur(4px);
+   -webkit-filter: blur(4px);
    min-height: 500px;
 }
 
