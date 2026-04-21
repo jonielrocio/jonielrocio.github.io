@@ -1033,5 +1033,8 @@ article img, .post-content img, p > img {
    font-weight: bold;
    position: absolute;
    text-align: center;
+   font-size: 21px;
+   display: flex;
+   flex-direction: center;
 }
    
