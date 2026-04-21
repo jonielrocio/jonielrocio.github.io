@@ -1019,8 +1019,6 @@ article img, .post-content img, p > img {
    ========================================================================== */
 
 .cme {
-   display: flex;
-   flex-direction: center;
    background-image: url("/assets/phone.jpg");
    background-position: center;
    background-repeat: no-repeat;
@@ -1029,4 +1027,11 @@ article img, .post-content img, p > img {
    -webkit-filter: blur(8px);
    height: 100%;
    width: auto;
-} 
+}
+
+.cmet {
+   font-weight: bold;
+   position: absolute;
+   text-align: center;
+}
+   
