@@ -1013,3 +1013,18 @@ article img, .post-content img, p > img {
    border: 2px solid #006BB6; /* Knicks Blue border */
    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Heavy shadow so it "pops" */
 }
+
+/* ==========================================================================
+       CONTACT MAIN PAGE
+   ========================================================================== */
+
+.cme {
+   display: flex;
+   flex-direction: center;
+   background-image: url("/assets/phone.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   filter: blur(8px);
+   -webkit-filter: blur(8px); 
+} 
