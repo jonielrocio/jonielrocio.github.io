@@ -1019,9 +1019,9 @@ article img, .post-content img, p > img {
    ========================================================================== */
 
 .cme {
-   background-image: linear-gradient(rgba(20, 20, 25, 0.60), rgba(20, 20, 25, 0.60)),
+   background-image: linear-gradient(rgba(20, 20, 25, 0.55), rgba(20, 20, 25, 0.55)),
       url("/assets/phone.jpg");
-   background-position: center 80%;
+   background-position: center 65%;
    background-repeat: no-repeat;
    background-size: cover;
    min-height: 500px;
