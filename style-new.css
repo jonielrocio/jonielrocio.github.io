@@ -1025,8 +1025,6 @@ article img, .post-content img, p > img {
    background-size: cover;
    filter: blur(8px);
    -webkit-filter: blur(8px);
-   height: 100%;
-   width: auto;
 }
 
 .cmet {
@@ -1036,5 +1034,7 @@ article img, .post-content img, p > img {
    font-size: 21px;
    display: flex;
    flex-direction: center;
+   height: 100%;
+   width: auto;
 }
    
