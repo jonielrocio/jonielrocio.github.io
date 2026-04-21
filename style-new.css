@@ -1025,6 +1025,11 @@ article img, .post-content img, p > img {
    background-size: cover;
    filter: blur(8px);
    -webkit-filter: blur(8px);
+   min-height: 550px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 
 .cmet {
