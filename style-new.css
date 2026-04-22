@@ -1092,45 +1092,32 @@ article img, .post-content img, p > img {
 /* ==========================================================================
        BLOG MAIN PAGE (INREACH)
    ========================================================================== */
-/* Container for the featured post */
-.inreach {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background-color: #fff; /* Matches your white/terracotta vibe */
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 3rem;
-}
-
-/* Tame the photo size */
-.inreach img {
-    width: 350px;      /* Set a fixed width for the featured image */
-    height: 250px;
-    object-fit: cover; /* Keeps it from looking squished */
-    border-radius: 8px;
-}
-
-/* Text styling */
-.inrtext h2 {
-    font-size: 2rem;
-    margin: 10px 0;
-}
-
+/* 1. Target the Post Page AND the Blog Index text */
+.post-content p, 
 .inrtext p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.25rem; /* Big, readable text */
+    line-height: 1.8;   /* Spacing to save your eyes */
+    color: #2c2c2c;     /* Dark grey for better contrast than pure black */
 }
 
-/* Mobile Friendly: Stack them on small screens */
-@media (max-width: 768px) {
-    .inreach {
-        flex-direction: column;
-        text-align: center;
-    }
-    .inreach img {
-        width: 100%;
-        max-width: 400px;
-    }
+/* 2. Target the Title on both blogs */
+.post-content h1,
+.inrtext h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
 }
 
+/* 3. Specifically fix the "Big Photo" on the Index and the Post */
+.inreach img,
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* 4. The specific fix for your "Latest Story" thumbnail */
+.inreach img {
+    width: 400px; /* Limits the giant photo on the index page */
+}
