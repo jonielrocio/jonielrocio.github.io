@@ -251,6 +251,35 @@ nav a {
     border-radius: 8px;
 }
 
+@media (max-width: 899px) {
+    /* 1. The Container: Force it to stop at the screen edge */
+    .th-hero-section {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden; /* Hard stop for anything poking out */
+    }
+
+    /* 2. The Text Wrapper: Prevent padding from adding to width */
+    .th-hero-text {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-bottom: 10vh; /* Adjusting your 23vh for mobile */
+        box-sizing: border-box !important; /* Forces padding INSIDE the 100% */
+        margin: 0 !important;
+    }
+
+    /* 3. The Animated Headline: Prevent it from staying on one line */
+    .th-hero-text h1 {
+        font-size: 1.5rem !important; /* Smaller for mobile screens */
+        max-width: 100% !important;
+        margin: 20px 0 !important;
+        white-space: normal !important; /* Allows text to wrap to next line */
+        overflow-wrap: break-word;
+    }
+}
+
 /* ==========================================================================
    5. BLOG GRIDS & CONTAINERS
    ========================================================================== */
