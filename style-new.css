@@ -1223,5 +1223,26 @@ article img, .post-content img, p > img {
     border-radius: 8px;
 }
 
+@media screen and (max-width: 600px) {
+    /* 1. Stack the blog index items */
+    .inreach {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    /* 2. Resize the index image so it doesn't exceed the phone width */
+    .inreach img {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+
+    /* 3. Ensure the text container isn't too wide */
+    .post-content p {
+        width: 90% !important;
+        font-size: 1.1rem !important; /* Slightly smaller for mobile comfort */
+    }
+}
+
 
 
