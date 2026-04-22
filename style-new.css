@@ -390,6 +390,14 @@ nav a {
         margin: 0 auto !important;
     }
 
+   .blog23 img {
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      height: 350px;
+      width: auto: 
+   }
+
     /* 2. Make the image fill the top */
     .blog23 {
         width: 100% !important;
