@@ -311,7 +311,7 @@ nav a {
 /* The Flex Container */
 .blog22 {
     display: flex;
-    flex-direction: column; /* Stacks image on top of text for mobile */
+    flex-direction: row; /* Stacks image on top of text for mobile */
     background: #fff;
     border-radius: 12px;
     overflow: hidden; /* Clips the image corners to the border-radius */
