@@ -526,7 +526,7 @@ nav a {
     width: fit-content; 
 }
 .tt:hover {
-    background-color: #e67e22; /* Slightly darker on hover */
+    background-color: #6b8e23; /* Slightly darker on hover */
     transform: translateY(-2px); /* Lifts the button up slightly */
     box-shadow: 0 4px 15px #6b8e23; /* Orange glow */
 }
