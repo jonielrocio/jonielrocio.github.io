@@ -305,7 +305,7 @@ nav a {
     width: 100%;
     max-width: 1200px;
     margin: 40px auto;
-    padding: 0 15px; /* Keeps it from hitting phone edges */
+    padding: 0 !important; /* Keeps it from hitting phone edges */
 }
 
 /* The Flex Container */
@@ -383,10 +383,9 @@ nav a {
 @media (max-width: 899px) {
     /* 1. Reset the main container from Row to Column */
    .blogg {
-      display: flex;
-      flex-direction: column;
+      display: block;
       margin: 0;
-      width: auto; 
+      width: 100%; 
    }
    
    .blog22 {
