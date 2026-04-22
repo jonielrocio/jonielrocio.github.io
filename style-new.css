@@ -410,6 +410,14 @@ nav a {
         border-radius: 0; /* Makes the card flush with the screen edges */
         box-shadow: none;  /* Optional: shadows can look messy on full-width mobile cards */
     }
+   @media (max-width: 899px) {
+    .blog21, .blog22 {
+        margin-left: 0 !important; /* Force it to touch the left wall */
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+}
 }
 /* ==========================================================================
    6. ABOUT, NEWS & FOOTER
