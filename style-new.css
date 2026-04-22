@@ -312,6 +312,7 @@ nav a {
 .blog22 {
     display: flex;
     flex-direction: row; /* Stacks image on top of text for mobile */
+   justify-content: center;
     background: #fff;
     border-radius: 12px;
     overflow: hidden; /* Clips the image corners to the border-radius */
