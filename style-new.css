@@ -318,6 +318,24 @@ nav a {
     width: fit-content;
 }
 
+/* Center the main H1 titles */
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Center Paragraphs and give them a readable width */
+p {
+    text-align: center;     /* Centers the actual lines of text */
+    margin-left: auto;      /* Centers the "box" of the paragraph */
+    margin-right: auto;
+    max-width: 800px;       /* Prevents text from stretching too wide on big screens */
+    line-height: 1.6;
+    padding: 0 20px;        /* Keeps text from hitting the edges on mobile */
+}
+
 /* --- DESKTOP UPGRADE (Side-by-Side) --- */
 @media (min-width: 900px) {
     .th-hero-container {
