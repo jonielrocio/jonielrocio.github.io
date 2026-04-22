@@ -390,25 +390,22 @@ nav a {
    
    .blog22 {
         display: flex;
-        flex-direction: column !important;
-        height: auto !important; /* Kill the fixed 500px height */
-        width: 100% !important;
-        margin: 0 auto !important;
+        height: 500px !important; /* Kill the fixed 500px height */
     }
 
    .blog23 img {
       object-fit: cover;
       object-position: center;
-      display: block;
-      height: 350px;
-      width: auto: 
+      height: 100%;
+      width: 100%: 
    }
 
     /* 2. Make the image fill the top */
     .blog23 {
         width: 100% !important;
-        height: 300px !important; /* Give it a nice height on mobile */
-        flex: none !important;
+        height: 100% !important; /* Give it a nice height on mobile */
+        object-fit: cover;
+       object-position: center;
     }
 
     /* 3. FIX THE LEFT MARGIN: Reset padding and alignment */
