@@ -528,11 +528,11 @@ nav a {
 .tt:hover {
     background-color: #e67e22; /* Slightly darker on hover */
     transform: translateY(-2px); /* Lifts the button up slightly */
-    box-shadow: 0 4px 15px #d35400; /* Orange glow */
+    box-shadow: 0 4px 15px #6b8e23; /* Orange glow */
 }
 .tt:active {
    transform: translateY(0); /* Pushes back down when clicked */
-    border-bottom: 1px solid #d35400;
+    border-bottom: 1px solid #6b8e23;
 }
 
 /* Mobile Fix: Stack everything vertically on small screens */
