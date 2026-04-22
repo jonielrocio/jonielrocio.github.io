@@ -255,112 +255,72 @@ nav a {
    5. BLOG GRIDS & CONTAINERS
    ========================================================================== */
 /* --- THE NEW HERO SECTION (Homepage) --- */
-.blogg {
-   width: 100%;
-   max-width: 1200px;
-   margin: 0 auto; 
-}
+/* ==========================================================================
+   LATEST BLOG HERO (blog21 Section)
+   ========================================================================== */
 
+/* The Outer Wrapper */
 .blog21 {
     width: 100%;
-    max-width: 1200px; /* Keeps it from stretching too wide on huge monitors */
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 0 10px;
+    padding: 0 15px; /* Keeps it from hitting phone edges */
 }
 
+/* The Flex Container */
 .blog22 {
     display: flex;
-    flex-direction: column; /* Stacked for mobile by default */
+    flex-direction: column; /* Stacks image on top of text for mobile */
     background: #fff;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: hidden; /* Clips the image corners to the border-radius */
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* The Image Container - Locked at 350px */
 .blog23 {
     width: 100%;
-    height: 350px; /* Good height for mobile */
+    height: 350px; 
+    overflow: hidden;
 }
 
-.blog23 {
+/* The Image - The Anti-Giraffe Fix */
+.blog23 img {
     width: 100% !important;
-    height: 350px !important;
-    object-fit: cover; /* This is the secret to making it look professional */
+    height: 100% !important;
+    object-fit: cover; /* Magic: Fills the box without stretching */
+    object-position: center; 
     display: block;
 }
 
+/* The Text Content Area */
 .blog24 {
     padding: 30px;
-    background: #faf9f6; /* That clean, off-white journal look */
+    background: #faf9f6; /* Clean journal off-white */
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.th-category {
-    color: #e67e22; /* inReach Orange */
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.blog24 h2 {
-    font-size: 2rem;
-    margin: 0 0 10px 0;
-    line-height: 1.2;
-}
-
-.th-hero-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff !important;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    width: fit-content;
-}
-
-/* Center the main H1 titles */
-h1 {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    width: 100%;
+    align-items: center;
 }
 
-/* Center Paragraphs and give them a readable width */
-p {
-    text-align: center;     /* Centers the actual lines of text */
-    margin-left: auto;      /* Centers the "box" of the paragraph */
-    margin-right: auto;
-    max-width: 800px;       /* Prevents text from stretching too wide on big screens */
-    line-height: 1.6;
-    padding: 0 20px;        /* Keeps text from hitting the edges on mobile */
-}
-
-/* --- DESKTOP UPGRADE (Side-by-Side) --- */
+/* DESKTOP VIEW: Side-by-Side */
 @media (min-width: 900px) {
-    .th-hero-container {
-        flex-direction: row; /* Image left, Text right */
+    .blog22 {
+        flex-direction: row; /* Image left, text right */
         height: 500px;
     }
 
     .blog23 {
-        flex: 1.4; /* Give the photo more "trail" space */
+        flex: 1.4; /* Image gets 60% of the width */
         height: 100%;
     }
 
     .blog24 {
-        flex: 1;
+        flex: 1; /* Text gets 40% of the width */
         padding: 60px;
-    }
-
-    .blog24 h2 {
-        font-size: 2.8rem;
+        text-align: left;
+        align-items: flex-start;
     }
 }
 /* ==========================================================================
