@@ -260,7 +260,8 @@ nav a {
    ========================================================================== */
 
 /* The Outer Wrapper */
-.bago, .bago p {
+.bago,
+.bago p {
    display: flex;
    justify-content: center;
    align-items: center;
