@@ -1095,24 +1095,23 @@ article img, .post-content img, p > img {
 /* --- BLOG & POST STYLING --- */
 
 /* 1. Target body text in BOTH your .md posts and your blog index */
-.post-content p, 
-.inrtext p {
-    font-size: 1.25rem; /* The "Big Text" you wanted */
-    line-height: 1.8;   /* Breathable spacing */
+.post-content p {
+    font-size: 1.2rem;   /* Bigger text size */
+    line-height: 1.8;    /* More space between lines for your eyes */
     color: #333;
-    margin-bottom: 1.5rem;
+    max-width: 750px;    /* Keeps lines from being too wide to read */
+    margin-left: auto;
+    margin-right: auto;
 }
-
 /* 2. Fix the giant photos */
 /* This tames images inside your .md posts */
 .post-content img {
-    max-width: 100%;
+    max-width: 100%;    /* Stops photos from going off-screen */
     height: auto;
-    margin: 2rem auto;
     display: block;
+    margin: 20px auto;  /* Centers them and adds breathing room */
     border-radius: 8px;
 }
-
 /* 3. Specific fix for the Blog Index (blog1.html) */
 .inreach {
     display: flex;
