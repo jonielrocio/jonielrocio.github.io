@@ -504,6 +504,36 @@ nav a {
     object-fit: cover;
     border-radius: 8px;
 }
+.tt {
+   display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    
+    /* Use your variable or the hex code for inReach Orange */
+    background-color: var(--accent); 
+    color: #ffffff !important;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    
+    border-radius: 4px;
+    border-bottom: 3px solid #6b8e23; /* Darker orange bar on the bottom */
+    
+    transition: all 0.3s ease; /* Makes the hover effect smooth */
+    width: fit-content; 
+}
+.tt:hover {
+    background-color: #e67e22; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Lifts the button up slightly */
+    box-shadow: 0 4px 15px rgba(245, 132, 38, 0.3); /* Orange glow */
+}
+.tt:active {
+   transform: translateY(0); /* Pushes back down when clicked */
+    border-bottom: 1px solid #d35400;
+}
 
 /* Mobile Fix: Stack everything vertically on small screens */
 @media (max-width: 768px) {
