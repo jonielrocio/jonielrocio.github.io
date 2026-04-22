@@ -9,18 +9,6 @@
     --bg-light: #dff1f1;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* This acts as a hard wall for the right side */
-    position: relative;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -241,7 +229,7 @@ nav a {
 }
 
 .th-hero-text p {
-    display: flex;
+    display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -273,15 +261,17 @@ nav a {
 
 /* The Outer Wrapper */
 .bago, {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   display: block;
+   text-align: center;
+   width: 100%;
+   margin: 20px;
 }
 
 .blog24 p {
     text-align: center;      /* Centers the text lines */
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .blog21 {
