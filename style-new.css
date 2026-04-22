@@ -406,6 +406,10 @@ nav a {
         align-items: center !important;
         margin: 0 !important;
     }
+   .blog22 {
+        border-radius: 0; /* Makes the card flush with the screen edges */
+        box-shadow: none;  /* Optional: shadows can look messy on full-width mobile cards */
+    }
 }
 /* ==========================================================================
    6. ABOUT, NEWS & FOOTER
