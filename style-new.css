@@ -1136,22 +1136,4 @@ article img, .post-content img, p > img {
     }
 }
 
-/* FORCE BIG TEXT EVERYWHERE */
-p {
-    font-size: 1.3rem !important; /* Forces text to be ~21px */
-    line-height: 1.8 !important;   /* Adds breathing room */
-    color: #303030 !important;    /* Darker grey for clarity */
-}
 
-/* FORCE IMAGES TO STAY REASONABLE */
-img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 30px auto !important; /* Centers and adds space */
-}
-
-/* FIX YOUR LATEST STORY BOX SPECIFICALLY */
-.inreach img {
-    max-width: 400px !important; /* Keeps the index photo small */
-}
