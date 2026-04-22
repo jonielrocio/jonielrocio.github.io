@@ -260,18 +260,17 @@ nav a {
    ========================================================================== */
 
 /* The Outer Wrapper */
-.bago, {
+.bago {
    display: block;
    text-align: center;
    width: 100%;
-   margin: 20px;
+   margin: 20px 0;
 }
 
 .blog24 p {
     text-align: center;      /* Centers the text lines */
     width: 100%;
-   margin-left: auto;
-   margin-right: auto;
+    margin: 10px 0;
 }
 
 .blog21 {
