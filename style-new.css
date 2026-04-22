@@ -327,8 +327,8 @@ nav a {
 
 /* The Image - The Anti-Giraffe Fix */
 .blog23 img {
-    width: 100% !important;
-    height: 100% !important;
+    width: 350px;
+    height: 400px;
     object-fit: cover; /* Magic: Fills the box without stretching */
     object-position: center; 
     display: block;
