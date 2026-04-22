@@ -382,7 +382,14 @@ nav a {
 /* DESKTOP VIEW: Side-by-Side */
 @media (max-width: 899px) {
     /* 1. Reset the main container from Row to Column */
-    .blog22 {
+   .blogg {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: auto; 
+   }
+   
+   .blog22 {
         display: flex;
         flex-direction: column !important;
         height: auto !important; /* Kill the fixed 500px height */
