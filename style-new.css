@@ -380,22 +380,31 @@ nav a {
 }
 
 /* DESKTOP VIEW: Side-by-Side */
-@media (min-width: 900px) {
+@media (max-width: 899px) {
+    /* 1. Reset the main container from Row to Column */
     .blog22 {
-        flex-direction: row; /* Image left, text right */
-        height: 500px;
+        display: flex;
+        flex-direction: column !important;
+        height: auto !important; /* Kill the fixed 500px height */
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
+    /* 2. Make the image fill the top */
     .blog23 {
-        flex: 1.4; /* Image gets 60% of the width */
-        height: 100%;
+        width: 100% !important;
+        height: 300px !important; /* Give it a nice height on mobile */
+        flex: none !important;
     }
 
+    /* 3. FIX THE LEFT MARGIN: Reset padding and alignment */
     .blog24 {
-        flex: 1; /* Text gets 40% of the width */
-        padding: 60px;
-        text-align: left;
-        align-items: flex-start;
+        flex: none !important;
+        width: 100% !important;
+        padding: 30px 20px !important; /* Equal padding on both sides */
+        text-align: center !important; /* Or 'left' if you prefer */
+        align-items: center !important;
+        margin: 0 !important;
     }
 }
 /* ==========================================================================
