@@ -1085,3 +1085,49 @@ article img, .post-content img, p > img {
 .cme2:hover {
     background-color: #5d2e0d; /* Darkens slightly when you hover */
 }
+
+/* ==========================================================================
+       BLOG MAIN PAGE (INREACH)
+   ========================================================================== */
+/* Container for the featured post */
+.inreach {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff; /* Matches your white/terracotta vibe */
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+/* Tame the photo size */
+.inreach img {
+    width: 350px;      /* Set a fixed width for the featured image */
+    height: 250px;
+    object-fit: cover; /* Keeps it from looking squished */
+    border-radius: 8px;
+}
+
+/* Text styling */
+.inrtext h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.inrtext p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Mobile Friendly: Stack them on small screens */
+@media (max-width: 768px) {
+    .inreach {
+        flex-direction: column;
+        text-align: center;
+    }
+    .inreach img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
