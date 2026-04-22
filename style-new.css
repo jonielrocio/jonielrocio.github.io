@@ -1092,32 +1092,47 @@ article img, .post-content img, p > img {
 /* ==========================================================================
        BLOG MAIN PAGE (INREACH)
    ========================================================================== */
-/* 1. Target the Post Page AND the Blog Index text */
+/* --- BLOG & POST STYLING --- */
+
+/* 1. Target body text in BOTH your .md posts and your blog index */
 .post-content p, 
 .inrtext p {
-    font-size: 1.25rem; /* Big, readable text */
-    line-height: 1.8;   /* Spacing to save your eyes */
-    color: #2c2c2c;     /* Dark grey for better contrast than pure black */
+    font-size: 1.25rem; /* The "Big Text" you wanted */
+    line-height: 1.8;   /* Breathable spacing */
+    color: #333;
+    margin-bottom: 1.5rem;
 }
 
-/* 2. Target the Title on both blogs */
-.post-content h1,
-.inrtext h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-}
-
-/* 3. Specifically fix the "Big Photo" on the Index and the Post */
-.inreach img,
+/* 2. Fix the giant photos */
+/* This tames images inside your .md posts */
 .post-content img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    margin: 2rem auto;
     display: block;
+    border-radius: 8px;
 }
 
-/* 4. The specific fix for your "Latest Story" thumbnail */
+/* 3. Specific fix for the Blog Index (blog1.html) */
+.inreach {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
 .inreach img {
-    width: 400px; /* Limits the giant photo on the index page */
+    width: 400px; /* Forces the index photo to stay a reasonable size */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Mobile fix: stacks them so it's not squished on your phone */
+@media (max-width: 768px) {
+    .inreach {
+        flex-direction: column;
+    }
+    .inreach img {
+        width: 100%;
+    }
 }
