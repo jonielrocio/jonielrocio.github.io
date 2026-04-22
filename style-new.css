@@ -8,6 +8,17 @@
     --type-dark: #1e1e1e;
     --bg-light: #dff1f1;
 }
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0; 
+}
+
+html, body { 
+   width: 100%;
+   overflow-x: hidden;
+   position: relative; 
+}
 
 body {
     margin: 0;
@@ -255,6 +266,12 @@ nav a {
    5. BLOG GRIDS & CONTAINERS
    ========================================================================== */
 /* --- THE NEW HERO SECTION (Homepage) --- */
+.content-container {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto; 
+}
+
 .th-hero-feature {
     width: 100%;
     max-width: 1200px; /* Keeps it from stretching too wide on huge monitors */
