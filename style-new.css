@@ -8,17 +8,6 @@
     --type-dark: #1e1e1e;
     --bg-light: #dff1f1;
 }
-* {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0; 
-}
-
-html, body { 
-   width: 100%;
-   overflow-x: hidden;
-   position: relative; 
-}
 
 body {
     margin: 0;
@@ -266,20 +255,20 @@ nav a {
    5. BLOG GRIDS & CONTAINERS
    ========================================================================== */
 /* --- THE NEW HERO SECTION (Homepage) --- */
-.content-container {
+.blogg {
    width: 100%;
    max-width: 1200px;
    margin: 0 auto; 
 }
 
-.th-hero-feature {
+.blog21 {
     width: 100%;
     max-width: 1200px; /* Keeps it from stretching too wide on huge monitors */
     margin: 40px auto;
     padding: 0 10px;
 }
 
-.th-hero-container {
+.blog22 {
     display: flex;
     flex-direction: column; /* Stacked for mobile by default */
     background: #fff;
@@ -288,19 +277,19 @@ nav a {
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-.th-hero-image {
+.blog23 {
     width: 100%;
     height: 350px; /* Good height for mobile */
 }
 
-.th-hero-image img {
+.blog23 {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover; /* This is the secret to making it look professional */
     display: block;
 }
 
-.th-hero-text {
+.blog24 {
     padding: 30px;
     background: #faf9f6; /* That clean, off-white journal look */
     display: flex;
@@ -317,7 +306,7 @@ nav a {
     display: block;
 }
 
-.th-hero-text h2 {
+.blog24 h2 {
     font-size: 2rem;
     margin: 0 0 10px 0;
     line-height: 1.2;
@@ -360,17 +349,17 @@ p {
         height: 500px;
     }
 
-    .th-hero-image {
+    .blog23 {
         flex: 1.4; /* Give the photo more "trail" space */
         height: 100%;
     }
 
-    .th-hero-text {
+    .blog24 {
         flex: 1;
         padding: 60px;
     }
 
-    .th-hero-text h2 {
+    .blog24 h2 {
         font-size: 2.8rem;
     }
 }
