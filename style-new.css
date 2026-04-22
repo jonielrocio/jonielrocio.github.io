@@ -260,6 +260,14 @@ nav a {
    ========================================================================== */
 
 /* The Outer Wrapper */
+.blogg {
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   justify-content: center;
+   align-items: center; 
+}
+   
 .blog21 {
     width: 100%;
     max-width: 1200px;
