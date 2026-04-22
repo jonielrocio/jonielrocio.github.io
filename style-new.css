@@ -254,58 +254,91 @@ nav a {
 /* ==========================================================================
    5. BLOG GRIDS & CONTAINERS
    ========================================================================== */
-/* 1. Make the container stretch full width */
-.th-featured-layout {
-    display: block !important; /* Forces it out of the side-by-side grid */
+/* --- THE NEW HERO SECTION (Homepage) --- */
+.th-hero-feature {
     width: 100%;
-    margin-top: 40px;
+    max-width: 1200px; /* Keeps it from stretching too wide on huge monitors */
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* 2. Target the image container */
-.th-card-image {
-    width: 100%;
+.th-hero-container {
+    display: flex;
+    flex-direction: column; /* Stacked for mobile by default */
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* 3. The exact selector for your image */
-.th-card-image img {
+.th-hero-image {
+    width: 100%;
+    height: 350px; /* Good height for mobile */
+}
+
+.th-hero-image img {
     width: 100% !important;
-    height: 450px !important; /* Force the height you want */
-    object-fit: cover;
-    border-radius: 8px;
+    height: 100% !important;
+    object-fit: cover; /* This is the secret to making it look professional */
     display: block;
 }
 
-/* 4. Center the text content below the big photo */
-.th-card-content {
-    padding: 20px 0;
-    text-align: left;
-}
-/* --- Desktop: Big & Bold --- */
-@media (min-width: 1024px) {
-    .th-featured-layout {
-        display: block; /* Breaks the 2-column grid to go full width */
-    }
-
-    .th-card-image img {
-        height: 500px !important; /* Nice tall cinematic look */
-        width: 100% !important;
-        object-fit: cover;
-    }
+.th-hero-text {
+    padding: 30px;
+    background: #faf9f6; /* That clean, off-white journal look */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* --- Mobile: Fit for Phones --- */
-@media (max-width: 768px) {
-    .th-card-image img {
-        height: 250px !important; /* Shorter height so you don't have to scroll forever */
-        width: 100% !important;
-        border-radius: 4px;
-    }
-
-    .th-card-content h3 {
-        font-size: 1.5rem; /* Shrink the title slightly for mobile screens */
-    }
+.th-category {
+    color: #e67e22; /* inReach Orange */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    display: block;
 }
 
+.th-hero-text h2 {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.th-hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: fit-content;
+}
+
+/* --- DESKTOP UPGRADE (Side-by-Side) --- */
+@media (min-width: 900px) {
+    .th-hero-container {
+        flex-direction: row; /* Image left, Text right */
+        height: 500px;
+    }
+
+    .th-hero-image {
+        flex: 1.4; /* Give the photo more "trail" space */
+        height: 100%;
+    }
+
+    .th-hero-text {
+        flex: 1;
+        padding: 60px;
+    }
+
+    .th-hero-text h2 {
+        font-size: 2.8rem;
+    }
+}
 /* ==========================================================================
    6. ABOUT, NEWS & FOOTER
    ========================================================================== */
