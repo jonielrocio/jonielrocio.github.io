@@ -1223,15 +1223,5 @@ article img, .post-content img, p > img {
     border-radius: 8px;
 }
 
-/* Mobile fix: stacks them so it's not squished on your phone */
-@media (max-width: 768px) {
-    .inreach {
-        flex-direction: column;
-    }
-    .inreach img {
-        width: 100%;
-    }
-}
-
 
 
