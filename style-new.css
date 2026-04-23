@@ -1130,12 +1130,12 @@ article img, .post-content img, p > img {
 .news-container {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important; /* Forces them to stay on the same line */
-    justify-content: center;
+    flex-wrap: nowrap !important;
     gap: 20px;
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
+    align-items: stretch; /* Forces both cards to be the same height */
 }
 
 /* 2. Strip the '100% width' off the children */
@@ -1169,6 +1169,34 @@ article img, .post-content img, p > img {
     object-fit: cover !important;
     border-radius: 8px;
     margin-top: 20px;
+}
+.rescue-feature, .KW {
+    flex: 0 0 calc(50% - 10px) !important; /* Math: 50% width minus half the gap */
+    box-sizing: border-box !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes image to bottom */
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    border-top: 8px solid #006BB6;
+    text-align: center;
+}
+
+/* Even out the images */
+#bal, #lin {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Standardize the titles */
+.news-container h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 15px;
+    min-height: 3.5rem; /* Ensures the boxes don't jump if one title is longer */
 }
 
 /* ==========================================================================
