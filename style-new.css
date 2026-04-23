@@ -1128,9 +1128,9 @@ article img, .post-content img, p > img {
    ========================================================================== */
 /* --- THE UNIVERSAL GRID --- */
 .news-container, .gear-container, .grid-wrapper {
-    display: grid !important;
+    display: flex !important;
     /* Forces 2-3 columns on desktop, 1 on mobile */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    flex-direction: row;
     gap: 25px !important;
     padding: 20px !important;
     max-width: 1200px !important;
