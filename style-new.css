@@ -1132,6 +1132,8 @@ article img, .post-content img, p > img {
     margin: 0 auto;
     padding: 40px 20px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+   diplay: flex;
+   flex-direction: row;
 }
 
 .rescue-feature {
@@ -1185,6 +1187,21 @@ article img, .post-content img, p > img {
    overflow: hidden; /* This keeps the image corners rounded */
    border: 2px solid #006BB6; /* Knicks Blue border */
    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Heavy shadow so it "pops" */
+}
+
+#lin {
+    width: 100%;       /* Forces the image to stay inside the .KW div */
+    max-width: 450px;  /* Keeps it from getting too big on desktop */
+    height: 250px;     /* Sets a consistent height so your row looks even */
+    object-fit: cover; /* Crops the photo to fit the box without stretching */
+    display: block;    /* Prevents alignment issues */
+    margin-top: 10px;
+}
+
+.KW {
+    display: flex;
+    flex-direction: column; /* This stacks the Text, Button, and Image *inside* the card */
+    align-items: center;
 }
 
 /* ==========================================================================
