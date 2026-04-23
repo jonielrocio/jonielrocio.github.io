@@ -1126,79 +1126,63 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. Force the container to be a row no matter what */
+/* 1. THE LAYOUT ENGINE */
 .news-container {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
-    align-items: stretch; /* Forces both cards to be the same height */
+    align-items: stretch; /* Forces both boxes to be the same height */
 }
 
-/* 2. Strip the '100% width' off the children */
+/* 2. THE TWIN CARDS (Targets any div inside the container) */
 .news-container > div {
-    flex: 1 !important;     /* Forces them to share the width */
-    width: 48% !important;   /* Explicitly limits them to less than half */
-    max-width: 48% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex: 1 !important;
+    width: 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     
-    /* Uniform Styling */
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 15px;
-    border-top: 8px solid #006BB6;
-    text-align: center;
-    box-sizing: border-box; /* Keeps padding from breaking the width */
+    background: #f9f9f9 !important;
+    padding: 25px !important;
+    border-radius: 15px !important;
+    border-top: 8px solid #006BB6 !important; /* Knicks Blue */
+    text-align: center !important;
+    box-sizing: border-box !important;
 }
 
-/* 3. Force the headers to shrink */
+/* 3. THE TEXT (Fixes the "Pretty Big" problem) */
 .news-container h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 15px;
+    font-size: 1.4rem !important; /* Forces text to a readable, uniform size */
+    color: #333 !important;
+    margin: 0 0 15px 0 !important;
+    min-height: 3.5rem; /* Aligns the cards if one title is 2 lines */
 }
 
-/* 4. Force the images to match */
+/* 4. THE BUTTONS */
+.btn-read {
+    display: inline-block !important;
+    background-color: #F58426 !important; /* Knicks Orange */
+    color: white !important;
+    padding: 10px 25px !important;
+    border-radius: 50px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    margin-bottom: 20px !important;
+}
+
+/* 5. THE IMAGES (Perfect Symmetry) */
 .news-container img {
     width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    border-radius: 8px;
-    margin-top: 20px;
+    height: 250px !important; /* Exact same height for both */
+    object-fit: cover !important; /* Crops the photo to fit the box */
+    border-radius: 10px !important;
+    margin-top: auto !important; /* Pushes image to the bottom */
 }
-.rescue-feature, .KW {
-    flex: 0 0 calc(50% - 10px) !important; /* Math: 50% width minus half the gap */
-    box-sizing: border-box !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Pushes image to bottom */
-    padding: 25px;
-    background: #f9f9f9;
-    border-radius: 15px;
-    border-top: 8px solid #006BB6;
-    text-align: center;
-}
-
-/* Even out the images */
-#bal, #lin {
-    width: 100% !important;
-    height: 250px !important;
-    object-fit: cover !important;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Standardize the titles */
-.news-container h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 15px;
-    min-height: 3.5rem; /* Ensures the boxes don't jump if one title is longer */
-}
-
 /* ==========================================================================
        CONTACT MAIN PAGE
    ========================================================================== */
