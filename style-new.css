@@ -1126,64 +1126,55 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. THE LAYOUT: Standardizes the container */
+/* 1. THE PARENT: Absolute Row Control */
 .news-container {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: wrap; /* Allows stacking on small screens */
+    flex-wrap: nowrap !important;
     gap: 20px;
-    max-width: 1000px;
+    max-width: 900px; /* Slightly narrower to keep things tight */
     margin: 40px auto;
-    padding: 0 20px;
-    justify-content: center;
+    align-items: stretch;
 }
 
-/* 2. THE CARDS: Force them to be equal */
+/* 2. THE CARDS */
 .rescue-feature, .KW {
-    flex: 1 1 400px !important; /* Grow, shrink, but try to stay around 400px */
+    flex: 1 !important;
+    width: 50% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
+    padding: 20px !important;
     background: #f9f9f9;
-    padding: 25px;
     border-radius: 15px;
     border-top: 8px solid #006BB6;
-    text-align: center;
-    box-sizing: border-box;
 }
 
-/* 3. THE TEXT: Uniform size */
-.news-container h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 15px;
-    min-height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 4. THE IMAGES: The "Big Image" Fix */
+/* 3. THE IMAGE FIX: This forces them to be smaller */
 #bal, #lin {
     width: 100% !important;
-    height: 250px !important; /* Hard limit on height so they aren't huge */
-    object-fit: cover !important; /* Crops the mountain view perfectly */
-    border-radius: 10px;
+    height: 200px !important;    /* Force a smaller height */
+    max-height: 200px !important; 
+    object-fit: cover !important; /* Crops the photo to the 200px box */
+    border-radius: 8px;
     margin-top: 20px;
+    display: block !important;
 }
 
-/* 5. MOBILE TWEAKS: For smaller screens */
-@media (max-width: 768px) {
+/* 4. THE TITLES */
+.news-container h2 {
+    font-size: 1.3rem !important; /* Shrunk the text further */
+    min-height: 3rem;
+    margin-bottom: 10px;
+}
+
+/* 5. RESPONSIVE: Stack only on small phones */
+@media (max-width: 600px) {
     .news-container {
         flex-direction: column !important;
     }
-    
-    .rescue-feature, .KW {
-        width: 100% !important;
-        flex: none !important;
-    }
-
     #bal, #lin {
-        height: 200px !important; /* Slightly shorter on mobile */
+        height: 180px !important;
     }
 }
 /* ==========================================================================
