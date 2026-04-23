@@ -1126,19 +1126,18 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* Container for all news items */
+/* Container Fix */
 .news-container {
     display: grid !important;
-    /* This creates a 2-column grid that turns into 1 column on mobile */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 25px !important;
+    gap: 30px !important;
     padding: 20px !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
 
-/* Individual News Card */
-.rescue-feature, .KW, .news-card {
+/* Card Fix */
+.rescue-feature, .KW {
     background: #f9f9f9 !important;
     border-radius: 15px !important;
     border-top: 8px solid #006BB6 !important; /* Knicks Blue */
@@ -1147,20 +1146,18 @@ article img, .post-content img, p > img {
     flex-direction: column !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    width: 100% !important; /* Grid handles the width now */
 }
 
-/* Photo scaling fix */
+/* Photo Fix */
 .news-container img {
     width: 100% !important;
-    height: 250px !important; /* Consistent height for all photos */
-    object-fit: cover !important; /* Prevents stretching */
+    height: 250px !important; /* Forces uniform height */
+    object-fit: cover !important; /* Crops to fit without stretching */
     border-radius: 10px !important;
     margin-top: 15px !important;
-    display: block !important;
 }
 
-/* Button Styling */
+/* Button Fix */
 .btn-read {
     display: inline-block !important;
     padding: 10px 15px !important;
@@ -1169,7 +1166,6 @@ article img, .post-content img, p > img {
     text-decoration: none !important;
     border-radius: 5px !important;
     font-weight: bold !important;
-    margin-bottom: 10px !important;
     text-align: center !important;
 }
 /* ==========================================================================
