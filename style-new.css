@@ -1183,6 +1183,15 @@ article img, .post-content img, p > img {
     border-radius: 10px !important;
     margin-top: auto !important; /* Pushes images to the bottom of the card */
 }
+/* This targets both #bal and #lin specifically */
+#bal, #lin {
+    width: 100% !important;     /* Fill the width of the card */
+    height: 200px !important;    /* Force them to be shorter (adjust this number as you like) */
+    object-fit: cover !important; /* Crops the image to fill the box without squishing */
+    border-radius: 10px;
+    margin-top: 20px;
+    display: block;
+}
 /* ==========================================================================
        CONTACT MAIN PAGE
    ========================================================================== */
