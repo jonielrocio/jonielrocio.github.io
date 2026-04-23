@@ -1126,47 +1126,50 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* Container Fix */
+/* 1. Force the side-by-side grid */
 .news-container {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 30px !important;
+    /* This strictly limits columns to a max of 500px each */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px)) !important; 
+    gap: 20px !important;
+    justify-content: center !important;
     padding: 20px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Card Fix */
+/* 2. Constrain the Boxes */
 .rescue-feature, .KW {
+    max-width: 100% !important;
     background: #f9f9f9 !important;
-    border-radius: 15px !important;
+    border-radius: 12px !important;
     border-top: 8px solid #006BB6 !important; /* Knicks Blue */
     padding: 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
     box-sizing: border-box !important;
 }
 
-/* Photo Fix */
+/* 3. The "Shrink the Photos" Rule (CRITICAL) */
 .news-container img {
     width: 100% !important;
-    height: 250px !important; /* Forces uniform height */
-    object-fit: cover !important; /* Crops to fit without stretching */
-    border-radius: 10px !important;
+    height: 250px !important; /* This forces them to stop being 'Big' */
+    object-fit: cover !important; /* This crops the hiking photo to fit the height */
+    border-radius: 8px !important;
     margin-top: 15px !important;
+    display: block !important;
 }
 
-/* Button Fix */
+/* 4. Button Fix */
 .btn-read {
-    display: inline-block !important;
-    padding: 10px 15px !important;
     background: #F58426 !important; /* Knicks Orange */
     color: white !important;
+    text-align: center !important;
+    padding: 12px !important;
     text-decoration: none !important;
     border-radius: 5px !important;
     font-weight: bold !important;
-    text-align: center !important;
+    margin: 10px 0 !important;
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
