@@ -1132,7 +1132,7 @@ article img, .post-content img, p > img {
     margin: 0 auto;
     padding: 40px 20px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-   diplay: flex;
+   display: flex;
    flex-direction: row;
 }
 
