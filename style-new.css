@@ -1132,22 +1132,32 @@ article img, .post-content img, p > img {
     margin: 0 auto;
     padding: 40px 20px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-   display: flex;
-   flex-direction: row;
+   display: flex !important;
+   flex-direction: row !important;
+   flex-wrap: nowrap;
 }
 
 .rescue-feature {
-    text-align: center;
+    tflex: 1; 
+    width: 50%;           /* Explicitly tells them they only get half the space */
+    box-sizing: border-box; /* IMPORTANT: This keeps the padding INSIDE the 50% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;        /* Match the padding for both */
     background: #f9f9f9;
-    padding: 40px;
     border-radius: 15px;
-    border-top: 8px solid #006BB6; /* Knicks Blue */
 }
 
 .rescue-feature h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
+}
+#bal, #lin {
+    width: 100%;
+    height: 250px;      /* Identical height */
+    object-fit: cover;  /* No stretching */
 }
 
 /* THE BUTTON */
