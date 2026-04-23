@@ -1137,27 +1137,35 @@ article img, .post-content img, p > img {
    flex-wrap: nowrap;
 }
 
-.rescue-feature {
-    tflex: 1; 
-    width: 50%;           /* Explicitly tells them they only get half the space */
-    box-sizing: border-box; /* IMPORTANT: This keeps the padding INSIDE the 50% width */
+.rescue-feature, .KW {
+    flex: 1;                /* Fixed the 'tflex' typo */
+    width: 50%;           
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px;        /* Match the padding for both */
+    align-items: center;    /* Keeps everything centered */
+    padding: 30px;        
     background: #f9f9f9;
     border-radius: 15px;
+    border-top: 8px solid #006BB6; /* Knicks Blue */
+    text-align: center;
 }
 
-.rescue-feature h2 {
-    font-size: 2.5rem;
+.rescue-feature h2, .KW h2 {
+    font-size: 1.5rem;      /* Match sizes here */
     color: #333;
     margin-bottom: 20px;
+    min-height: 3.5rem;    /* Ensures cards stay even if text wraps */
 }
 #bal, #lin {
     width: 100%;
-    height: 250px;      /* Identical height */
-    object-fit: cover;  /* No stretching */
+    height: 250px;         /* Fixed identical height */
+    max-width: 100%;       /* Remove the 750px/450px limits so they fill the card */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: auto;      /* Pushes photo to the bottom */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 /* THE BUTTON */
