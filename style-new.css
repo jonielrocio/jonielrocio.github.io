@@ -1126,18 +1126,61 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-.rescue-feature, .KW {
-    flex: 1 !important; /* Let flexbox handle the math */
-    width: 48% !important; /* Safe fallback width */
-    max-width: 50%;
+/* The Main Container */
+.news-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 30px !important;
+    padding: 20px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* The Individual Cards (Everything) */
+.news-card {
+    background: #f9f9f9 !important;
+    border-radius: 15px !important;
+    border-top: 8px solid #006BB6 !important; /* Knicks Blue */
+    padding: 20px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    padding: 20px !important;
-    background: #f9f9f9;
-    border-radius: 15px;
-    border-top: 8px solid #006BB6;
-    box-sizing: border-box !important;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+/* The Photos Fix */
+.news-card img {
+    width: 100% !important;
+    height: 220px !important; /* Forces all photos to same height */
+    object-fit: cover !important; /* Prevents squishing/stretching */
+    border-radius: 10px !important;
+    margin-top: 15px !important;
+    display: block !important;
+}
+
+/* Heading & Button Styles */
+.news-card h2 {
+    margin-top: 0 !important;
+    font-size: 1.4rem !important;
+    color: #333 !important;
+}
+
+.btn-read {
+    display: inline-block !important;
+    padding: 10px 15px !important;
+    background: #F58426 !important; /* Knicks Orange */
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin-top: 10px !important;
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
