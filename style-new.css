@@ -848,11 +848,12 @@ Try Page
   max-width: 850px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .suri {
         min-height: auto; /* Let the content decide the height on mobile */
-        padding: 40px 15px;
+        padding: 40px 20px;
         width: 95%; /* Give it a tiny bit of breathing room on the edges */
+        word-wrap: break-word;
     }
 
     .surih1 {
@@ -863,6 +864,9 @@ Try Page
     .surip {
         font-size: 22px; /* Scale down the 40px text */
         margin-bottom: 20px;
+       width: 95%;
+       min-height: auto;
+       margin: 20px auto;
     }
 
     .una1 {
