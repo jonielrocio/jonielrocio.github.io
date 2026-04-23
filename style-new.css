@@ -1126,71 +1126,65 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. THE FOUNDATION: Force a side-by-side row */
+/* 1. THE LAYOUT: Standardizes the container */
 .news-container {
     display: flex !important;
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap; /* Allows stacking on small screens */
     gap: 20px;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
-    align-items: stretch; /* Forces both boxes to be the same height */
+    justify-content: center;
 }
 
-/* 2. THE TWIN CARDS: Targets both divs to make them identical */
-.news-container > div {
-    flex: 1 !important;
+/* 2. THE CARDS: Force them to be equal */
+.rescue-feature, .KW {
+    flex: 1 1 400px !important; /* Grow, shrink, but try to stay around 400px */
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    align-items: center !important;
-    
-    background: #f9f9f9 !important;
-    padding: 30px !important;
-    border-radius: 15px !important;
-    border-top: 8px solid #006BB6 !important; /* Knicks Blue */
-    text-align: center !important;
-    box-sizing: border-box !important;
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 8px solid #006BB6;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* 3. THE HEADERS: Shrinks "Big George" and matches both titles */
+/* 3. THE TEXT: Uniform size */
 .news-container h2 {
     font-size: 1.5rem !important;
-    color: #333 !important;
-    margin: 0 0 15px 0 !important;
-    min-height: 3.5rem; /* Keeps titles level even if they wrap */
-    line-height: 1.2;
+    margin-bottom: 15px;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 4. THE BUTTONS: Centered and consistent */
-.btn-read {
-    display: inline-block !important;
-    background-color: #F58426 !important; /* Knicks Orange */
-    color: white !important;
-    padding: 10px 25px !important;
-    border-radius: 50px !important;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    margin-bottom: 20px !important;
-}
-
-/* 5. THE IMAGES: Identical sizing and perfect cropping */
-.news-container img {
-    width: 100% !important;
-    height: 250px !important; /* Force them to match exactly */
-    object-fit: cover !important; /* Crops images to fit the box perfectly */
-    border-radius: 10px !important;
-    margin-top: auto !important; /* Pushes images to the bottom of the card */
-}
-/* This targets both #bal and #lin specifically */
+/* 4. THE IMAGES: The "Big Image" Fix */
 #bal, #lin {
-    width: 100% !important;     /* Fill the width of the card */
-    height: 200px !important;    /* Force them to be shorter (adjust this number as you like) */
-    object-fit: cover !important; /* Crops the image to fill the box without squishing */
+    width: 100% !important;
+    height: 250px !important; /* Hard limit on height so they aren't huge */
+    object-fit: cover !important; /* Crops the mountain view perfectly */
     border-radius: 10px;
     margin-top: 20px;
-    display: block;
+}
+
+/* 5. MOBILE TWEAKS: For smaller screens */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column !important;
+    }
+    
+    .rescue-feature, .KW {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    #bal, #lin {
+        height: 200px !important; /* Slightly shorter on mobile */
+    }
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
