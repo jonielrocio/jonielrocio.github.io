@@ -1126,100 +1126,49 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* NEWS PAGE LAYOUT */
+/* 1. Force the container to be a row no matter what */
 .news-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-   display: flex !important;
-   flex-direction: row !important;
-   flex-wrap: nowrap;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Forces them to stay on the same line */
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.rescue-feature, .KW {
-    flex: 1;                /* Fixed the 'tflex' typo */
-    width: 50%;           
-    box-sizing: border-box; 
+/* 2. Strip the '100% width' off the children */
+.news-container > div {
+    flex: 1 !important;     /* Forces them to share the width */
+    width: 48% !important;   /* Explicitly limits them to less than half */
+    max-width: 48% !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;    /* Keeps everything centered */
-    padding: 30px;        
+    
+    /* Uniform Styling */
     background: #f9f9f9;
+    padding: 25px;
     border-radius: 15px;
-    border-top: 8px solid #006BB6; /* Knicks Blue */
+    border-top: 8px solid #006BB6;
     text-align: center;
+    box-sizing: border-box; /* Keeps padding from breaking the width */
 }
 
-.rescue-feature h2, .KW h2 {
-    font-size: 1.5rem;      /* Match sizes here */
-    color: #333;
-    margin-bottom: 20px;
-    min-height: 3.5rem;    /* Ensures cards stay even if text wraps */
+/* 3. Force the headers to shrink */
+.news-container h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 15px;
 }
-#bal, #lin {
-    width: 100%;
-    height: 250px;         /* Fixed identical height */
-    max-width: 100%;       /* Remove the 750px/450px limits so they fill the card */
-    object-fit: cover;
+
+/* 4. Force the images to match */
+.news-container img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
     border-radius: 8px;
-    margin-top: auto;      /* Pushes photo to the bottom */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* THE BUTTON */
-.btn-read {
-    display: inline-block;
-    background-color: #F58426; /* Knicks Orange */
-    color: white !important;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    transition: transform 0.2s ease;
-}
-
-.btn-read:hover {
-    transform: scale(1.05);
-    background-color: #006BB6;
-}
-
-/* THE IMAGE (Big George Fix) */
-#bal {
-    width: 100%;
-    height: auto;
-    max-width: 750px; /* Limits size on desktop */
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.news-teaser {
-   background-color: #ffffff;
-   max-width: 500px;
-   margin: 30px auto;
-   border-radius: 12px;
-   overflow: hidden; /* This keeps the image corners rounded */
-   border: 2px solid #006BB6; /* Knicks Blue border */
-   box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Heavy shadow so it "pops" */
-}
-
-#lin {
-    width: 100%;       /* Forces the image to stay inside the .KW div */
-    max-width: 450px;  /* Keeps it from getting too big on desktop */
-    height: 250px;     /* Sets a consistent height so your row looks even */
-    object-fit: cover; /* Crops the photo to fit the box without stretching */
-    display: block;    /* Prevents alignment issues */
-    margin-top: 10px;
-}
-
-.KW {
-    display: flex;
-    flex-direction: column; /* This stacks the Text, Button, and Image *inside* the card */
-    align-items: center;
+    margin-top: 20px;
 }
 
 /* ==========================================================================
