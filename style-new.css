@@ -1126,26 +1126,10 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. THE CONTAINER: Force the row and clear any overflow */
-.news-container {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 20px;
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 0 15px;
-    box-sizing: border-box !important;
-    overflow: hidden; /* Prevents anything from sticking out */
-}
-
-/* 2. THE CARDS: Force them to stay exactly side-by-side */
 .rescue-feature, .KW {
-    /* calc(50% - 10px) accounts for the 20px gap between them */
-    flex: 0 0 calc(50% - 10px) !important;
-    width: calc(50% - 10px) !important;
-    max-width: calc(50% - 10px) !important;
-    
+    flex: 1 !important; /* Let flexbox handle the math */
+    width: 48% !important; /* Safe fallback width */
+    max-width: 50%;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -1153,26 +1137,7 @@ article img, .post-content img, p > img {
     background: #f9f9f9;
     border-radius: 15px;
     border-top: 8px solid #006BB6;
-    box-sizing: border-box !important; /* CRITICAL: Padding stays INSIDE the width */
-}
-
-/* 3. THE IMAGES: Stay inside the card's width */
-.news-container img {
-    width: 100% !important;   /* Fills the card width */
-    max-width: 100% !important; 
-    height: 180px !important;  /* Limits the height as requested */
-    object-fit: cover !important;
-    border-radius: 8px;
-    margin-top: 15px;
-    display: block;
-}
-
-/* 4. THE TITLES: Compact and aligned */
-.news-container h2 {
-    font-size: 1.25rem !important;
-    margin: 0 0 10px 0 !important;
-    min-height: 3rem; /* Ensures the buttons align even if titles wrap */
-    line-height: 1.3;
+    box-sizing: border-box !important;
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
