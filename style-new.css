@@ -9,11 +9,6 @@
     --bg-light: #dff1f1;
 }
 
-html, body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
-
 body {
     margin: 0;
     padding: 0;
