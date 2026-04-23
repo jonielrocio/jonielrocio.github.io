@@ -1126,50 +1126,62 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. Force the side-by-side grid */
-.news-container {
+/* --- THE UNIVERSAL GRID --- */
+.news-container, .gear-container, .grid-wrapper {
     display: grid !important;
-    /* This strictly limits columns to a max of 500px each */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 500px)) !important; 
-    gap: 20px !important;
-    justify-content: center !important;
+    /* Forces 2-3 columns on desktop, 1 on mobile */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 25px !important;
     padding: 20px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
 }
 
-/* 2. Constrain the Boxes */
-.rescue-feature, .KW {
-    max-width: 100% !important;
+/* --- THE UNIVERSAL CARD --- */
+.news-card, .rescue-feature, .KW, .gear-card {
     background: #f9f9f9 !important;
-    border-radius: 12px !important;
+    border-radius: 15px !important;
     border-top: 8px solid #006BB6 !important; /* Knicks Blue */
     padding: 20px !important;
     display: flex !important;
     flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
     box-sizing: border-box !important;
+    transition: transform 0.2s ease !important;
 }
 
-/* 3. The "Shrink the Photos" Rule (CRITICAL) */
-.news-container img {
+.news-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+/* --- THE PHOTO TAMER (Fixes the "Big" issue everywhere) --- */
+.news-container img, .gear-container img, .grid-wrapper img {
     width: 100% !important;
-    height: 250px !important; /* This forces them to stop being 'Big' */
-    object-fit: cover !important; /* This crops the hiking photo to fit the height */
-    border-radius: 8px !important;
+    height: 250px !important; /* This is the secret to stopping the 'Big' look */
+    object-fit: cover !important; /* Crops high-res trail photos to fit the box */
+    border-radius: 10px !important;
     margin-top: 15px !important;
     display: block !important;
 }
 
-/* 4. Button Fix */
-.btn-read {
+/* --- TYPOGRAPHY & BUTTONS --- */
+h2 {
+    font-size: 1.4rem !important;
+    margin-bottom: 15px !important;
+    color: #222 !important;
+}
+
+.btn-read, .btn-action {
+    display: block !important;
     background: #F58426 !important; /* Knicks Orange */
     color: white !important;
     text-align: center !important;
     padding: 12px !important;
     text-decoration: none !important;
-    border-radius: 5px !important;
+    border-radius: 6px !important;
     font-weight: bold !important;
-    margin: 10px 0 !important;
+    margin-top: auto !important; /* Keeps buttons aligned at bottom */
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
