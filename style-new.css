@@ -1183,6 +1183,15 @@ h2 {
     font-weight: bold !important;
     margin-top: auto !important; /* Keeps buttons aligned at bottom */
 }
+
+@media (max-width: 768px;) {
+   .news-container img,
+   .KW img {
+      width: auto;
+      height: 350px !important;
+   }
+}
+   
 /* ==========================================================================
        CONTACT MAIN PAGE
    ========================================================================== */
