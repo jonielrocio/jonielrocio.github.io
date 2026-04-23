@@ -1126,7 +1126,7 @@ article img, .post-content img, p > img {
 /* ==========================================================================
             NEWS MAIN PAGE
    ========================================================================== */
-/* 1. THE LAYOUT ENGINE */
+/* 1. THE FOUNDATION: Force a side-by-side row */
 .news-container {
     display: flex !important;
     flex-direction: row !important;
@@ -1138,32 +1138,32 @@ article img, .post-content img, p > img {
     align-items: stretch; /* Forces both boxes to be the same height */
 }
 
-/* 2. THE TWIN CARDS (Targets any div inside the container) */
+/* 2. THE TWIN CARDS: Targets both divs to make them identical */
 .news-container > div {
     flex: 1 !important;
-    width: 50% !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     align-items: center !important;
     
     background: #f9f9f9 !important;
-    padding: 25px !important;
+    padding: 30px !important;
     border-radius: 15px !important;
     border-top: 8px solid #006BB6 !important; /* Knicks Blue */
     text-align: center !important;
     box-sizing: border-box !important;
 }
 
-/* 3. THE TEXT (Fixes the "Pretty Big" problem) */
+/* 3. THE HEADERS: Shrinks "Big George" and matches both titles */
 .news-container h2 {
-    font-size: 1.4rem !important; /* Forces text to a readable, uniform size */
+    font-size: 1.5rem !important;
     color: #333 !important;
     margin: 0 0 15px 0 !important;
-    min-height: 3.5rem; /* Aligns the cards if one title is 2 lines */
+    min-height: 3.5rem; /* Keeps titles level even if they wrap */
+    line-height: 1.2;
 }
 
-/* 4. THE BUTTONS */
+/* 4. THE BUTTONS: Centered and consistent */
 .btn-read {
     display: inline-block !important;
     background-color: #F58426 !important; /* Knicks Orange */
@@ -1175,13 +1175,13 @@ article img, .post-content img, p > img {
     margin-bottom: 20px !important;
 }
 
-/* 5. THE IMAGES (Perfect Symmetry) */
+/* 5. THE IMAGES: Identical sizing and perfect cropping */
 .news-container img {
     width: 100% !important;
-    height: 250px !important; /* Exact same height for both */
-    object-fit: cover !important; /* Crops the photo to fit the box */
+    height: 250px !important; /* Force them to match exactly */
+    object-fit: cover !important; /* Crops images to fit the box perfectly */
     border-radius: 10px !important;
-    margin-top: auto !important; /* Pushes image to the bottom */
+    margin-top: auto !important; /* Pushes images to the bottom of the card */
 }
 /* ==========================================================================
        CONTACT MAIN PAGE
