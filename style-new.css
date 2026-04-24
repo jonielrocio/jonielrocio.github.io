@@ -1188,7 +1188,13 @@ h2 {
    .news-container img,
    .KW img {
       width: auto;
+      height: 250px !important;
+   }
+   .KW,
+   .rescue-feature; {
+      width: auto;
       height: 350px !important;
+      object-fit: cover;
    }
 }
    
