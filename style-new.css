@@ -1184,26 +1184,30 @@ h2 {
     margin-top: auto !important; /* Keeps buttons aligned at bottom */
 }
 
-@media (max-width: 768px) { /* Removed the extra semicolon after 768px */
-   
-   .news-container img,
-   .KW img,
-   .rescue-feature img {
-      width: 100%;       /* Spans the full width of the container */
-      height: 250px;     /* Sets a consistent height for the "magazine" look */
-      object-fit: cover; /* This makes the image fill the 250px area without stretching */
-      display: block;
+@media (max-width: 768px) {
+   .news-container {
+      display: flex;
+      flex-direction: column; /* This stacks them vertically */
+      align-items: center;    /* Centers them on the mobile screen */
+      width: 100%;
    }
 
-   .KW,
+   .KW, 
    .rescue-feature {
-      width: 100%;       /* Forces the div to be wide on mobile */
-      height: auto;      /* Lets the height grow based on the text + image */
-      padding: 15px;     /* Adds space so text doesn't hit the screen edge */
-      box-sizing: border-box;
-      margin-bottom: 20px;
+      width: 100% !important; /* Forces them to take the full phone width */
+      height: auto !important;
+      margin-bottom: 30px;    /* Adds space between the stories */
    }
-}   
+
+   .KW img, 
+   .rescue-feature img {
+      width: 100%;
+      height: auto;           /* Keeps the image aspect ratio natural */
+      max-height: 300px;      /* Prevents the image from being too huge */
+      object-fit: cover;
+   }
+}
+
 /* ==========================================================================
        CONTACT MAIN PAGE
    ========================================================================== */
