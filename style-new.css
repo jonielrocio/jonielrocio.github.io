@@ -1188,8 +1188,9 @@ h2 {
    .news-container {
       display: flex;
       flex-direction: column; /* This stacks them vertically */
-      align-items: center;    /* Centers them on the mobile screen */
+      align-items: flex-start;    /* Centers them on the mobile screen */
       width: 100%;
+      padding: 0;
    }
 
    .KW 
