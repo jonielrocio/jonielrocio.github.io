@@ -1197,7 +1197,7 @@ h2 {
       width: calc(100%-40px) !important; /* Forces them to take the full phone width */
       height: auto !important;
       margin-bottom: 30px;    /* Adds space between the stories */
-      margin-left: left;
+      margin-left: auto;
       margin-right: auto;
    }
 
