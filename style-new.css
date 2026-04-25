@@ -1170,6 +1170,7 @@ h2 {
     font-size: 1.4rem !important;
     margin-bottom: 15px !important;
     color: #222 !important;
+    text-align: center;
 }
 
 .btn-read, .btn-action {
