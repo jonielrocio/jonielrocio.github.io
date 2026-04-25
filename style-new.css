@@ -1185,47 +1185,40 @@ h2 {
 }
 
 @media (max-width: 768px) {
-   .news-container {
-      display: flex;
-      flex-direction: column; /* This stacks them vertically */
-      align-items: flex-start;    /* Centers them on the mobile screen */
-      width: 100%;
-      padding: 0;
-   }
+  /* 1. Prevent the whole page from wiggling sideways */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-   .KW 
-   .rescue-feature {
-      width: calc(100%-40px) !important; /* Forces them to take the full phone width */
-      height: auto !important;
-      margin-bottom: 30px;    /* Adds space between the stories */
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 !important;
-   }
-   
-   .rescue-feature {
-      width: 100% !important;
-      min-width: 0 !important; /* Forces it to give up its desktop width */
-      max-width: 100vw !important; /* Hard limit at the viewport edge */
-      box-sizing: border-box;
+  /* 2. Fix the News Container */
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px; /* Give the containers a little breathing room from the edge */
+    box-sizing: border-box; 
+  }
+
+  /* 3. Force Cards to stay within the screen */
+  .KW, .rescue-feature {
+    width: 100% !important;
+    max-width: 100% !important; /* Prevents them from being larger than the parent */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important; /* CRITICAL: Includes padding in the 100% width */
+  }
+
+  /* 4. Ensure images don't prop the boxes open */
+  .KW img, .rescue-feature img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+  }
 }
-
-   .KW {
-      width: 100% !important;
-      margin-left: 0 !important;   /* Kill the gap on the left */
-      margin-right: 0 !important;  /* Kill the gap on the right */
-      padding: 0 !important;       /* Ensure no internal push */
-      box-sizing: border-box !important; 
-}   
-   .KW img, 
-   .rescue-feature img {
-      width: 100%;
-      height: auto;           /* Keeps the image aspect ratio natural */
-      max-height: 300px;      /* Prevents the image from being too huge */
-      object-fit: cover;
-   }
-}
-
 /* ==========================================================================
        CONTACT MAIN PAGE
    ========================================================================== */
