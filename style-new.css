@@ -1192,7 +1192,7 @@ h2 {
       width: 100%;
    }
 
-   .KW, 
+   .KW 
    .rescue-feature {
       width: calc(100%-40px) !important; /* Forces them to take the full phone width */
       height: auto !important;
@@ -1200,7 +1200,13 @@ h2 {
       margin-left: auto;
       margin-right: auto;
    }
-
+   
+   .rescue-feature {
+   width: 100% !important;
+   min-width: 0 !important; /* Forces it to give up its desktop width */
+   max-width: 100vw !important; /* Hard limit at the viewport edge */
+}
+   
    .KW img, 
    .rescue-feature img {
       width: 100%;
