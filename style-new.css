@@ -1199,14 +1199,23 @@ h2 {
       margin-bottom: 30px;    /* Adds space between the stories */
       margin-left: auto;
       margin-right: auto;
+      padding: 0 !important;
    }
    
    .rescue-feature {
-   width: 100% !important;
-   min-width: 0 !important; /* Forces it to give up its desktop width */
-   max-width: 100vw !important; /* Hard limit at the viewport edge */
+      width: 100% !important;
+      min-width: 0 !important; /* Forces it to give up its desktop width */
+      max-width: 100vw !important; /* Hard limit at the viewport edge */
+      box-sizing: border-box;
 }
-   
+
+   .KW {
+      width: 100% !important;
+      margin-left: 0 !important;   /* Kill the gap on the left */
+      margin-right: 0 !important;  /* Kill the gap on the right */
+      padding: 0 !important;       /* Ensure no internal push */
+      box-sizing: border-box !important; 
+}   
    .KW img, 
    .rescue-feature img {
       width: 100%;
