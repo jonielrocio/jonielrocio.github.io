@@ -580,7 +580,8 @@ footer {
 ========================================================================== */
 .blagag {
    display: flex;
-   flex-direction: row; 
+   flex-direction: row;
+   justify-content: center;
 }
 
 /* Container 1: The Top Hero */
@@ -634,6 +635,18 @@ footer {
 
 /* Mobile Fix for .inreach */
 @media (max-width: 768px) {
+   .blagag {
+      display: flex:
+      flex-direction: column;
+      height: 250px;
+      width: auto; 
+   }
+      
+   .mbp {
+      flex-direction: column;
+      text-align: center; 
+   }
+   
    .inreach {
       flex-direction: column;
       text-align: center;
