@@ -596,7 +596,7 @@ footer {
    flex-direction: column-reverse;
 }
 .category-tag {
-    font-size: 30px;
+    font-size: 1.4rem !important;
     background-color: #6B8E23 !important;
     color: #ffffff !important;
     padding: 4px 12px;
