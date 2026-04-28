@@ -1353,9 +1353,10 @@ h2 {
     font-size: 1.2rem;   /* Bigger text size */
     line-height: 1.8;    /* More space between lines for your eyes */
     color: #333;
-    max-width: 750px;    /* Keeps lines from being too wide to read */
-    margin-left: auto;
-    margin-right: auto;
+   width: auto !important;
+    max-width: none;    /* Keeps lines from being too wide to read */
+    margin-left: 20px !important;
+    margin-right: 20px !important;
 }
 /* 2. Fix the giant photos */
 /* This tames images inside your .md posts */
@@ -1401,9 +1402,7 @@ h2 {
     }
 }
 
-*{
-   outline: 1px solid red !important; 
-}
+
 
 
 
