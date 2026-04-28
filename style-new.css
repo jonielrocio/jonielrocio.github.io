@@ -634,6 +634,7 @@ footer {
    height: 400px;
    object-fit: cover;
    border-radius: 12px;
+   margin-top: 0 !important;
 }
 
 .inrtext {
