@@ -596,7 +596,36 @@ footer {
    flex-direction: column-reverse;
 }
 .category-tag {
-   font-size: 30px; 
+    font-size: 30px;
+    background-color: #6B8E23 !important;
+    color: #ffffff !important;
+    padding: 4px 12px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    
+    /* This triggers the blinking animation */
+    animation: pulse-blink 2s infinite;
+}
+
+/* This defines the 'pulse' movement */
+@keyframes pulse-blink {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;        /* Fades out slightly */
+        transform: scale(1.05); /* Grows just a tiny bit */
+        background-color: #556B2F !important; /* Dips into a darker olive */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 }
 
 .inreach img {
