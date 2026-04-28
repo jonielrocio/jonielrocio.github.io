@@ -636,25 +636,35 @@ footer {
 
 /* Mobile Fix for .inreach */
 @media (max-width: 768px) {
+   /* The main wrapper */
    .blagag {
       display: flex;
       flex-direction: column;
-      height: 250px;
-      width: auto;
-      object-fit: cover;
+      gap: 20px; /* Adds space between the two stories */
+      width: 100%;
    }
       
-   .mbp {
-      flex-direction: column;
-      text-align: center; 
-   }
-   
-   .inreach {
+   /* Individual story containers */
+   .mbp, .inreach {
+      display: flex;
       flex-direction: column;
       text-align: center;
-    }
-}
+      width: 100%;
+   }
 
+   /* Target the images specifically */
+   .mbp img, .inreach img {
+      width: 100%;
+      height: 250px; /* Set your desired height here instead */
+      object-fit: cover;
+      display: block;
+   }
+
+   /* Ensure the text has some padding so it doesn't hit the screen edges */
+   .mpbtxt, .inrtext {
+      padding: 15px;
+   }
+}
 /*=============================================================================
 Try Page
 ============================================================================*/
