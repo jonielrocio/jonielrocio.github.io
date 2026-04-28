@@ -637,7 +637,7 @@ footer {
 /* Mobile Fix for .inreach */
 @media (max-width: 768px) {
    .blagag {
-      display: flex:
+      display: flex;
       flex-direction: column;
       height: 250px;
       width: auto; 
