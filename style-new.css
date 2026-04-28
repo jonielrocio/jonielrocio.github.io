@@ -640,7 +640,8 @@ footer {
       display: flex;
       flex-direction: column;
       height: 250px;
-      width: auto; 
+      width: auto;
+      object-fit: cover;
    }
       
    .mbp {
