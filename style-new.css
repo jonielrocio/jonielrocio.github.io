@@ -643,6 +643,8 @@ footer {
       gap: 20px; /* Adds space between the two stories */
       width: 100%;
       box-sizing: border-box;
+      margin: 0 !important;
+      padding: 0 !important;
    }
       
    /* Individual story containers */
