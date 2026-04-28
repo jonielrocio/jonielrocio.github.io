@@ -659,6 +659,10 @@ footer {
    flex: 1;
    text-align: center;
 }
+.mbp p {
+   font-size: 1rem !important;
+   font-style: italic !important; 
+}
    
    
 
