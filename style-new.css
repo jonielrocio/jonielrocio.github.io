@@ -582,6 +582,7 @@ footer {
    display: flex;
    flex-direction: row;
    justify-content: center;
+   text-align: center !important;
 }
 
 /* Container 1: The Top Hero */
