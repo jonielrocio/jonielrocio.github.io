@@ -19,44 +19,4 @@ We have now entered a new millennium where materials are lighter, more durable, 
 
 As we age, we become wiser. We develop the character and knowledge to cover long distances while minimizing the physical impact on our bodies. Most of us eventually trim the weight we carry—moving from light packing to ultralight, and now to the emerging "super-ultralight." 
 
-But the question I want to ask is: When is ultralight actually ultralight? Is it defined by a specific number? Is it the community? The brands? The hype? Or, fundamentally, should the definition be relative to the individual? 
-
- <!-- Discussion Section -->
-
-<section class="discussion-wrap" style="margin-top: 4rem;">
-
-    <hr style="border: 0; border-top: 2px solid #003366; margin-bottom: 2rem;">
-
-    
-
-    <div class="discussion-header">
-
-        <h2 style="color: #003366; margin-bottom: 0.5rem;">Join the Conversation</h2>
-
-        <p style="font-style: italic; color: #555;">No account required. Share your thoughts on the "Ultralight" debate below.</p>
-
-    </div>
-
-    <!-- Cusdis Engine -->
-
-    <div id="cusdis_thread"
-
-      data-host="https://cusdis.com"
-
-      data-app-id="329f0e31-13d0-4663-bb13-b815eae25566"
-
-      data-page-id="{{ page.url }}"
-
-      data-page-url="{{ page.url | absolute_url }}"
-
-      data-page-title="{{ page.title }}"
-
-      data-theme="auto"
-
-    ></div>
-
-    
-
-    <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-
-</section>
+But the question I want to ask is: When is ultralight actually ultralight? Is it defined by a specific number? Is it the community? The brands? The hype? Or, fundamentally, should the definition be relative to the individual?
