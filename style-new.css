@@ -1438,6 +1438,30 @@ h2 {
     }
 }
 
+/* ==========================================================================
+       CONUNDRUM PAGE
+   ========================================================================== */
+
+#Wanderers {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.comments-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    border-top: 1px solid #eee;
+}
+
+.trail-talk-title {
+    font-family: 'Inter', sans-serif; /* Use your brand font */
+    text-transform: uppercase;
+    color: #228B22; /* Matches your Wanderer badge green */
+    letter-spacing: 1px;
+}
+
 
 
 
