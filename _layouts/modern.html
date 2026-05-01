@@ -11,7 +11,6 @@
   <header class="ulo">
         <div class="tara">
           <a href="/index.html"><img src="/assets/bago-logo1.png" class="logo-ko" alt="Logo"></a>
-          
           <img src="/assets/dnd.png" class="dnd">
         </div>
         
@@ -36,6 +35,12 @@
 
     <main>
       {{ content }}
+      {% if page.comments != false %}
+      <section class="comments-container" style="margin-top: 50px; padding: 20px; border-top: 1px solid #ddd;">
+        <h2 class="trail-talk-title">Trail Talk</h2>
+        {% include disqus_comments.html %}
+      </section>
+      {% endif %}
     </main>
                 
     <hr>
@@ -45,15 +50,10 @@
         <p>Every word and photo here was crafted with care. Please ask before sharing!</p>
         <div id="Wanderers"></div>
     </footer>
-  
-    
 
     <script>
     function toggleMenu() {
-        // This finds your navigation menu by its ID
         const navMenu = document.getElementById('nav-menu');
-        
-        // This adds the "active" class if it's missing, or removes it if it's there
         navMenu.classList.toggle('active');
     }
 
@@ -64,28 +64,7 @@
           <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=228B22&style=flat-square&label=Wanderers" alt="Visitor Count">
         </a>`;
     }
-
-      <section class="comments-container" style="margin-top: 50px; padding: 20px; border-top: 1px solid #ddd;">
-        <h2 class="trail-talk-title">Trail Talk</h2>
-  
-        <script src="https://giscus.app/client.js"
-              data-repo="jonielrocio/jonielrocio.github.io"
-              data-repo-id="R_kgDONY-XPA" 
-              data-category="Announcements"
-              data-category-id="DIC_kwDONY-XPM4CkbGv"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="0"
-              data-input-position="bottom"
-              data-theme="light"
-              data-lang="en"
-              crossorigin="anonymous"
-              async>
-        </script>
-    </section>
-
-</script>
+    </script>
 
 </body>
 </html>
