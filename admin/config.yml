@@ -11,7 +11,7 @@ collections:
     label: "Blog"
     folder: "_posts"
     extension: "html"
-    format: "frontmatter"
+    format: "html"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     clean_accents: true
