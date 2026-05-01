@@ -2,7 +2,7 @@ collections:
   - name: "posts"
     label: "Blog"
     folder: "_posts"
-    extension: "html"
+    extension: "md"
     format: "frontmatter"
     create: true
     fields:
