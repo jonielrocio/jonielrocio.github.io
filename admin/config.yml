@@ -2,24 +2,3 @@ backend:
   name: github
   repo: jonielrocio/jonielrocio.github.io
   branch: main
-  base_url: https://api.github.com
-  site_url: https://jonielrocio.github.io
-
-media_folder: "assets"
-public_folder: "/assets"
-
-publish_mode: simple
-
-collections:
-  - name: "posts"
-    label: "Blog"
-    folder: "_posts"
-    extension: "md"
-    format: "yaml-frontmatter"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "modern"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
