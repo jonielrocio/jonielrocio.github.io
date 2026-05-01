@@ -1,14 +1,13 @@
 backend:
-name: github
-repo: jonielrocio/jonielrocio.github.io
-branch: main
-site_url: https://jonielrocio.github.io
+  name: github
+  repo: jonielrocio/jonielrocio.github.io
+  branch: main
+  site_url: https://jonielrocio.github.io
 
 media_folder: "assets"
 public_folder: "/assets"
 
 publish_mode: simple
-display_url: https://jonielrocio.github.io
 
 collections:
   - name: "posts"
@@ -22,5 +21,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "modern"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
