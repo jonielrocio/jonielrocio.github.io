@@ -3,7 +3,7 @@ backend:
   repo: jonielrocio/jonielrocio.github.io
   branch: master
   site_domain: jonielrocio.github.io
-  
+
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
@@ -14,12 +14,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "modern" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Enable Comments", name: "comments", widget: "boolean", default: true }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  disqus:
-    shortname: dirtanddistance
