@@ -1,3 +1,15 @@
+backend:
+  name: github
+  repo: jonielrocio/jonielrocio.github.io
+  branch: main # Double-check if your GitHub says 'main' or 'master'
+  site_url: https://jonielrocio.github.io
+
+media_folder: "assets"
+public_folder: "/assets"
+
+publish_mode: simple
+display_url: https://jonielrocio.github.io
+
 collections:
   - name: "posts"
     label: "Blog"
@@ -5,6 +17,7 @@ collections:
     extension: "md"
     format: "frontmatter"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "modern"}
       - {label: "Title", name: "title", widget: "string"}
