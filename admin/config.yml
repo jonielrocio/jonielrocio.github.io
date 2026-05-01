@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: jonielrocio/jonielrocio.github.io
-  branch: main
+  branch: trail-fix
   site_url: https://jonielrocio.github.io
 
 media_folder: "assets"
