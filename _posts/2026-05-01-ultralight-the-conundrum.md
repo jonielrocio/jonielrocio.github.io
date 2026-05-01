@@ -1,6 +1,0 @@
----
-layout: modern
-title: "Ultralight: The Conundrum"
-date: 2026-05-01
----
-
