@@ -10,6 +10,8 @@ collections:
   - name: "posts"
     label: "Blog"
     folder: "_posts"
+    extension: "html"
+    format: "frontmatter"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     clean_accents: true
