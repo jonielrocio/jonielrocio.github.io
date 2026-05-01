@@ -42,8 +42,6 @@ But the question I want to ask is: When is ultralight actually ultralight? Is
 a specific number? Is it the community? The brands? The hype? Or, fundamentally, should the
 definition be relative to the individual?
 
- <section class="comments-section" style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 2rem;">
-
   <h3>Trail Talk</h3>
 
   <script src="https://giscus.app/client.js"
@@ -75,5 +73,3 @@ definition be relative to the individual?
         async>
 
   </script>
-
-</section>
