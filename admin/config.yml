@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: jonielrocio/jonielrocio.github.io
-  branch: main # Double-check if your GitHub says 'main' or 'master'
+  branch: main
   site_url: https://jonielrocio.github.io
 
 media_folder: "assets"
