@@ -1,24 +1,13 @@
-backend:
-  name: github
-  repo: jonielrocio/jonielrocio.github.io
-  branch: master
-
-media_folder: "images/blog"
-public_folder: "/images/blog"
-
 collections:
   - name: "posts"
     label: "Blog"
     folder: "_posts"
     extension: "html"
-    format: "yaml-frontmatter"
+    format: "frontmatter"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    clean_accents: true
-    lowercase_field: true
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "modern"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
