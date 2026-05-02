@@ -1480,7 +1480,15 @@ h2 {
 @media (max-width: 768px) {
    width: auto;
    align-items: center;
+
+   #disqus_thread {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      overflow: hidden !important;
+    }
 }
+
    
 
 
