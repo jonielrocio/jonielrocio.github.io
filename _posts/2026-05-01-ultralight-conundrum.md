@@ -6,6 +6,7 @@ date: 2026-05-01
 
 ```c
 Ultralight: The Conundrum.
+
 Long before backpacking became a recreational hobby, indigenous peoples
 worldwide developed specialized packs and lightweight gear for long-distance
 trade and seasonal migration. As the Industrial Revolution and urbanization 
