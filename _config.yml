@@ -4,6 +4,8 @@ defaults:
       type: "posts"
     values:
       layout: "modern"
+      disqus:
+        shortname: dirtanddistance
   - scope:
       path: ""
       type: "pages"
