@@ -1477,5 +1477,11 @@ h2 {
    justify-content: center;
 }
 
+@media (max-width: 768px) {
+   width: auto;
+   align-items: center;
+}
+   
+
 
 
