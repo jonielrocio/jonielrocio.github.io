@@ -49,7 +49,7 @@
     <footer>
         <p>&copy; {{ "now" | date: "%Y" }} Joniel Rocio | Dirt & Distance. All rights reserved.</p>
         <p>Every word and photo here was crafted with care. Please ask before sharing!</p>
-        <div id="Wanderers"></div>
+        <div id="Hikers"></div>
     </footer>
 
     <script>
@@ -60,11 +60,14 @@
         }
     }
 
-    const counterDiv = document.getElementById('Wanderers');
+    const counterDiv = document.getElementById('Hikers');
     if (counterDiv) {
+      
+      const cacheBuster = new Date().getTime();
+      
       counterDiv.innerHTML = `
         <a href="https://github.com/jonielrocio">
-          <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=228B22&style=flat-square&label=Wanderers" alt="Visitor Count">
+          <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=228B22&style=flat-square&label=Hikers&v={cacheBuster}" alt="Visitor Count">
         </a>`;
     }
     </script>
