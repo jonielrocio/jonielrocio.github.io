@@ -1487,6 +1487,12 @@ h2 {
         overflow-x: hidden;
     }
 
+   .language-c {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+   }
+
     #con {
         flex-direction: column;
         font-size: 22px;
