@@ -1467,26 +1467,26 @@ h2 {
 }
 
 /* Ensure the comments inside follow the same rules */
-.ul #disqus_thread {
+.ul .comments-container {
     width: 100%;
     margin-top: 40px;
 }
 
 /* 1. UNIVERSAL: This sets the margin for every comment box on the site */
-.ul #disqus_thread {
+.ul .comment-container {
     margin-top: 50px;
     padding: 0 25px; /* Keeps that uniform 18px text alignment */
 }
 
 /* 2. SPECIFIC: This ONLY targets the comment box on the 'ultralight' page */
-.post-ultralight .ul #disqus_thread {
+.post-ultralight .ul .comments-container {
     border: 1.5px solid #F58426; /* Knicks Orange border */
     padding: 20px;
     background: #fffaf5;        /* Very subtle orange tint */
 }
 
 /* This targets the comment section within your uniform layout */
-.ul #disqus_thread {
+.ul .comments-container {
     max-width: 800px !important;    /* This matches the max-width of your main text */
     margin: 50px auto !important;
     padding: 0 25px !important;     /* Keeps your 18px text margin uniform */
