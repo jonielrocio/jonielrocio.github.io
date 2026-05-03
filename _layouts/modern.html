@@ -49,7 +49,7 @@
     <footer>
         <p>&copy; {{ "now" | date: "%Y" }} Joniel Rocio | Dirt & Distance. All rights reserved.</p>
         <p>Every word and photo here was crafted with care. Please ask before sharing!</p>
-        <div id="Hikers"></div>
+        <div id="Hikers" style="display: none;"></div>
     </footer>
 
     <script>
@@ -62,13 +62,16 @@
 
     const counterDiv = document.getElementById('Hikers');
     if (counterDiv) {
-      
-      const cacheBuster = new Date().getTime();
-      
-      counterDiv.innerHTML = `
-        <a href="https://github.com/jonielrocio/jonielrocio.github.io">
-          <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=F58426&style=flat-square&label=Hikers" alt="Visitor Count">
-        </a>`;
+        // This part runs for EVERYONE, so the counter actually counts the hit
+        counterDiv.innerHTML = `
+            <a href="https://github.com/jonielrocio/jonielrocio.github.io">
+              <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=F58426&style=flat-square&label=Hikers" alt="Visitor Count">
+            </a>`;
+        
+        // This part checks the URL for your secret key
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('admin') === 'true') {
+            counterDiv.style.display = 'block';
     }
     </script>
 
