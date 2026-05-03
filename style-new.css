@@ -1466,22 +1466,19 @@ h2 {
     width: 100%;
 }
 
-/* Ensure the comments inside follow the same rules */
-/* 1. UNIVERSAL: Sets the standard look for all posts */
-.ul .comments-container {
-    width: 100% !important;
-    max-width: 800px !important;    /* Keeps it from being a "long stick" */
-    margin: 50px auto !important;   /* Centers it with a top gap */
-    padding: 0 25px !important;     /* Uniform text alignment */
+/* TARGET ONLY THE COMMENT AREA */
+.comments-container {
+    width: 100%;
+    max-width: 800px;  /* This keeps it consistent with your post width */
+    margin: 60px auto; /* Centering 'auto' is the secret to killing the stick */
+    padding: 0 20px;
     box-sizing: border-box;
-    display: block;
 }
 
-/* 2. SPECIFIC: Only adds the special styling for the Ultralight page */
-.post-ultralight .ul .comments-container {
-    border: 1.5px solid #F58426;    /* Knicks Orange border */
-    background: #fffaf5;            /* Subtle orange tint */
-    padding: 20px !important;       /* Overrides the universal 0 25px */
+/* Ensure Disqus itself takes up the full width of our container */
+#disqus_thread {
+    width: 100% !important;
+    display: block !important;
 }
 
 .plak {
