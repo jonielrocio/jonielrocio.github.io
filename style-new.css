@@ -1458,6 +1458,14 @@ h2 {
     font-size: 1.05rem;
 }
 
+.ul h1 {
+    text-align: center;
+    font-size: 2rem;      /* Bold and clear for mobile */
+    margin: 1.5rem 0;     /* Balanced space above and below */
+    display: block;
+    width: 100%;
+}
+
 /* Ensure the comments inside follow the same rules */
 .ul #disqus_thread {
     width: 100%;
