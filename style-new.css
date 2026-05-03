@@ -1485,7 +1485,8 @@ h2 {
       display: none !important;
       visibility: hidden !important;
       height: 0 !important;
-      overflow: hidden !important;
+      overflow: wrap !important;
+      word-wrap: brea-word;
     }
 }
 
