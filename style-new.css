@@ -1443,13 +1443,18 @@ h2 {
    ========================================================================== */
 /* The 'Master Boundary' for your Ultralight post */
 .ul {
-    display: block;
     width: 100%;
-    max-width: 800px; /* Or whatever width fits your eye */
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box; /* Crucial for Safari */
-    overflow-x: hidden;     /* The 'Insurance Policy' against the right-side wiggle */
+    /* Increase this number to move text away from the edges */
+    padding: 0 25px; 
+    
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+    /* Optional: This ensures the text looks clean on mobile */
+    word-wrap: break-word;
+    line-height: 1.6;
 }
 
 /* Ensure the comments inside follow the same rules */
