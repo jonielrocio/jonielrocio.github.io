@@ -1472,6 +1472,19 @@ h2 {
     margin-top: 40px;
 }
 
+/* 1. UNIVERSAL: This sets the margin for every comment box on the site */
+.ul #disqus_thread {
+    margin-top: 50px;
+    padding: 0 25px; /* Keeps that uniform 18px text alignment */
+}
+
+/* 2. SPECIFIC: This ONLY targets the comment box on the 'ultralight' page */
+.post-ultralight .ul #disqus_thread {
+    border: 1.5px solid #F58426; /* Knicks Orange border */
+    padding: 20px;
+    background: #fffaf5;        /* Very subtle orange tint */
+}
+
 .plak {
    display: flex;
    flex-direction: row;
