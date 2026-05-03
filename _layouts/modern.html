@@ -36,7 +36,7 @@
     <main>
       {{ content }}
 
-      {% if page.comments != false %}
+      {% if page.comments == true %}
       <section class="comments-container" style="margin-top: 50px; padding: 20px; border-top: 1px solid #ddd;">
         <h2 class="trail-talk-title">Trail Talk</h2>
         {% include disqus_comments.html %}
