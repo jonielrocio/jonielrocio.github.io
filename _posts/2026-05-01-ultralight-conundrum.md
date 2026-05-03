@@ -55,35 +55,3 @@ But the question I want to ask is: When is ultralight actually ultralight? Is
 a specific number? Is it the community? The brands? The hype? Or, fundamentally, should the
 definition be relative to the individual?
 ```
-
-  <h3>Trail Talk</h3>
-
-  <script src="https://giscus.app/client.js"
-
-        data-repo="jonielrocio/jonielrocio.github.io"
-
-        data-repo-id="[YOUR_REPO_ID]"
-
-        data-category="Announcements"
-
-        data-category-id="[YOUR_CATEGORY_ID]"
-
-        data-mapping="pathname"
-
-        data-strict="0"
-
-        data-reactions-enabled="1"
-
-        data-emit-metadata="0"
-
-        data-input-position="bottom"
-
-        data-theme="light"
-
-        data-lang="en"
-
-        crossorigin="anonymous"
-
-        async>
-
-  </script>
