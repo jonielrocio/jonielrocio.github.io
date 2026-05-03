@@ -6,47 +6,46 @@ title: Blog
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
-<body>
+<body class="{{ page.class }}"> <!-- This allows for your Knicks Orange specific styling -->
 
-<main style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+<main class="post-content-area">
     <article class="modern-post">
-        <h1 style="font-size: 2.8rem; color: #222; margin-bottom: 10px;">{{ page.title }}</h1>
-        <p style="color: #666; margin-bottom: 30px;">Published on {{ page.date | date: "%B %e, %Y" }}</p>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-date">Published on {{ page.date | date: "%B %e, %Y" }}</p>
             
-          <div class="entry-content">
-              {{ content }}
-          </div>
-        </article>
-  </main>
-  
-  <script>
+        <div class="entry-content">
+            {{ content }}
+        </div>
+    </article>
+</main>
+
+<!-- UNIVERSAL COMMENT SECTION -->
+{% if page.comments %}
+<section class="site-comments">
+    <div class="comments-inner">
+        {% include disqus_comments.html %}
+    </div>
+</section>
+{% endif %}
+
+<script>
+    /* Your slider script stays here */
     let slideIndex = 1;
-    
     setInterval(() => {
-      // This finds ALL radio buttons inside your 'slides' container
       const totalSlides = document.querySelectorAll('.slides input[type="radio"]').length;
-      
       if (totalSlides > 0) {
         let radio = document.getElementById('i' + slideIndex);
-        if (radio) {
-            radio.checked = true;
-        }
-        
+        if (radio) { radio.checked = true; }
         slideIndex++;
-        
-        // Instead of '4', it uses whatever the actual count is
-        if (slideIndex > totalSlides) {
-            slideIndex = 1;
-        }
+        if (slideIndex > totalSlides) { slideIndex = 1; }
       }
     }, 5000);
-  </script>
+</script>
   
 </body>
 </html>
