@@ -1441,7 +1441,22 @@ h2 {
 /* ==========================================================================
        CONUNDRUM PAGE
    ========================================================================== */
+/* The 'Master Boundary' for your Ultralight post */
+.ul {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Or whatever width fits your eye */
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Crucial for Safari */
+    overflow-x: hidden;     /* The 'Insurance Policy' against the right-side wiggle */
+}
 
+/* Ensure the comments inside follow the same rules */
+.ul #disqus_thread {
+    width: 100%;
+    margin-top: 40px;
+}
 
 .plak {
    display: flex;
