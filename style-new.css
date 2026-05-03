@@ -1488,7 +1488,7 @@ h2 {
 /* This targets the comment section within your uniform layout */
 .ul #disqus_thread {
     max-width: 800px !important;    /* This matches the max-width of your main text */
-    margin: 0 auto !important;
+    margin: 50px auto !important;
     padding: 0 25px !important;     /* Keeps your 18px text margin uniform */
     width: 100% !important;         /* Ensures it fills the space on small screens */
     box-sizing: border-box;
@@ -1501,10 +1501,6 @@ h2 {
    font-size: 32px;
    color:  #6B8E23;
    text-align: center;
-}
-
-body {
-    background-color: red !important;
 }
 
    
