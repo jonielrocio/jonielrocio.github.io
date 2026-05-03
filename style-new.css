@@ -1467,31 +1467,21 @@ h2 {
 }
 
 /* Ensure the comments inside follow the same rules */
+/* 1. UNIVERSAL: Sets the standard look for all posts */
 .ul .comments-container {
-    width: 100%;
-    margin-top: 40px;
-}
-
-/* 1. UNIVERSAL: This sets the margin for every comment box on the site */
-.ul .comment-container {
-    margin-top: 50px;
-    padding: 0 25px; /* Keeps that uniform 18px text alignment */
-}
-
-/* 2. SPECIFIC: This ONLY targets the comment box on the 'ultralight' page */
-.post-ultralight .ul .comments-container {
-    border: 1.5px solid #F58426; /* Knicks Orange border */
-    padding: 20px;
-    background: #fffaf5;        /* Very subtle orange tint */
-}
-
-/* This targets the comment section within your uniform layout */
-.ul .comments-container {
-    max-width: 800px !important;    /* This matches the max-width of your main text */
-    margin: 50px auto !important;
-    padding: 0 25px !important;     /* Keeps your 18px text margin uniform */
-    width: 100% !important;         /* Ensures it fills the space on small screens */
+    width: 100% !important;
+    max-width: 800px !important;    /* Keeps it from being a "long stick" */
+    margin: 50px auto !important;   /* Centers it with a top gap */
+    padding: 0 25px !important;     /* Uniform text alignment */
     box-sizing: border-box;
+    display: block;
+}
+
+/* 2. SPECIFIC: Only adds the special styling for the Ultralight page */
+.post-ultralight .ul .comments-container {
+    border: 1.5px solid #F58426;    /* Knicks Orange border */
+    background: #fffaf5;            /* Subtle orange tint */
+    padding: 20px !important;       /* Overrides the universal 0 25px */
 }
 
 .plak {
