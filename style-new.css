@@ -1491,8 +1491,10 @@ h2 {
 
 .plak {
    align-items: center;
+   display: flex;
+   flex-direction: row;
    font-size: 32px;
-   color:  #6B8E2;
+   color:  #F58426;
 
    
 
