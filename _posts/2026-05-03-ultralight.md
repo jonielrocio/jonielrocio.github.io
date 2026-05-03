@@ -7,6 +7,8 @@ comments: true
 
 {: .ul}
 
+<div class="ul" markdown="1">
+
 # Ultralight: The Conundrum
 
 Long before backpacking became a recreational hobby, indigenous peoples worldwide developed specialized packs and lightweight gear for long-distance trade and seasonal migration. As the Industrial Revolution and urbanization transformed the world, they sparked a collective desire to return to nature. This gave birth to hiking and backpacking as recreation and sport.
@@ -22,3 +24,5 @@ We have now entered a new millennium where materials are lighter, more durable, 
 As we age, we become wiser. We develop the character and knowledge to cover long distances while minimizing the physical impact on our bodies. Most of us eventually trim the weight we carry—moving from light packing to ultralight, and now to the emerging "super-ultralight."
 
 But the question I want to ask is: When is ultralight actually ultralight? Is it defined by a specific number? Is it the community? The brands? The hype? Or, fundamentally, should the definition be relative to the individual?
+
+</div>
