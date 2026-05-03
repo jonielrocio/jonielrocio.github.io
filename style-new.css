@@ -1488,10 +1488,10 @@ h2 {
 /* This targets the comment section within your uniform layout */
 .ul #disqus_thread {
     max-width: 800px;    /* This matches the max-width of your main text */
-    margin-left: auto;   /* Centers the box on the screen */
-    margin-right: auto;  /* Centers the box on the screen */
+    margin: 0 auto;
     padding: 0 25px;     /* Keeps your 18px text margin uniform */
     width: 100%;         /* Ensures it fills the space on small screens */
+    box-sizing: border-box;
 }
 
 .plak {
