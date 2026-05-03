@@ -1455,6 +1455,7 @@ h2 {
     /* Optional: This ensures the text looks clean on mobile */
     word-wrap: break-word;
     line-height: 1.6;
+    font-size: 1.05rem;
 }
 
 /* Ensure the comments inside follow the same rules */
