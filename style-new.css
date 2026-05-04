@@ -1497,7 +1497,7 @@ h2 {
    .com-pol {
       display: block;
       font-size: 1.2rem;
-      max-width: 800%;
+      max-width: 800px;
       margin: 40px auto !important;
       clear: both;
       align-self: center;
