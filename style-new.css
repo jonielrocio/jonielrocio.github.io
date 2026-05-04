@@ -1496,7 +1496,7 @@ h2 {
 
    .com-pol {
       display: flex
-      flex-direction: center;
+      flex-direction: row;
       justify-content: center;
       font-size: 1.2rem;
    }
