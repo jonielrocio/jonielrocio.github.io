@@ -1510,7 +1510,7 @@ h2 {
    font-style: italic; 
    ]
 
-   .comment-policy {
+   #comment-policy {
       display: block;
       text-align: center;
       max-width: 800px;
