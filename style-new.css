@@ -1494,10 +1494,11 @@ h2 {
        COMMENT POLICY MAIN PAGE
    ========================================================================== */
 
-   .com-plo {
+   .com-pol {
       display: block;
       justify-content: center;
       font-size: 1.2rem;
+      max-width: 100%;
       margin-left: auto;
       margin-right: auto;
    }
