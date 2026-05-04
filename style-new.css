@@ -1495,8 +1495,7 @@ h2 {
    ========================================================================== */
 
    .com-pol {
-      display: flex;
-      flex-direction: column;
+      display: block;
       justify-content: center;
       font-size: 1.2rem;
    }
