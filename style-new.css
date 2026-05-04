@@ -1498,9 +1498,12 @@ h2 {
       display: block;
       font-size: 1.2rem;
       max-width: 800%;
-      margin: 40px auto;
+      margin: 40px auto !important;
       clear: both;
-      padding: 0 20px;
+      align-self: center;
+      justify-self: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
    }
 .com-pol h1 {
    font-size: 30px !important;
