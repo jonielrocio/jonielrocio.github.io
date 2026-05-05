@@ -1547,6 +1547,7 @@ h2 {
    font-style: italic;
    text-align: center;
    margin: 40px auto;
+   margin-top: -40px;
 }
 
 #st2 {
@@ -1562,7 +1563,8 @@ h2 {
    margin-bottom: 0 !important;
 }
 #smartphones-outsmarting-the-outdoor-messaging-business {
-   font-style: italic; 
+   font-style: italic;
+   margin-top
 }
    
 
