@@ -1529,6 +1529,10 @@ h2 {
    max-width: 800px;
    margin: 40px auto;
 }
-
-
+.nera img {
+   height: 400px;
+   width: auto;
+   display: block;
+}
+   
 
