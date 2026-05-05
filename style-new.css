@@ -1520,5 +1520,14 @@ h2 {
    font-size: 1.875rem; 
 }
 
+/* ==========================================================================
+       BLOG MAIN PAGE (SMARTPHONE)
+   ========================================================================== */
+.nera {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
 
 
