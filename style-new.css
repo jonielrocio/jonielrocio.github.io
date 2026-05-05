@@ -1528,17 +1528,18 @@ h2 {
    font-size: 1.2rem;
    max-width: 800px;
    margin: 40px auto;
-   justify-content: center;
 }
 .nera img {
    height: 400px;
    width: auto;
    display: block;
+   margin: 40px auto;
 }
 .sat2 img {
    height: 400px;
    width: auto;
    display: block;
+   margin: 40px auto;
 }
 
 #ab {
@@ -1552,7 +1553,7 @@ h2 {
    display: block; 
 }
 
-.nera h1 {
+#the-new-era-of-satellite-messaging {
    display: block;
    max-width: 800px;
    margin: 40px auto; 
