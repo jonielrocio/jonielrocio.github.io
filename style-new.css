@@ -1524,9 +1524,10 @@ h2 {
        BLOG MAIN PAGE (SMARTPHONE)
    ========================================================================== */
 .nera {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   display: block;
+   font-size: 1.2rem;
+   max-width: 800px;
+   margin: 40px auto;
 }
 
 
