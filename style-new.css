@@ -1564,7 +1564,29 @@ h2 {
 }
 #smartphones-outsmarting-the-outdoor-messaging-business {
    font-style: italic;
-   margin-top
+}
+
+/* ==========================================================================
+       BLOG MAIN PAGE (SMARTPHONE)
+   ========================================================================== */
+
+.bagogag {
+   display: flex;
+   flex-direction: column;
+   justify-content:: center;
+   max-width: 800px;
+   margin: 40px auto;
+}
+#sat1 {
+   height: 400px;
+   width: auto;
+   display: block;
+}
+
+#mbp {
+   height: 400px;
+   width: auto;
+   display: block;
 }
    
 
