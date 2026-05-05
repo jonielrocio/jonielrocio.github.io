@@ -1545,6 +1545,8 @@ h2 {
 #ab {
    font-size: 0.5em;
    font-style: italic;
+   text-align: center;
+   margin: 40px auto;
 }
 
 #st2 {
@@ -1554,9 +1556,8 @@ h2 {
 }
 
 #the-new-era-of-satellite-messaging {
-   display: block;
-   max-width: 800px;
-   margin: 40px auto; 
+   text-align: center;
+   max-width: 800px; 
 }
    
 
