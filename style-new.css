@@ -1528,6 +1528,7 @@ h2 {
    font-size: 1.2rem;
    max-width: 800px;
    margin: 40px auto;
+   justify-content: center;
 }
 .nera img {
    height: 400px;
@@ -1549,6 +1550,12 @@ h2 {
    height: auto;
    width: 400px;
    display: block; 
+}
+
+.nera h1 {
+   display: block;
+   max-width: 800px;
+   margin: 40px auto; 
 }
    
 
