@@ -1558,6 +1558,11 @@ h2 {
 #the-new-era-of-satellite-messaging {
    text-align: center;
    max-width: 800px; 
+   margin: 40px auto;
+   margin-bottom: 0 !important;
+}
+#smartphones-outsmarting-the-outdoor-messaging-business {
+   font-style: italic; 
 }
    
 
