@@ -1539,5 +1539,16 @@ h2 {
    width: auto;
    display: block;
 }
+
+#ab {
+   font-size: 0.5em;
+   font-style: italic;
+}
+
+#st2 {
+   height: auto;
+   width: 400px;
+   display: block; 
+}
    
 
