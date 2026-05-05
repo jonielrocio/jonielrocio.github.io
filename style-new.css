@@ -1597,5 +1597,10 @@ h2 {
    width: auto;
    display: block;
 }
+@media {
+   #mbp {
+      height: 350px; 
+   }
+}
    
 
