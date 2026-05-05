@@ -1573,6 +1573,8 @@ h2 {
 .bagogag {
    display: flex;
    flex-direction: column;
+   align-items: center;
+   justify-content: center;
    max-width: 800px;
    margin: 40px auto;
 }
