@@ -1611,12 +1611,13 @@ h2 {
 /* ==========================================================================
        BLOG MAIN PAGE (MACBOOK)
    ========================================================================== */
-.entry-content {
+.post-content-area {
    display: flex;
    flex-direction: column;
-   align-items: center;
-   height: 350px;
-   width: auto; 
+   justify-content: center;
+   max-width: 800px;
+   margin: 40px auto;
+   
 }
 .entry-content img {
    height: 350px;
