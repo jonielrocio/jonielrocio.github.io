@@ -1607,5 +1607,22 @@ h2 {
       padding-right: 20px !important;
    }
 }
+
+/* ==========================================================================
+       BLOG MAIN PAGE (MACBOOK)
+   ========================================================================== */
+.umd {
+   display: block;
+   justify-content: center;
+   width: auto;
+   height: 350px;
+}
+.umd img {
+   display: block;
+   height: 350px;
+   width: auto;
+   justify-content: center; 
+}
+
    
 
