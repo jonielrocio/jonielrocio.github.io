@@ -1625,10 +1625,15 @@ h2 {
    display: block; 
 }
 
+.post-title {
+   align-items: center; 
+}
+
 @media (max-width: 768px) {
    .post-content-area {
       padding-left: 20px;
-      padding-right: 20px; 
+      padding-right: 20px;
+      font-size: 18px;
    }
 }
    
