@@ -1636,6 +1636,10 @@ h2 {
       padding-right: 20px !important;
       font-size: 18px;
    }
+   #m2 {
+      display: block;
+      height: 350px;
+      width: auto;
 }
    
 
