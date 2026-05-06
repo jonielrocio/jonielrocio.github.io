@@ -4,7 +4,7 @@ title: Reliability Means Sustainability
 date: 2026-04-28
 image: /images/blog/mbp2.jpg
 ---
-
+<div class="umd">
 By: Joniel Rocio
 
 In an era where everything is readily available, so much of what we own has become disposable. There is no doubt that our environmental impact is massive—especially on our soil when these items are not properly recycled. One fast-rising problem is electronic waste, or e-waste. According to the Global E-Waste Monitor 2024, e-waste is growing five times faster than documented recycling efforts. This is largely driven by shorter product life cycles and a lack of repair options. As a low-impact hiker, I take pride in applying trail ethics to my tech. With that joy, I present to you my sixteen-year-old 'Tank': a 2010 Apple MacBook Pro.
@@ -26,3 +26,4 @@ The sixteen-year journey of this machine has been a long one. As information tec
 As a community and as individuals, we can all do our part to help eliminate e-waste. The first step is to identify, understand, and accept that we have a problem; the data is readily available online for anyone to see. While recycling is a step in the right direction, it is only a partial solution. My own way of contributing is through due diligence: choosing the right product and maintaining it properly. This combination is the key to a sustainable environment. In closing, I will stand by my belief that what Apple achieved with this machine is absolutely awesome—both for the consumer and the environment alike. Thank you, Apple, for building something that actually lasts. 
 
 “P.S. If anyone at Apple is reading this and wants to see if the 2026 models can actually outlast 'The Tank,' my inbox is open! Until then, I’ll keep hitting 'commit' on the best laptop I’ve ever owned.”
+</div>
