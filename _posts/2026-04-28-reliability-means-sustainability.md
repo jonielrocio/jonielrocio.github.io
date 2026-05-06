@@ -28,6 +28,6 @@ By: Joniel Rocio
 <img id="m4" src="/images/blog/mbp4.jpg">
 
 <p>As a community and as individuals, we can all do our part to help eliminate e-waste. The first step is to identify, understand, and accept that we have a problem; the data is readily available online for anyone to see. While recycling is a step in the right direction, it is only a partial solution. My own way of contributing is through due diligence: choosing the right product and maintaining it properly. This combination is the key to a sustainable environment. In closing, I will stand by my belief that what Apple achieved with this machine is absolutely awesome—both for the consumer and the environment alike. Thank you, Apple, for building something that actually lasts.</p>
-
-“P.S. If anyone at Apple is reading this and wants to see if the 2026 models can actually outlast 'The Tank,' my inbox is open! Until then, I’ll keep hitting 'commit' on the best laptop I’ve ever owned.”
 </div>
+“P.S. If anyone at Apple is reading this and wants to see if the 2026 models can actually outlast 'The Tank,' my inbox is open! Until then, I’ll keep hitting 'commit' on the best laptop I’ve ever owned.”
+
