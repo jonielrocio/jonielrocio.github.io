@@ -422,6 +422,9 @@ nav a {
         height: 250px;
         width: auto; /* Fixed the colon typo here */
         display: block;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 100%;
     }
 
     /* 3. Text Area - Balanced padding */
