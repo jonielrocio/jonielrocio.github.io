@@ -1529,12 +1529,14 @@ h2 {
    max-width: 800px;
    margin: 40px auto;
 }
+
 .nera img {
    height: 400px;
    width: auto;
    display: block;
    margin: 40px auto;
 }
+
 .sat2 img {
    height: 400px;
    width: auto;
@@ -1609,6 +1611,7 @@ h2 {
       height: 350px;
       display: block;
    }
+   
    .umd {
       padding-left: 20px !important;
       padding-right: 20px !important;
@@ -1626,6 +1629,7 @@ h2 {
    margin: 40px auto;
    
 }
+
 .entry-content img {
    height: 350px;
    width: auto;
