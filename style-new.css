@@ -1624,5 +1624,12 @@ h2 {
    width: auto;
    display: block; 
 }
+
+@media (max-width: 768px) {
+   .post-content-area {
+      padding-left: 20px;
+      padding-right: 20px; 
+   }
+}
    
 
