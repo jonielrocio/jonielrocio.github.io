@@ -18,6 +18,13 @@ body {
     line-height: 1.6;
 }
 
+@media screen and (max-width: 768px) {
+   body {
+      padding-left: 20px;
+      padding-right: 20px; 
+   } 
+}
+
 /* ==========================================================================
    2. UNIFIED HEADER (.ulo) - Logo Left, Nav Right
    ========================================================================== */
@@ -1599,7 +1606,8 @@ h2 {
 }
 @media {
    #mbp {
-      height: 350px; 
+      height: 350px;
+      display: block;
    }
 }
    
