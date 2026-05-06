@@ -1624,5 +1624,11 @@ h2 {
    justify-content: center; 
 }
 
+.umd p {
+   display: block;
+   justify-content: center;
+   flex: 1;
+}
+
    
 
