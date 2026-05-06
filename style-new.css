@@ -1611,27 +1611,13 @@ h2 {
 /* ==========================================================================
        BLOG MAIN PAGE (MACBOOK)
    ========================================================================== */
-.umd {
-   display: block;
-   justify-content: center;
-   width: auto;
-   height: 350px;
-}
-.umd img {
+#m1 m2 m3 m4 {
    display: block;
    height: 350px;
    width: auto;
    justify-content: center; 
 }
 
-.entry-content {
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   align-items: center;
-   justify-content: center;
-   flex: 1;
-}
 
    
 
