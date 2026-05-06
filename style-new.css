@@ -1624,7 +1624,7 @@ h2 {
    justify-content: center; 
 }
 
-.umd p {
+.entry-content {
    display: flex;
    flex-direction: column;
    text-align: center;
