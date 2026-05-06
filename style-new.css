@@ -334,6 +334,7 @@ nav a {
     height: 100%;
     object-fit: cover; /* Magic: Fills the box without stretching */ 
     display: block;
+    align-items: center;
 }
 .blog24 {
    flex: 0 0 450px;
