@@ -60,22 +60,32 @@
         }
     }
 
-       const counterDiv = document.getElementById('Hikers');
-       if (counterDiv) {
-         counterDiv.innerHTML = `
-          <a href="https://github.com/jonielrocio/jonielrocio.github.io">
-            <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=F58426&style=flat-square&label=Hikers" alt="Visitor Count">
-          </a>`;
-      }
-        
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const counterDiv = document.getElementById('Hikers');
         const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('admin') === 'true') {
-          counterDiv.style.display = 'block';
-        } else {
-          counterDiv.style.display = 'none';
-    }
-}
-    </script>
+
+        if (counterDiv) {
+      
+            counterDiv.innerHTML = `
+              <a href="https://github.com/jonielrocio/jonielrocio.github.io">
+                <img src="https://komarev.com/ghpvc/?username=jonielrocio&repo=jonielrocio.github.io&color=F58426&style=flat-square&label=Hikers" alt="Visitor Count">
+              </a>`;
+
+        
+        
+            if (urlParams.get('admin') === 'true') {
+            counterDiv.style.display = 'block';
+            } else {
+            
+                counterDiv.style.display = 'block'; 
+                counterDiv.style.opacity = '0';
+                counterDiv.style.height = '0';
+                counterDiv.style.overflow = 'hidden';
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
