@@ -1668,12 +1668,13 @@ h2 {
    display: block;
    max-width: 800px; 
    margin: 40px auto;
-   font-size: 18px;
+   font-size: 19.2px;
    text-align: left;
 }
 
 #ultralight-the-conundrum {
    text-align: center;
+   font-size: 32px;
 }
    
 
